@@ -1,0 +1,92 @@
+<div class="bg-[#0f141e] h-[460px] font-[system-ui]">
+	<div class="px-11 mx-[75px] pt-24">
+		<div class="flex">
+			<div class="w-80">
+				<p class="text-white text-xl w-[148px] mb-[10px]">
+					Connect with us on social media
+				</p>
+				<div class="flex flex-wrap w-80 ml-[-5px]">
+					<div class="h-10 w-10 rounded-3xl mx-2 bg-[#1e2532] text-white hover:bg-blue-600 cursor-pointer">
+						<a href="https://nl.linkedin.com/company/resume-io" target="_blank"><img class="w-6 pt-2 ml-2"
+								src="assets/Imgs/linkedin.svg"></a>
+					</div>
+					<div
+						class="border border-[#1e2532] h-10 w-10 rounded-3xl mx-2 bg-[#1e2532] text-white hover:bg-white cursor-pointer">
+						<a href="https://www.youtube.com/@resumeio" target="_blank"><svg class="mt-[7px] ml-[7px] fill-white hover:fill-red-600" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24"
+								width="24">
+								<path clip-rule="evenodd"
+									d="m22.59 19.04c.45-.4.75-.92.87-1.5.32-1.83.5-3.68.54-5.54 0-1.86-.19-3.71-.54-5.54a2.75 2.75 0 0 0 -.87-1.5 3.08 3.08 0 0 0 -1.64-.74 66.5 66.5 0 0 0 -17.96 0c-.61.08-1.19.34-1.64.74s-.75.92-.87 1.5a30.72 30.72 0 0 0 -.48 5.54c0 1.86.15 3.71.48 5.54.12.58.42 1.1.87 1.5s1.03.66 1.64.74a66.5 66.5 0 0 0 17.96 0 3.08 3.08 0 0 0 1.64-.74zm-5.83-7.04-7.18-3.92v7.84z"
+									fill-rule="evenodd"></path>
+							</svg></a>
+					</div>
+					<div class="h-10 w-10 rounded-3xl mx-2 bg-[#1e2532] text-white hover:bg-rose-600 cursor-pointer">
+						<a href="https://nl.pinterest.com/resumeio/" target="_blank"><img class="w-6 pt-2 ml-2" src="assets/Imgs/pint.svg"></a>
+					</div>
+					<div
+						class="h-10 w-10 rounded-3xl mx-2 bg-[#1e2532] text-white hover:bg-gradient-to-r from-[#ed634a] to-[#ba46a5] cursor-pointer">
+						<a href="https://www.instagram.com/resume.io/" target="_blank"><img class="w-6 pt-2 ml-2" src="assets/Imgs/instagram.svg"></a>
+					</div>
+					<div class="h-10 w-10 rounded-3xl mx-2 bg-[#1e2532] text-white hover:bg-blue-800 cursor-pointer">
+						<a href="https://www.facebook.com/resume.io/" target="_blank"><img class="w-6 pt-2 ml-2" src="assets/Imgs/facebook.svg"></a>
+					</div>
+					<div class="h-10 w-10 rounded-3xl mx-2 my-[10px] bg-[#1e2532] text-white hover:bg-[#1e2532] cursor-pointer">
+						<a href="https://www.tiktok.com/@resume.io" target="_blank"><img class="w-6 pt-2 ml-2" src="assets/Imgs/tiktok.svg"></a>
+					</div>
+					<div class="h-10 w-10 rounded-3xl mx-2 my-[10px] bg-[#1e2532] text-white hover:bg-green-600 cursor-pointer">
+						<a href="https://open.spotify.com/show/2hMZ6hrQo8ydPeeCkniiWV" target="_blank"><img class="w-6 pt-2 ml-2" src="assets/Imgs/spotify.svg"></a>
+					</div>
+				</div>
+			</div>
+			<div class="flex">
+				<div class="ml-8">
+					<p class="text-[#303848] uppercase text-[13px] font-semibold mb-2 tracking-[2px]">job seekers</p>
+					<ul *ngFor="let seeker of seekers">
+						<li class="text-white mb-2 cursor-pointer hover:text-blue-600"><a [routerLink]="[seeker.route]">{{seeker.name}}</a></li>
+					</ul>
+				</div>
+				<div class="ml-12">
+					<p class="text-[#303848] uppercase text-[13px] font-semibold mb-2 tracking-[2px]">career resources</p>
+					<ul *ngFor="let career of careers">
+						<li class="text-white mb-2 cursor-pointer hover:text-blue-600"><a [routerLink]="[career.route]">{{career.name}}</a></li>
+					</ul>
+				</div>
+				<div class="ml-12">
+					<p class="text-[#303848] uppercase text-[13px] font-semibold mb-2 tracking-[2px]">our company</p>
+					<ul *ngFor="let company of companies">
+						<li class="text-white mb-2 cursor-pointer hover:text-blue-600"><a [routerLink]="[company.route]">{{company.name}}</a></li>
+					</ul>
+				</div>
+				<div class="ml-12">
+					<p class="text-[#303848] uppercase text-[13px] font-semibold mb-2 tracking-[2px]">support</p>
+					<ul *ngFor="let support of supports">
+						<li class="text-white mb-2 cursor-pointer hover:text-blue-600"><a [routerLink]="[support.route]">{{support.name}}</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="flex mt-[67px]">
+			<div class="cursor-pointer">
+				<a class="text-white text-[15px] flex mb-1 hover:text-blue-600">
+					<img class="w-[22px] h-[15px] mt-[3px] mr-[9px]" src="assets/Imgs/en.png">
+					International
+				</a>
+				<p class="text-[#495163] tracking-[.3px] text-xs">Copyright 2024 - Resume.io</p>
+			</div>
+			<a href="https://parwcc.com/" class="cursor-pointer">
+				<img class="ml-[216px] mt-[-17px]" src="assets/Imgs/cprw.webp">
+			</a>
+			<div class="flex ml-[153px] mt-[17px]">
+				<p class="text-sm text-[#656e83] mr-2 mt-[3px]">More than a resume. Resume.io is a part of</p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="96" height="24" viewBox="0 0 96 24" fill="none">
+					<path d="M9.3 2.69922C4.16376 2.69922 0 6.86298 0 11.9992C0 17.1355 4.16376 21.2992 9.3 21.2992V2.69922Z"
+						fill="#2F8DEB"></path>
+					<circle cx="19.4992" cy="11.9992" r="9.3" fill="#A0D6FA"></circle>
+					<path
+						d="M38.9892 17.1914C36.849 17.1914 35.0394 15.347 35.0394 13.0328C35.0394 10.7186 36.849 8.8742 38.9892 8.8742C40.9554 8.8742 42.33 10.4402 42.6432 11.9888H40.9206C40.7466 11.345 40.1202 10.4924 38.9892 10.4924C37.7538 10.4924 36.762 11.5364 36.762 13.0328C36.762 14.5466 37.7538 15.5906 38.9892 15.5906C40.1202 15.5906 40.7466 14.7206 40.9206 14.0768H42.6432C42.33 15.6254 40.9554 17.1914 38.9892 17.1914ZM47.0826 8.8742C49.014 8.8742 50.2494 10.1792 50.2494 12.0932V17H48.9618L48.6486 16.1126H48.579C48.2484 16.5128 47.5002 17.1914 46.2474 17.1914C44.6988 17.1914 43.5852 16.13 43.5852 14.825C43.5852 13.2416 45.0816 12.2324 47.274 12.2324H48.5268V11.9714C48.5268 11.0144 47.9352 10.4228 47.0652 10.4228C46.1952 10.4228 45.7602 10.9796 45.6558 11.4842H43.9506C44.0724 10.1618 45.1686 8.8742 47.0826 8.8742ZM46.5954 15.7472C47.796 15.7472 48.5268 14.912 48.5268 13.9724V13.4852H47.274C45.9342 13.4852 45.3078 13.955 45.3078 14.6858C45.3078 15.2948 45.7602 15.7472 46.5954 15.7472ZM53.8667 17H52.1441V9.0656H53.4317L53.7449 9.953H53.8319C54.0581 9.6224 54.7715 8.8742 55.7807 8.8742C56.0591 8.8742 56.2505 8.8916 56.4593 8.9612V10.6664C56.2331 10.6142 56.0243 10.5968 55.7459 10.5968C54.6323 10.5968 53.8667 11.3624 53.8667 12.6326V17ZM64.5482 12.8588C64.5482 13.259 64.5134 13.5374 64.4612 13.7114H58.5974C58.8236 14.912 59.6588 15.6428 60.7898 15.6428C61.6772 15.6428 62.2166 15.2078 62.495 14.8076H64.2872C63.8348 15.956 62.5472 17.1914 60.8072 17.1914C58.6148 17.1914 56.8574 15.3992 56.8574 13.0328C56.8574 10.7186 58.667 8.8742 60.7724 8.8742C62.8952 8.8742 64.5482 10.6142 64.5482 12.8588ZM60.7724 10.4228C59.711 10.4228 58.8236 11.1884 58.58 12.4064H62.8952C62.6864 11.2406 61.8512 10.4228 60.7724 10.4228ZM73.3161 12.8588C73.3161 13.259 73.2813 13.5374 73.2291 13.7114H67.3653C67.5915 14.912 68.4267 15.6428 69.5577 15.6428C70.4451 15.6428 70.9845 15.2078 71.2629 14.8076H73.0551C72.6027 15.956 71.3151 17.1914 69.5751 17.1914C67.3827 17.1914 65.6253 15.3992 65.6253 13.0328C65.6253 10.7186 67.4349 8.8742 69.5403 8.8742C71.6631 8.8742 73.3161 10.6142 73.3161 12.8588ZM69.5403 10.4228C68.4789 10.4228 67.5915 11.1884 67.3479 12.4064H71.6631C71.4543 11.2406 70.6191 10.4228 69.5403 10.4228ZM76.5683 17H74.8457V9.0656H76.1333L76.4465 9.953H76.5335C76.7597 9.6224 77.4731 8.8742 78.4823 8.8742C78.7607 8.8742 78.9521 8.8916 79.1609 8.9612V10.6664C78.9347 10.6142 78.7259 10.5968 78.4475 10.5968C77.3339 10.5968 76.5683 11.3624 76.5683 12.6326V17ZM80.2142 17.1914C79.5878 17.1914 79.118 16.7042 79.118 16.0952C79.118 15.4862 79.5878 14.999 80.2142 14.999C80.8232 14.999 81.3104 15.4862 81.3104 16.0952C81.3104 16.7042 80.8232 17.1914 80.2142 17.1914ZM83.736 7.9694C83.1792 7.9694 82.7268 7.5344 82.7268 6.9602C82.7268 6.3686 83.1792 5.951 83.736 5.951C84.2928 5.951 84.7452 6.3686 84.7452 6.9602C84.7452 7.5344 84.2928 7.9694 83.736 7.9694ZM84.5886 17H82.866V9.0656H84.5886V17ZM90.0847 17.1914C87.9445 17.1914 86.1349 15.347 86.1349 13.0328C86.1349 10.7186 87.9445 8.8742 90.0847 8.8742C92.2249 8.8742 94.0171 10.7186 94.0171 13.0328C94.0171 15.347 92.2249 17.1914 90.0847 17.1914ZM90.0847 15.5906C91.3027 15.5906 92.2945 14.5466 92.2945 13.0328C92.2945 11.5364 91.3027 10.4924 90.0847 10.4924C88.8493 10.4924 87.8575 11.5364 87.8575 13.0328C87.8575 14.5466 88.8493 15.5906 90.0847 15.5906Z"
+						fill="white"></path>
+				</svg>
+				<p class="text-sm text-[#656e83] ml-2 mt-[3px]">product ecosystem.</p>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,463 @@
+<div class="bg-[#f0f8ff]">
+	<div class="border-white mx-[120px]">
+		<h1 class="capitalize text-[23px] pt-[110px] font-bold mb-3 text-[#1e2532]">profile setup</h1>
+	</div>
+	<div class="px-[120px] pb-8 pt-3">
+		<div class=" bg-white px-[50px] border-t-[3px] pb-10 border-[#50abf5] pt-7 ">
+			<div class="flex">
+				<div class="w-[50%]">
+					<div class="">
+						<div class="flex flex-col items-center pr-[82px]">
+							<img [src]="profilePicture || 'assets/default.jpg'" alt="Profile Picture"
+								class="w-[160px] h-[160px] object-cover rounded-[50%] border mb-[10px]" />
+							<button (click)="fileInput.click()"
+								class="border p-1 px-3 text-sm border-blue-500 hover:text-blue-500">Select Picture</button>
+							<input type="file" #fileInput (change)="onFileSelected($event)" accept="image/*" style="display: none" />
+						</div>
+						<button (click)="saveProfilePicture()"
+							class="bg-[#50abf5] text-white py-[6px]  px-3 font-medium mt-4  text-[14px] mb-4">Upload</button>
+					</div>
+					<h2 class="text-[20px] font-bold mb-3 font-[system-ui]">About Me</h2>
+					<div class="flex">
+						<div>
+							<div>
+								<h2 class="text-[15px] font-[system-ui]">Name</h2>
+								<input type="text" id="name" [(ngModel)]="name"
+									class="w-[100%] bg-[#eff2f9] py-[6px] text-[14px] px-4 border-[0px] text-black outline-0 caret-[#1a91f0]">
+							</div>
+						</div>
+						<div class="mx-4">
+							<div>
+								<h2 class="text-[15px] font-[system-ui]">Job Title</h2>
+								<input type="title" [(ngModel)]="title"
+									class="w-[100%] bg-[#eff2f9] py-[6px] px-4 text-[14px] border-[0px] text-black outline-0 caret-[#1a91f0]">
+							</div>
+						</div>
+					</div>
+					<div class="flex mt-8">
+						<div>
+							<div>
+								<h2 class="text-[15px] font-[system-ui]">Email</h2>
+								<input type="email" id="email" [(ngModel)]="email" required
+									class="w-[100%] bg-[#eff2f9] py-[6px] text-[14px] px-4 border-[0px] text-black outline-0 caret-[#1a91f0]">
+							</div>
+						</div>
+						<div class="mx-4">
+							<div>
+								<h2 class="text-[15px] font-[system-ui]">Mobile</h2>
+								<input type="phone" id="phone" [(ngModel)]="phone"
+									class="w-[100%] bg-[#eff2f9] py-[6px] px-4 text-[14px] border-[0px] text-black outline-0 caret-[#1a91f0]">
+							</div>
+						</div>
+					</div>
+					<div class="flex mt-8">
+						<div>
+							<div>
+								<h2 class="text-[15px] font-[system-ui]">Address</h2>
+								<input type="address" id="address" [(ngModel)]="address" required
+									class="w-[100%] bg-[#eff2f9] py-[6px] text-[14px] px-4 border-[0px] text-black outline-0 caret-[#1a91f0]">
+							</div>
+						</div>
+						<div class="mx-4">
+							<div>
+								<h2 class="text-[15px] font-[system-ui]">City</h2>
+								<input type="city" [(ngModel)]="cityName"
+									class="w-[100%] bg-[#eff2f9] py-[6px] px-4 text-[14px] border-[0px] text-black outline-0 caret-[#1a91f0]">
+							</div>
+						</div>
+					</div>
+					<button (click)="saveName()" type="submit"
+						class="bg-[#50abf5] text-white py-[6px] px-3 font-medium mt-4 text-[15px]">Submit</button>
+					<div class="mt-7">
+						<h2 class="text-[20px] font-bold mb-3 font-[system-ui]">Add Skills</h2>
+						<div class="border pb-7 w-[420px] h-full p-4 border-t-2 border-t-blue-500">
+							<div class="flex mb-4">
+								<input type="text" id="Skills" required [(ngModel)]="skill" placeholder="Enter Skill"
+									class="w-[98%] bg-white py-[6px] border-2 text-[14px] px-4 rounded-[3px] text-black outline-0 caret-[#1a91f0]">
+								<button (click)="AddSkills()" class="bg-[#eff2f9] border-[2px] w-10 h-10 cursor-pointer ml-[-30px]">
+									<svg class="w-4 h-4 ml-[10px] bg-[#8d8d8d] border-1 border-[#8d8d8d] rounded-[20px]" fill="white"
+										viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd"
+											d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+											clip-rule="evenodd">
+										</path>
+									</svg>
+								</button>
+							</div>
+							<div *ngIf="skills.length > 0" class="mt-4 grid grid-cols-2 gap-[21px]">
+								<div *ngFor="let skill of skills" class="bg-[#e7e7e7] text-[#47494a] p-2 text-[13px] shadow-custom1">
+									<div>{{skill.name}}</div>
+									<div class="flex items-center mt-2">
+										<input type="range" min="0" max="100" step="1" [(ngModel)]="skill.percentage" class="w-full mr-2" />
+										<span>{{ skill.percentage }}%</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button (click)="saveSkills()"
+							class="text-white mt-3 inline-flex items-center bg-blue-400 hover:bg-blue-500 font-medium text-[15px] px-3 py-[6px] text-center">
+							Submit
+						</button>
+					</div>
+					<div class="mt-7">
+						<h2 class="text-[20px] font-bold mb-3 font-[system-ui]">Add Language</h2>
+						<div class="border w-[420px] h-full p-4 border-t-2 border-t-blue-500">
+							<h1 class="font-bold text-[17px] text-blue-500 mb-2">Select Language</h1>
+							<div class="border-b"></div>
+							<div class="mb-3">
+								<div class="grid grid-cols-2">
+									<div *ngFor="let language of languages; let i = index" class="mt-2">
+										<input type="checkbox" [value]="language" (change)="onLanguageChange($event, i)"
+											[checked]="isLanguageSelected(language)" />
+										<label class="mx-3">{{ language }}</label>
+										<div class="w-[90%] h-[5px] rounded bg-white pb-[18px]">
+											<input type="range" min="0" max="100" step="1" [ngModel]="getLanguagePercentage(language)"
+												(ngModelChange)="updateLanguagePercentage(language, $event)"
+												[disabled]="!isLanguageSelected(language)" class="w-full" />
+										</div>
+										<span>{{ getLanguagePercentage(language) }}%</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button (click)="saveLanguages()"
+							class="text-white mt-3 inline-flex items-center bg-blue-400 hover:bg-blue-500 font-medium text-[15px] px-3 py-[6px] text-center">
+							Submit
+						</button>
+					</div>
+				</div>
+				<div class="w-[50%] mt-[4px]">
+					<h2 class="text-[20px] font-bold mb-3 font-[system-ui]">Profile Experience</h2>
+					<div class="">
+						<div (click)="openProfileModal()"
+							class="bg-[#d9ecfc] justify-center cursor-pointer flex p-[10px] px-5 tracking-[1px] mt-4 rounded-[6px] text-[14px]">
+							<svg class="w-5 h-5 mr-[6px]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd"
+									d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+									clip-rule="evenodd">
+								</path>
+							</svg>
+							Add Profile Experience
+						</div>
+						<div [ngClass]="{'showProfile': showProfileModal}"
+							class="hidden fixed top-0 right-0 left-0 z-[1] w-[100%] h-[100%] bg-[rgb(0,0,0)]  bg-[rgba(0,0,0,0.4)]">
+							<div class="relative p-4 mt-[70px] w-full mx-[300px] max-w-[800px] max-h-full">
+								<div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+									<div
+										class="flex items-center border-t-[4px] border-t-[#50abf5] justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+										<h3 class="text-lg font-semibold text-blue-500 dark:text-white">
+											Profile Experience
+										</h3>
+										<button type="button" (click)="closeProfileDialog()"
+											class="text-[#aaa] float-right text-[28px] font-bold cursor-pointer hover:text-black focus:text-black">
+											<svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+												<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+													d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+											</svg>
+										</button>
+									</div>
+									<div class="p-4 px-4 md:p-5">
+										<div class="grid gap-4 mb-4 grid-cols-2">
+										</div>
+										<div class="col-span-2 mb-3">
+											<label for="description" class="block mb-2 text-[16px] font-medium text-gray-900">
+												Description</label>
+											<textarea [(ngModel)]="description" name="description" id="description" rows="4"
+												class="block p-2.5 w-full text-sm  py-3 px-4 rounded-[3px] text-black outline-0 caret-[#1a91f0] border outline-none"></textarea>
+										</div>
+										<button type="submit" (click)="saveProfile()"
+											class="text-white inline-flex items-center bg-blue-500 hover:bg-blue-600 font-medium text-sm px-3 py-[8px] text-center">
+											Save
+										</button>
+										<button (click)="closeProfileDialog()"
+											class="bg-white border mx-3 inline-flex items-center text-blue-500 hover:text-blue-600 hover:bg-gray-100 font-medium text-sm px-3 py-[8px] text-center">
+											Close
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div *ngIf="profileExperiences" class="mt-4 rounded-md text-[#3c3a3a] text-[15px]">
+							{{ profileExperiences }}
+						</div>
+						<div class="border-b mt-10"></div>
+					</div>
+					<h2 class="text-[20px] mt-3 font-bold mb-3 font-[system-ui]">Education</h2>
+					<div class="">
+						<div (click)="openDialog()"
+							class="bg-[#d9ecfc] justify-center cursor-pointer flex p-[10px] px-5 tracking-[1px] mt-4 rounded-[6px] text-[14px]">
+							<svg class="w-5 h-5 mr-[6px]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd"
+									d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+									clip-rule="evenodd">
+								</path>
+							</svg>
+							Add Education
+						</div>
+						<!-- modal -->
+						<div [ngClass]="{'show': showModal}"
+							class="hidden fixed overflow-auto top-0 right-0 left-0 z-[1] w-[100%] h-[100%] bg-[rgb(0,0,0)]  bg-[rgba(0,0,0,0.4)]">
+							<div class="relative p-4 mt-[70px] w-full mx-auto max-w-md max-h-full">
+								<div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+									<div
+										class="flex items-center justify-between border-t-[4px] border-t-[#50abf5] p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+										<h3 class="text-lg font-semibold text-blue-500 dark:text-white">
+											Add Education
+										</h3>
+										<button type="button" (click)="closeDialog()"
+											class="text-[#aaa] float-right text-[28px] font-bold cursor-pointer hover:text-black focus:text-black">
+											<svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+												<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+													d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+											</svg>
+										</button>
+									</div>
+									<div class="p-4 px-4 md:p-5">
+										<div class="grid gap-4 mb-4 grid-cols-2">
+											<div class="col-span-2">
+												<label for="name" class="block mb-2 text-[15px] font-medium text-gray-900">Degree</label>
+												<input type="text" id="degree" [(ngModel)]="degree"
+													class="bg-gray-50 border border-gray-300 text-gray-900 text-sm block w-full p-[9px] outline-none"
+													required="">
+											</div>
+											<div class="col-span-2">
+												<label for="name" class="block mb-2 text-[15px] font-medium text-gray-900">Institute</label>
+												<input type="text" id="institution" [(ngModel)]="institution"
+													class="bg-gray-50 border border-gray-300 text-gray-900 text-sm block w-full p-[9px] outline-none"
+													required="">
+											</div>
+											<div class="col-span-2">
+												<label for="name" class="block mb-2 text-[15px] font-medium text-gray-900">Location</label>
+												<input type="city" id="city" [(ngModel)]="location"
+													class="bg-gray-50 border border-gray-300 text-gray-900 text-sm block w-full p-[9px] outline-none"
+													required="">
+											</div>
+											<div class="col-span-2 sm:col-span-1">
+												<label class="block mb-2 text-[15px] font-medium text-gray-900">StartDate</label>
+												<input type="date" id="startDate" [(ngModel)]="startDate"
+													class="bg-gray-50 border border-gray-300 text-gray-900 text-sm w-full p-[9px] outline-none"
+													required="">
+											</div>
+											<div class="col-span-2 sm:col-span-1">
+												<label class="block mb-2 text-[15px] font-medium text-gray-900 dark:text-white">EndDate</label>
+												<input type="date" id="endDate" [(ngModel)]="endDate"
+													class="bg-gray-50 border border-gray-300 text-gray-900 text-sm p-[9px] w-full outline-none"
+													required="">
+											</div>
+										</div>
+										<button type="submit" (click)="saveEducation()"
+											class="text-white inline-flex items-center bg-blue-500 hover:bg-blue-600 font-medium text-sm px-4 py-[9px] text-center">
+											Save
+										</button>
+										<button (click)="closeDialog()"
+											class="bg-white border mx-3 inline-flex items-center text-blue-500 hover:text-blue-600 hover:bg-gray-100 font-medium text-sm px-4 py-[9px] text-center">
+											Close
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div *ngFor="let Education of savedEducations" class="mt-4 text-[#4E4E4E] text-[15px] font-semibold">
+							<p>{{ Education.degree }}</p>
+							<p>{{ Education.institution }}, {{Education.location}}</p>
+							<p>{{ Education.startDate }} - {{ Education.endDate }}</p>
+
+						</div>
+						<div class="border-b mt-10"></div>
+					</div>
+					<!-- work experience  -->
+					<h2 class="text-[20px] mt-3 font-bold mb-3 font-[system-ui]">Work History</h2>
+					<div class="">
+						<div (click)="openExperienceDialog()"
+							class="bg-[#d9ecfc] justify-center cursor-pointer flex p-[10px] mt-4 px-5 tracking-[1px] rounded-[6px] text-[14px]">
+							<svg class="w-5 h-5 mr-[6px]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd"
+									d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+									clip-rule="evenodd">
+								</path>
+							</svg>
+							Add Experience
+						</div>
+						<div [ngClass]="{'showModal': showExperienceModal}"
+							class="hidden overflow-auto fixed top-0 right-0 left-0 z-[1] w-[100%] h-[100%] bg-[rgb(0,0,0)]  bg-[rgba(0,0,0,0.4)]">
+							<div class="relative p-4 mt-[70px] w-full mx-auto max-w-[550px] max-h-full ">
+								<div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+									<div
+										class="flex items-center justify-between p-4 md:p-5 border-t-[4px] border-t-[#50abf5] border-b rounded-t dark:border-gray-600">
+										<h3 class="text-lg font-semibold text-blue-500 dark:text-white">
+											Add Employement History
+										</h3>
+										<button type="button" (click)="closeExperienceDialog()"
+											class="text-[#aaa] float-right text-[28px] font-bold cursor-pointer hover:text-black focus:text-black">
+											<svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+												<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+													d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+											</svg>
+										</button>
+									</div>
+									<div class="p-4 px-4 md:p-5">
+										<div class="grid gap-4 mb-4 grid-cols-2">
+											<div class="col-span-2">
+												<label for="name" class="block mb-2 text-[15px] font-medium text-gray-900">Company</label>
+												<input type="text" id="company" [(ngModel)]="company" placeholder="Name"
+													class="bg-[#eff2f9] border text-black outline-0 caret-[#1a91f0] placeholder:text-gray-400 text-sm block w-full p-[9px] outline-none"
+													required="">
+											</div>
+											<div class="col-span-2 sm:col-span-1">
+												<label class="block mb-2 text-[15px] font-medium text-gray-900">City</label>
+												<input type="text" id="city" [(ngModel)]="city"
+													class="bg-[#eff2f9] border text-black outline-0 caret-[#1a91f0] w-full p-[9px] outline-none"
+													required="">
+											</div>
+											<div class="col-span-2 sm:col-span-1">
+												<label class="block mb-2 text-[15px] font-medium text-gray-900 dark:text-white">Country</label>
+												<input type="text" id="country" [(ngModel)]="country"
+													class="bg-[#eff2f9] border text-black outline-0 caret-[#1a91f0] p-[9px] w-full outline-none"
+													required="">
+											</div>
+											<div class="col-span-2 sm:col-span-1">
+												<label class="block mb-2 text-[15px] font-medium text-gray-900">StartDate</label>
+												<input type="date" id="startDate" [(ngModel)]="startDate"
+													class="bg-[#eff2f9] border text-black outline-0 caret-[#1a91f0] w-full p-[9px] outline-none"
+													required="">
+											</div>
+											<div class="col-span-2 sm:col-span-1">
+												<label class="block mb-2 text-[15px] font-medium text-gray-900 dark:text-white">EndDate</label>
+												<input type="date" id="endDate" [(ngModel)]="endDate"
+													class="bg-[#eff2f9] border text-black outline-0 caret-[#1a91f0] p-[9px] w-full outline-none"
+													required="">
+											</div>
+										</div>
+										<div class="col-span-2 mb-3">
+											<label for="description" class="block mb-2 text-[16px] font-medium text-gray-900">
+												Description</label>
+											<textarea id="requirements" rows="4" [(ngModel)]="requirements"
+												class="block p-2.5 w-full text-sm  py-3 px-4 rounded-[3px] text-black outline-0 caret-[#1a91f0] border outline-none"></textarea>
+										</div>
+										<button type="submit" (click)="saveHistory()"
+											class="text-white inline-flex items-center bg-blue-500 hover:bg-blue-600 font-medium  text-sm px-4 py-[9px] text-center">
+											Save
+										</button>
+										<button (click)="closeExperienceDialog()"
+											class="bg-white border mx-3 inline-flex items-center text-blue-500 hover:text-blue-600 hover:bg-gray-100 font-medium text-sm px-4 py-[9px] text-center">
+											Close
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div *ngFor="let experience of savedExperience" class="mt-4">
+							<div class="flex justify-between mb-3">
+								<div>
+									<p class="text-[#4E4E4E] text-[15px] font-semibold">{{experience.company}}</p>
+								</div>
+								<div>
+									<p class="text-[#4E4E4E] text-[15px] font-semibold">{{experience.startDate}} - {{experience.endDate}}
+									</p>
+									<p class="text-[#4E4E4E] text-[15px] font-semibold">{{experience.city}}, {{experience.country}}</p>
+								</div>
+							</div>
+							<p class="text-[#4E4E4E] text-[15px]">{{experience.requirements}}</p>
+						</div>
+						<div class="border-b mt-10"></div>
+					</div>
+					<!-- Add Projects  -->
+					<h2 class="text-[20px] mt-3 font-bold mb-3 font-[system-ui]">Add Projects</h2>
+					<div class="">
+						<div (click)="openProjectDialog()"
+							class="bg-[#d9ecfc] justify-center cursor-pointer flex p-[10px] mt-4 px-5 tracking-[1px] rounded-[6px] text-[14px]">
+							<svg class="w-5 h-5 mr-[6px]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd"
+									d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+									clip-rule="evenodd">
+								</path>
+							</svg>
+							Add Projects
+						</div>
+						<div [ngClass]="{'ProjectModal':showProjectModal}"
+							class="hidden overflow-auto fixed top-0 right-0 left-0 z-[1] w-[100%] h-[100%] bg-[rgb(0,0,0)]  bg-[rgba(0,0,0,0.4)]">
+							<div class="relative p-4 mt-[70px] w-full mx-auto max-w-[550px] max-h-full ">
+								<div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+									<div
+										class="flex items-center justify-between p-4 md:p-5 border-t-[4px] border-t-[#50abf5] border-b rounded-t dark:border-gray-600">
+										<h3 class="text-lg font-semibold text-blue-500 dark:text-white">
+											Add Projects
+										</h3>
+										<button type="button" (click)="closeProjectDialog()"
+											class="text-[#aaa] float-right text-[28px] font-bold cursor-pointer hover:text-black focus:text-black">
+											<svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+												<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+													d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+											</svg>
+										</button>
+									</div>
+									<div class="p-4 px-4 md:p-5">
+										<div class="grid gap-4 mb-4 grid-cols-2">
+											<div class="col-span-2">
+												<label for="name" class="block mb-2 text-[15px] font-medium text-gray-900">Project Title</label>
+												<input type="title" id="projectTitle" [(ngModel)]="projectTitle" placeholder="Title of Project"
+													class="bg-[#eff2f9] border text-black outline-0 caret-[#1a91f0] placeholder:text-[#707070] placeholder:tracking-wider text-sm block w-full p-[9px] outline-none"
+													required="">
+											</div>
+											<div class="col-span-2">
+												<label class="block mb-2 text-[15px] font-medium text-gray-900">Project URL</label>
+												<input type="url" id="ProjectURL" [(ngModel)]="ProjectURL" placeholder="Web URL"
+													class="bg-[#eff2f9] border text-black outline-0 caret-[#1a91f0] placeholder:text-[#707070] placeholder:tracking-wider w-full p-[9px] text-sm outline-none"
+													required="">
+											</div>
+											<div class="col-span-2 sm:col-span-1">
+												<label class="block mb-2 text-[15px] font-medium text-gray-900">StartDate</label>
+												<input type="date" id="startDate" [(ngModel)]="startDate"
+													class="bg-[#eff2f9] border text-black outline-0 caret-[#1a91f0] text-sm w-full p-[9px] outline-none"
+													required="">
+											</div>
+											<div class="col-span-2 sm:col-span-1">
+												<label class="block mb-2 text-[15px] font-medium text-gray-900 dark:text-white">EndDate</label>
+												<input type="date" id="endDate" [(ngModel)]="endDate"
+													class="bg-[#eff2f9] border text-black outline-0 caret-[#1a91f0] text-sm p-[9px] w-full outline-none"
+													required="">
+											</div>
+										</div>
+										<div class="col-span-2 mb-3">
+											<label for="description" class="block mb-2 text-[16px] font-medium text-gray-900">
+												Description</label>
+											<textarea id="description" rows="4" [(ngModel)]="ProjectDescription"
+												class="block p-2.5 w-full text-sm  py-3 px-4 rounded-[3px] text-black outline-0 caret-[#1a91f0] border outline-none"></textarea>
+										</div>
+										<button type="submit" (click)="saveProjects()"
+											class="text-white inline-flex items-center bg-blue-500 hover:bg-blue-600 font-medium  text-sm px-4 py-[9px] text-center">
+											Save
+										</button>
+										<button (click)="closeProjectDialog()"
+											class="bg-white border mx-3 inline-flex items-center text-blue-500 hover:text-blue-600 hover:bg-gray-100 font-medium text-sm px-4 py-[9px] text-center">
+											Close
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div *ngFor="let project of savedProjects" class="mt-4">
+							<div class="text-[#4E4E4E] text-[15px] font-semibold flex justify-between mb-3">
+								<div>
+									<p>{{project.projectTitle}}</p>
+									<p>{{project.ProjectURL}}</p>
+								</div>
+								<div>
+									<p>{{project.startDate}} - {{project.endDate}}</p>
+								</div>
+							</div>
+							<p class="text-[#4E4E4E] text-[15px]">{{project.ProjectDescription}}</p>
+						</div>
+					</div>
+					<div class="border-b mt-10"></div>
+				</div>
+			</div>
+			<div class="flex justify-center mt-4">
+				<button (click)="onUploadProfile()"
+					class="bg-blue-500 hover:bg-blue-600 rounded-3xl text-white w-[300px] justify-center cursor-pointer flex p-[10px] px-5 mt-4 text-[15px]">
+					Upload Profile
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

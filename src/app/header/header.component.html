@@ -1,0 +1,25 @@
+<header class="bg-white h-20 fixed top-0 w-[100%] z-10 max-md:h-52 " [ngClass]="{'hidden': isNavbarHidden}"
+	[ngClass]="{'-translate-y-full': isNavbarHidden, 'transition-transform': !isNavbarHidden}">
+	<div class="pl-[31px] pr-[31px] pt-[17px] flex justify-between items-center max-md:pt-[52px] max-md:pl-[70px]">
+		<a routerLink="/resume.io">
+			<img class="w-28 cursor-pointer max-md:w-80" [src]="logoImg">
+		</a>
+		<div class="flex">
+			<mat-icon class="text-[100px]">menu</mat-icon>
+			<ul
+				class="flex text-[#7a7a7a] text-[17px] font-[sans-serif] font-normal items-center cursor-pointer max-md:hidden">
+				<li class="pr-8 font-[system-ui] font-semibold text-[rgb(101 104 108)] hover:text-[#769ee7]"><a
+						routerLink="resume.io/profile">Profile Setup</a></li>
+			</ul>
+			<span class="border-r mr-10 h-5 mt-[15px]"></span>
+			<a routerLink="resume.io/app/auth/sign-in"
+				class="text-[#50abf5] font-bold capitalize mt-[14px] mr-[30px] cursor-pointer rounded hover:text-[#0077d5] max-md:hidden">
+				log in
+			</a>
+			<a href="resume.io/app/create-resume" (click)="navigateToTemplates($event)"
+				class="border bg-[#1a91f0] capitalize p-3 pl-[22px] pr-[22px] cursor-pointer text-[white] font-bold rounded hover:bg-[#0077d5] max-md:hidden">
+				sign up
+			</a>
+		</div>
+	</div>
+</header>

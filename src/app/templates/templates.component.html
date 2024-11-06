@@ -1,0 +1,107 @@
+<div class="bg-[#eff2f9] flex flex-col min-h-[100vh] relative overflow-hidden">
+	<!-- Header -->
+	<div>
+		<div class="flex items-center justify-between px-8 py-[22px] relative top-0 left-0">
+			<span routerLink="/resume.io">
+				<img class="w-28 cursor-pointer max-md:w-80" [src]="logoImg">
+			</span>
+			<div class="absolute w-[700px] flex items-center justify-center left-[24%]">
+				<div class="w-[100%] flex items-center justify-center">
+					<div
+						class="flex items-center after:w-[32px] after:h-[1px] after:bg-[#d9deeb] after:mx-2 after:text-[#d9deeb]">
+						<div
+							class="w-7 h-7 rounded-[50%] bg-[#1a91f0] flex justify-center items-center text-base leading-5 text-white font-semibold mr-3">
+							1</div>
+						<div class="text-[#1e2532] mt-[5px] text-[17px]">Choose template</div>
+					</div>
+					<div
+						class="flex items-center after:w-[32px] after:h-[1px] after:bg-[#d9deeb] after:mx-2 after:text-[#d9deeb]">
+						<div
+							class="w-7 h-7 rounded-[50%] bg-[#d9deeb] flex justify-center items-center text-base leading-5 text-[#828ba2] font-semibold mr-3">
+							2</div>
+						<div class="text-[#828ba2] mt-[5px] text-[17px]">Enter your details</div>
+					</div>
+					<div class="flex items-center">
+						<div
+							class="w-7 h-7 rounded-[50%] bg-[#d9deeb] flex justify-center items-center text-base leading-5 text-[#828ba2] font-semibold mr-3">
+							3</div>
+						<div class="text-[#828ba2] mt-[5px] text-[17px]">Download resume</div>
+					</div>
+				</div>
+			</div>
+			<button routerLink="/resume.io" class="fill-[#a1a1a1] flex hover:fill-[#1a91f0]">
+				<svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M10.5857864,12 L3.79289322,5.20710678 L5.20710678,3.79289322 L12,10.5857864 L18.7928932,3.79289322 L20.2071068,5.20710678 L13.4142136,12 L20.2071068,18.7928932 L18.7928932,20.2071068 L12,13.4142136 L5.20710678,20.2071068 L3.79289322,18.7928932 L10.5857864,12 Z">
+					</path>
+				</svg>
+			</button>
+		</div>
+	</div>
+	<div class="">
+		<div (click)="prev()"
+			class="absolute flex items-center justify-center w-12 h-12 bg-[#1a91f0] text-white rounded-[50%] z-[2] cursor-pointer left-[60px] rotate-180 top-[49%] hover:bg-[#10529b]">
+			<svg fill="white" width="25" height="25" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
+				<path d="M9.32427537,7.23715414 L10.6757246,5.76284586 L16.6757246,11.2628459 C17.1080918,11.6591824 17.1080918,12.3408176 16.6757246,12.7371541 L10.6757246,18.2371541 L9.32427537,16.7628459 L14.5201072,12 L9.32427537,7.23715414 Z"></path>
+			</svg>
+		</div>
+		<div (click)="next()"
+			class="absolute flex items-center justify-center w-12 h-12 bg-[#1a91f0] text-white rounded-[50%] z-[2] cursor-pointer right-[60px] top-[49%] hover:bg-[#10529b]">
+			<svg fill="white" width="25" height="25" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
+				<path d="M9.32427537,7.23715414 L10.6757246,5.76284586 L16.6757246,11.2628459 C17.1080918,11.6591824 17.1080918,12.3408176 16.6757246,12.7371541 L10.6757246,18.2371541 L9.32427537,16.7628459 L14.5201072,12 L9.32427537,7.23715414 Z"></path>
+			</svg>
+		</div>
+		<div class="px-[35px]">
+			<div class="flex"
+				[ngStyle]="{ 'width': (slides.length * 213) + 'px', 'transform': 'translateX(' + (-currentIndex * 213) + 'px)' }">
+				<div class="cursor-pointer mt-[16px] mb-[10px] mx-4" *ngFor="let slide of slides">
+					<div class="flex flex-col items-center cursor-default">
+						<div class="">
+							<div class="capitalize text-[17px] font-semibold text-[#353535]">{{slide.city}}</div>
+						</div>
+						<div class="text-[14px] leading-6 tracking-[0.3px] text-[#828ba2]">{{slide.userChose}} users chose this
+							template
+						</div>
+					</div>
+					<div class="flex flex-col">
+						<img class="rounded-md h-[400px] max-w-[310px]" [src]="slide.img" [alt]="slide.name">
+						<div class="mt-[-37px] ml-[211px] mr-[22px]">
+							<div class="uppercase bg-[#ec930c] z-[1] text-white px-[3px] rounded-[3px] text-[14px] font-bold">pdf
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div class="flex px-[50px]" #sliderWrapper>
+			<div class="slide cursor-pointer mt-[16px] mb-[10px] mx-4" *ngFor="let slide of slides let i=index" style="transition: -webkit-transform 300ms ease 0s">
+				<div class="flex flex-col items-center cursor-default">
+					<div class="">
+						<div class="capitalize text-[17px] font-semibold text-[#353535]">{{slide.city}}</div>
+					</div>
+					<div class="text-[14px] leading-6 tracking-[0.3px] text-[#828ba2]">{{slide.userChose}} users chose this
+						template</div>
+				</div>
+				<div>
+					<img class="rounded-md h-[400px] w-[270px]" src="{{ slide.img }}" alt="{{ slide.alt }}">
+					<div class="absolute mt-[-37px] ml-[220px]">
+						<div class="uppercase bg-[#ec930c] text-white px-[3px] rounded-[3px] text-[14px] font-bold">pdf</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+	</div>
+	<!-- Footer -->
+	<footer
+		class="mt-[45px] text-[12px] leading-5 w-[100%] px-10 pb-3 mx-auto text-center tracking-wider text-[#828ba2] max-w-[657px]">
+		By signing up via your social profile or by email you agree with our
+		<a href="resume.io/tos" class="text-[#1a91f0] hover:text-[#10529b]" target="_blank">Terms of use</a> and
+		<a class="text-[#1a91f0] hover:text-[#10529b]" href="/privacy" target="_blank">Privacy Policy</a>, and
+		topresume.com's
+		<a class="text-[#1a91f0] hover:text-[#10529b]" href="https://www.topresume.com/terms" target="_blank">Terms &
+			Conditions</a> and
+		<a class="text-[#1a91f0] hover:text-[#10529b]" href="https://www.topresume.com/privacy" target="_blank">Privacy
+			Policy</a>.
+	</footer>
+</div>

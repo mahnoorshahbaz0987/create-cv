@@ -1,0 +1,17 @@
+<div class="bg-[#e8eef8] mt-[90px] pb-[10px]">
+	<div class="mx-auto w-[736px] pt-20">
+		<h1 class="text-[#1a91f0] text-[47px] leading-[57px] font-bold mb-2 text-center">Legal Documents</h1>
+		<div class="text-[19px] leading-7 mb-10 text-center text-[#1e2532]">All documents were updated<br>on July 20, 2022
+		</div>
+		<div class="flex cursor-pointer gap-16">
+			<div *ngFor="let tab of tabs">
+				<a [href]="tab.route" routerLinkActive="active"
+					class="text-[#828ba2] text-[15px] p-[10px] text-center leading-5 hover:text-[#1a91f0]">{{tab.name}}</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div>
+	hello world
+</div>
+<router-outlet></router-outlet>
