@@ -29,7 +29,7 @@
               "jspdf",
               "dompurify"
             ],
-            "outputPath": "dist/",
+            "outputPath": "public/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -62,7 +62,8 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/create-resume/"
             },
             "development": {
               "optimization": false,
