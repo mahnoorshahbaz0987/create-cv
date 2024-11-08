@@ -1,25 +1,42 @@
-image: node:16-alpine
-cache:
-  paths:
-    - node_modules/
+# image: node:16-alpine
+# cache:
+#   paths:
+#     - node_modules/
 
-before_script:
-   npm install
+# before_script:
+#    npm install
 
-build:
-  stage: build
-  script:
-    - npm run build --configuration production --output-path=dist
-  artifacts:
-    paths:
-      - dist/
+# build:
+#   stage: build
+#   script:
+#     - npm run build --configuration production --output-path=dist
+#   artifacts:
+#     paths:
+#       - dist/
 
-pages:
-  stage: deploy
-  script:
-    - mv dist public
-  artifacts:
-    paths:
-      - public
-  only:
-    - main
+# pages:
+#   stage: deploy
+#   script:
+#     - mv dist public
+#   artifacts:
+#     paths:
+#       - public
+#   only:
+#     - main
+stages:
+   - Build
+   - Test
+Build:
+  image: alpine
+  stage: Build
+  script: |
+        mkdir Build
+        cd Build
+        touch Build.txt
+Test:
+  image: alpine
+  stage: Test
+  script: |
+        mkdir Test
+        cd Test
+        touch Test.txt
