@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -24,7 +23,6 @@ import { CreateResumeComponent } from './create-resume/create-resume.component';
 import { TosComponent } from './tos/tos.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { TabsComponent } from './tabs/tabs.component';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
 
@@ -55,8 +53,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
+    BrowserAnimationsModule,
     MatTabsModule,
-    SlickCarouselModule,
     FormsModule
   ],
   providers: [
