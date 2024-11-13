@@ -23,11 +23,19 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "optimization": {
+              "scripts": true,
+              "styles": true,
+              "fonts": true
+            },
             "allowedCommonJsDependencies": [
-              "canvg",
+              "raf",
+              "rgbcolor",
               "html2canvas",
+              "dompurify",
               "jspdf",
-              "dompurify"
+              "core-js",
+               "canvg"
             ],
             "outputPath": "public/",
             "index": "src/index.html",
