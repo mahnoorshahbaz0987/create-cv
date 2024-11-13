@@ -61,7 +61,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/create-resume/"
+              "baseHref": "/create-resumes/"
             },
             "development": {
               "optimization": false,
