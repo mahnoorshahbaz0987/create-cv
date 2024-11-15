@@ -35,7 +35,7 @@
               "dompurify",
               "jspdf",
               "core-js",
-               "canvg"
+              "canvg"
             ],
             "outputPath": "public/",
             "index": "src/index.html",

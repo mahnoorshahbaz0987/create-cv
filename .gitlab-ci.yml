@@ -17,11 +17,11 @@ build:
   artifacts:
     paths:
       - public/
-
+      expire_in: 1 week
 pages:
   stage: deploy
   script:
-    - cp -r public/* public/
+     - echo "Deploying GitLab Pages"
   artifacts:
     paths:
       - public/
