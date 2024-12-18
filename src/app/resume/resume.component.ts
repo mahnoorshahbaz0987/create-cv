@@ -109,21 +109,21 @@ export class ResumeComponent {
       { label: 'Cover letters', text: 'Our cover letter builder works with the same ease and use of elegant templates as the resume creator.' },
     ];
     this.featuresImg = [
-      { position: '0 0' },
-      { position: '-450px 0' },
+      { position: '0 0',width: '106px' },
+      { position: '-450px 0', width: '132px' },
       { position: '-215px 0' },
-      { position: '-116px 0' },
-      { position: '-336px 0' },
-      { position: '-168px 0' },
-      { position: '-283px 0' },
-      { position: '-392px 0' },
-      { position: '-56px 0' },
+      { position: '-116px 0', width: '133px' },
+      { position: '-336px 0', width: '136px' },
+      { position: '-168px 0', width: '136px' },
+      { position: '-283px 0', width: '136px' },
+      { position: '-392px 0', width: '136px' },
+      { position: '-56px 0', width: '136px' },
     ];
     this.logos = [
-      { position: '0 -44px' },
+      { position: '0 -44px', marginLeft: '65px' },
       { position: '0 -22px', marginLeft: '-32px' },
-      { position: '0 -94px', height: '32px', marginLeft: '0px', marginTop: '11px' },
-      { position: '0 -66px', height: '28px', marginLeft: '25px' },
+      { position: '0 -94px', height: '32px', marginLeft: '3px', marginTop: '11px' },
+      { position: '0 -66px', height: '28px', marginLeft: '30px' },
       { position: '0 0', marginLeft: '25px' },
     ]
     this.stars = [
@@ -142,18 +142,27 @@ export class ResumeComponent {
     ]
    
     this.questionsAndAnswers = [
-      { question: 'How can I use resume.io for free?', answer: 'Resume.io has a few different tools you can use 100% for free without entering any credit card details.', showAnswer: false },
-      { question: 'How can I customize my resume?', answer: 'Our resume templates are designed to adapt to your content and look great across all of our designs.', showAnswer: false },
-      { question: 'Can I download my resume to Word or PDF?', answer: 'Once your resume is ready there are a number of ways you can export your resumes or cover letters to start applying for jobs. You can download a PDF, DOCX(Word), or TXT file of your resume either directly from your Dashboard or from the Resume Editor.', showAnswer: false },
-      { question: 'How do I cancel, downgrade or delete my account?', answer: 'You can cancel a Resume.io subscription right from our website without even logging into the app. To do that visit our Contact Us page here and then click the "Cancel Subscription" option from the menu.', showAnswer: false },
+      { question: 'What is the definition of a resume?', answer: 'A resume is a concise document that summarizes your work experience, education, skills, qualities, and accomplishments. It’s used to showcase your qualifications to potential employers and helps you stand out. It tells employers why you deserve a job interview in one or two powerful pages. ', showAnswer: false },
+      { question: 'What is the difference between a CV and a resume?', answer: 'In the U.S. and elsewhere around the world, the terms "CV" and "resume" are often used in the same way. However, there are some differences. A resume is typically shorter, highlighting relevant skills and experience for a specific job. A CV (curriculum vitae) is more detailed, focusing on your entire career. For most U.S. job applications, a resume is the preferred format. ', showAnswer: false },
+      { question: 'How do I choose the right resume template?', answer: "To choose the right resume template, consider the job you're applying for and your industry. If you're in a creative field, a more visually appealing template might be best. For traditional industries like finance or law, stick to a clean, professional layout. Ensure the template is easy to read, highlights your strengths, and aligns with your experience level. Avoid overloading it with too many graphics or colors that could distract from your qualifications. Choosing the best resume format for the template is also important: Chronological (or reverse chronological) - Most popular: Lists jobs in reverse order, starting with the most recent. Ideal for those with a consistent career track. Functional (skills-based): Highlights skills over chronological work history, perfect for career changers or those with employment gaps. Combination (hybrid): Merges elements of both chronological and functional formats, listing skills followed by employment history. Great for experienced professionals with varied transferable skills relevant to the job. Review our field-tested resume templates or job-specific resume examples to help pick the ideal template for you or change your template on the fly in the builder.", showAnswer: false },
+      { question: 'How far back should a resume go?', answer: "A resume should typically go back 10-15 years, focusing on the most recent and relevant experience, and not necessarily all your previous jobs. Older jobs may be summarized briefly or left out if they aren't relevant to the position you're applying for. The goal is to highlight your most valuable skills and accomplishments without overwhelming the reader by making your resume too long.", showAnswer: false },
+      { question: 'What does an ATS-friendly resume mean?', answer: "An ATS-friendly resume is designed to pass through the Applicant Tracking Systems, which employers use to screen resumes, especially for roles with lots of applicants. To make your resume ATS-friendly, use a simple, clean format without complex designs or graphics, include relevant keywords from the job description, and use standard fonts. Avoid tables, images, or unusual file formats, and save your resume as a .docx or PDF to ensure compatibility. Use our specially designed ATS resume templates to create the strictest ATS-friendly resume, approved by resume.io career experts. ", showAnswer: false },
+      { question: 'What resume file format can I download in?', answer: "While you can’t download it directly in Google Docs format, you can download certain resumes in the .docx file and easily upload them to Google Drive, where you can open and edit them in Google Docs. Both .docx and PDF formats are widely accepted for job applications. View how to download in various formats in the resume builder.", showAnswer: false },
+      { question: 'Is it worth paying for a resume builder?', answer: "Yes. Paying for the resume builder offers several advantages. Our free resume builder comes with the Vancouver template, and it's a good start if you have zero budget. However, paid features unlock professional templates, advanced customization, and AI-powered suggestions. All of these increase your chances of getting hired. Your job application is only as strong as your weakest link. The free features are a great starting point, but if you're not getting as many interviews as you would like, perhaps it’s time to make a small investment in your future career.", showAnswer: false },
+      { question: 'Should I make a different resume for every job application?', answer: "Yes, it's essential to tailor your resume for every job application. Tailored resumes are directly relevant to the job description. This impresses recruiters. Customize your resume by highlighting the skills, experiences, and accomplishments most relevant to the specific job. This increases your chances of standing out and showing employers you're a great fit for their position. However, you don't need to start from scratch; just tweak key sections to match the job description. With our resume builder, you can easily duplicate existing resumes, paste the new job listing link, and receive tailored advice to help you update your resume to match the specific job requirements. ", showAnswer: false },
+      { question: 'What makes resume.io the best resume builder?', answer: "Resume.io stands out for two reasons. Firstly, we’re a market leader. We’ve been refining the builder for more than 10 years; it’s fast, effective, and creates strong resumes that win interviews. Our AI resume builder makes it easy to produce mistake-free resumes that highlight your strengths and align with industry standards. They’re exactly what recruiters want to see. Secondly (and this is a big one, your resume is just the start. With every resume, you get free access to more than 18 powerful career tools like job search, interview preparation, and salary analysis. ", showAnswer: false },
+
     ];
+    
 
   };
   ngOnInit() {
     // this.updateVisibleReviews();
     this.combinedFeatures = this.features.map((feature: any, index: any) => {
       const imgPosition = this.featuresImg[index] ? this.featuresImg[index].position : '0 0';
-      return { ...feature, imgPosition, imgUrl: '/assets/Imgs/features_sprite.svg' };
+      const imgWidth = this.featuresImg[index] && this.featuresImg[index].width ? this.featuresImg[index].width : '105px';
+
+      return { ...feature, imgPosition, imgWidth, imgUrl: '/assets/Imgs/features_sprite.svg' };
     });
     this.combinedLogo = this.logos.map((logo: any, index: any) => {
       const imgPosition = this.logos[index] ? this.logos[index].position : '0 0';

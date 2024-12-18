@@ -25,6 +25,7 @@ import { PrivacyComponent } from './privacy/privacy.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
+import { SwiperSliderComponent } from './swiper-slider/swiper-slider.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { FormsModule } from '@angular/forms';
     PrivacyComponent,
     TabsComponent,
     ProfileComponent,
+    SwiperSliderComponent,
 
   ],
   imports: [
@@ -55,7 +57,7 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
     provideAnimationsAsync()

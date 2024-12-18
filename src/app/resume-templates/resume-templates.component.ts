@@ -57,9 +57,6 @@ export class ResumeTemplatesComponent {
   @ViewChild('content45', { static: false }) el45!: ElementRef;
   @ViewChild('content46', { static: false }) el46!: ElementRef;
   @ViewChild('content47', { static: false }) el47!: ElementRef;
- 
-
-
 
   name: string;
   title: string;
@@ -103,7 +100,7 @@ export class ResumeTemplatesComponent {
         company: "Cinnova Technologies L.L.C, Lahore, Pakistan",
         startDate: new Date('Jun, 2021'),
         endDate: null,
-        requirements30: [
+        requirements: [
           'Thriving at Cinnove Technologies as a full-stack developer and leading the entire project with (Angular, Ionic, NodeJs with serverless, PSQL, Tailwind CSS) expertise and dedication'
         ]
       },
@@ -112,7 +109,7 @@ export class ResumeTemplatesComponent {
         company: "Codility, lahore, Pakistan",
         startDate: new Date("Jan, 2019"),
         endDate: new Date("May, 2021"),
-        requirements30: [
+        requirements: [
           'Joined Codility Solutions as a front-end engineer, elevated to a full-stack developer role, excelling in Angular, React, and Node.js. Took on leadership responsibilities, managing the front-end team and delivering stellar performance as a lead developer.'
         ]
       },
@@ -121,7 +118,7 @@ export class ResumeTemplatesComponent {
         company: "Jfreaks, Lahore, Pakistan",
         startDate: new Date("Mar, 2016"),
         endDate: new Date("Dec, 2018"),
-        requirements30: [
+        requirements: [
           'Joined JFreaks as a front-end developer, maximized the opportunity by mastering a diverse skill set, including Grails, Angular, HTML5, CSS3, PSD to CSS conversion, Bootstrap, Materialized CSS and advanced Git techniques.'
         ]
       }
@@ -192,32 +189,39 @@ export class ResumeTemplatesComponent {
     console.log(skills);
     console.log(profileExperience);
     console.log(savedProjects);
-    this.Profile = profileExperience;
-    this.Details = nameData;
-    this.name = nameData.name;
-    this.title = nameData.title;
-    this.skills = skills;
-    this.profileImg = profilePicture;
-    this.projects = savedProjects;
-    this.employements = savedExperience.map((exp: any) => {
-      return {
-        ...exp,
-        startDate: exp.startDate ? new Date(exp.startDate) : null,
-        endDate: exp.endDate ? new Date(exp.endDate) : null,
-        requirements: typeof exp.requirements === 'string' ? exp.requirements.split('\n') : []
-      };
-    });
-    this.educations = savedEducations.map((exp: any) => {
-      return {
-        ...exp,
-        startDate: exp.startDate ? new Date(exp.startDate) : null,
-        endDate: exp.endDate ? new Date(exp.endDate) : null,
-        institution: exp.institution,
-        degree: exp.degree,
-        location: exp.location,
-      };
-    });
-    this.languages = selectedLanguages;
+
+    if (Object.keys(nameData).length > 0) {
+      this.Details = nameData;
+      this.name = nameData.name || this.name;
+      this.title = nameData.title || this.title;
+    }
+
+    this.profileImg = profilePicture || this.profileImg;
+    this.Profile = profileExperience || this.Profile;
+    this.skills = skills.length > 0 ? skills : this.skills;
+    this.projects = savedProjects.length > 0 ? savedProjects : this.projects;
+
+    this.employements =
+      savedExperience.length > 0
+        ? savedExperience.map((exp: any) => ({
+          ...exp,
+          startDate: exp.startDate ? new Date(exp.startDate) : null,
+          endDate: exp.endDate ? new Date(exp.endDate) : null,
+          requirements: typeof exp.requirements === 'string' ? exp.requirements.split('\n') : [],
+        }))
+        : this.employements;
+
+    this.educations =
+      savedEducations.length > 0
+        ? savedEducations.map((edu: any) => ({
+          ...edu,
+          startDate: edu.startDate ? new Date(edu.startDate) : null,
+          endDate: edu.endDate ? new Date(edu.endDate) : null,
+        }))
+        : this.educations;
+
+    this.languages = selectedLanguages.length > 0 ? selectedLanguages : this.languages;
+
   }
 
   getDots(percentage: number): boolean[] {

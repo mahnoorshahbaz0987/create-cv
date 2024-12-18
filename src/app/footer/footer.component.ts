@@ -23,7 +23,6 @@ export class FooterComponent {
   companies: any = [
     {name:'About Us'},
     {name:'Pricing'},
-    {name:'Product Updates'},
     {name:'Sponsorship Program'},
     {name:'Media Kit'},
     {name:'Affiliates'}
@@ -33,6 +32,7 @@ export class FooterComponent {
     {name:'Contact Us'},
     {name:'Terms of Service'},
     {name:'Privacy'},
-    {name:'Right of Withdrawal'}
+    {name:'Right of Withdrawal'},
+    {name:'Do not sell, do not share'}
   ];
 }
