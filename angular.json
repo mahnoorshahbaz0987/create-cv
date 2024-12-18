@@ -37,7 +37,7 @@
               "core-js",
               "canvg"
             ],
-            "outputPath": "dist/",
+            "outputPath": "dist/Angular_pdf",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
