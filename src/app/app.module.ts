@@ -26,6 +26,7 @@ import { TabsComponent } from './tabs/tabs.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { SwiperSliderComponent } from './swiper-slider/swiper-slider.component';
+import { ATSComponent } from './ats/ats.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { SwiperSliderComponent } from './swiper-slider/swiper-slider.component';
     TabsComponent,
     ProfileComponent,
     SwiperSliderComponent,
+    ATSComponent,
 
   ],
   imports: [

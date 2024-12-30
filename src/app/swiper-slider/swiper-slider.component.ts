@@ -37,7 +37,7 @@ export class SwiperSliderComponent  implements AfterViewInit {
   ngAfterViewInit() {
     new Swiper('.swiper-container', {
       modules: [Navigation],
-      spaceBetween: 10, // Space between slides
+      spaceBetween: 470, // Space between slides
       loop: true, // Enable looping of slides
       centeredSlides: true, // Center the active slide
       slidesPerView: 3, // Adjust number of visible slides

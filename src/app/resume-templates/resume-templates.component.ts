@@ -70,8 +70,10 @@ export class ResumeTemplatesComponent {
   educations: any = [];
   maxDots = 5;
   maxDots1 = 10;
-
+  headingText: string = 'Job-winning resume templates';
+  
   constructor(private router: Router) {
+
     // Templates Data
     this.name = 'sarah amelia';
     this.title = 'grapics designer';

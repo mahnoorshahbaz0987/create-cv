@@ -15,6 +15,8 @@ import { TemplatesComponent } from './templates/templates.component';
 import { TosComponent } from './tos/tos.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { ProfileComponent } from './profile/profile.component';
+import { TabsComponent } from './tabs/tabs.component';
+import { ATSComponent } from './ats/ats.component';
 
 const routes: Routes = [
   { path: 'resume.io', component: ResumeComponent },
@@ -27,14 +29,17 @@ const routes: Routes = [
   {path:'resume.io/profile', component:ProfileComponent},
   { path: 'resume.io/app', component: ResumeAppComponent },
   {
-    path: 'resume.io/resume-templates', component: ResumeTemplatesComponent },
-    // children: [
-      { path: 'resume.io/resume-templates/simple', component: SimpleComponent },
-      { path: 'resume.io/resume-templates/creative', component: CreativeComponent },
-      { path: 'resume.io/resume-templates/modern', component: ModernComponent },
-      { path: 'resume.io/resume-templates/professional', component: ProfessionalComponent },
-    // ]
-  // },
+    path: 'resume.io/resume-templates', 
+    component: ResumeTemplatesComponent,
+    children: [
+      { path: 'resume.io/resume-templates', redirectTo: 'resume.io/resume-templates', pathMatch: 'full' }, // Default child route
+      { path: 'simple', component: SimpleComponent }, 
+      {path: 'ats', component: ATSComponent },
+      {path: 'modern', component:ModernComponent },
+      { path: 'professional', component: ProfessionalComponent },
+      { path: 'creative', component: CreativeComponent },
+    ]
+  },
   { path: 'resume.io/resume-builder', component: ResumeBuilderComponent },
 ];
 

@@ -1,17 +1,20 @@
-<div class="swiper-container relative w-full h-[400px]">
+<div class="swiper-container relative w-full overflow-hidden h-[400px] mt-14">
   <button
-    class="swiper-button-prev bg-[#1a91f0] flex items-center justify-center h-[48px] w-[48px] absolute z-[2] rounded-full text-white p-5 cursor-pointer left-[330px]">
-    &#10094;
+    class="swiper-button-prev !left-[330px] after:!text-[12px] after:!font-extrabold bg-[#1a91f0] flex items-center justify-center  !h-[48px] !w-[48px] absolute z-[2] rounded-full !text-white p-5 cursor-pointer">
   </button>
   <div class="swiper-wrapper flex justify-center">
     <div class="swiper-slide" *ngFor="let template of templates; let i = index" [class.active]="i === currentIndex">
       <h3 class="text-center mt-2">{{ template.name | titlecase }}</h3>
-      <img class=" h-[428px] object-cover" [src]="template.imageUrl" [alt]="template.name" />
-      
+      <!-- <img class="w-full h-[428px] object-cover" [src]="template.imageUrl" [alt]="template.name" /> -->
+      <a
+      class="block absolute w-[560px] h-[400px] bg-cover bg-[50%_0] shadow-[0_16px_36px_rgba(15,20,31,0.08),0_24px_60px_rgba(15,20,31,0.08)]"
+      [href]="'/app/create-resume?template=' + template.name"
+      [style.backgroundImage]="'url(' + template.imageUrl + ')'"
+      [attr.alt]="template.name">
+    </a>
     </div>
   </div>
   <button
-    class="swiper-button-next bg-[#1a91f0] flex items-center justify-center h-[48px] w-[48px] absolute z-[2] rounded-full text-white p-5 cursor-pointer right-[330px]">
-    &#10095;
+    class="swiper-button-next !right-[330px] after:!text-[12px] after:!font-extrabold bg-[#1a91f0] flex items-center justify-center !h-[48px] !w-[48px] absolute z-[2] rounded-full !text-white p-5 cursor-pointer">
   </button>
 </div>
