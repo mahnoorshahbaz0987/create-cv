@@ -1,4 +1,4 @@
-<div class="bg-[#0f141e] h-[full] pb-12 font-[system-ui]">
+<!-- <div class="bg-[#0f141e] h-[full] pb-12 font-[system-ui]">
 	<div class="px-11 mx-[25px] pt-24">
 		<div class="flex">
 			<div class="w-80">
@@ -99,4 +99,106 @@
 			</div>
 		</div>
 	</div>
+</div> -->
+<div class="bg-[#0f141e] pb-12 font-[system-ui]">
+  <div class="px-4 sm:px-6 md:px-11 mx-4 pt-8 sm:pt-12 md:pt-24">
+    <div class="flex flex-col md:flex-row max-md:flex-col">
+      <!-- Social Media Section -->
+      <div class="w-full md:w-80 mb-8 md:mb-0 max-md:text-center">
+        <p class="text-white text-xl w-full sm:w-[148px] mb-[10px] max-md:mb-4">
+          Connect with us on social media
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center max-md:justify-center">
+          <div class="h-10 w-10 rounded-full bg-[#1e2532] text-white hover:bg-blue-600 cursor-pointer">
+            <a href="https://nl.linkedin.com/company/resume-io" target="_blank">
+              <img class="w-6 pt-2 ml-2" src="assets/Imgs/linkedin.svg">
+            </a>
+          </div>
+          <div class="h-10 w-10 rounded-full bg-[#1e2532] hover:bg-white cursor-pointer">
+            <a href="https://www.youtube.com/@resumeio" target="_blank">
+              <svg class="mt-[7px] ml-[7px] fill-white hover:fill-red-600" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                <path clip-rule="evenodd"
+                      d="m22.59 19.04c.45-.4.75-.92.87-1.5.32-1.83.5-3.68.54-5.54 0-1.86-.19-3.71-.54-5.54a2.75 2.75 0 0 0 -.87-1.5 3.08 3.08 0 0 0 -1.64-.74 66.5 66.5 0 0 0 -17.96 0c-.61.08-1.19.34-1.64.74s-.75.92-.87 1.5a30.72 30.72 0 0 0 -.48 5.54c0 1.86.15 3.71.48 5.54.12.58.42 1.1.87 1.5s1.03.66 1.64.74a66.5 66.5 0 0 0 17.96 0 3.08 3.08 0 0 0 1.64-.74zm-5.83-7.04-7.18-3.92v7.84z"
+                      fill-rule="evenodd"></path>
+              </svg>
+            </a>
+          </div>
+          <!-- Other Social Media Icons -->
+          <div class="h-10 w-10 rounded-full bg-[#1e2532] text-white hover:bg-rose-600 cursor-pointer">
+            <a href="https://nl.pinterest.com/resumeio/" target="_blank">
+              <img class="w-6 pt-2 ml-2" src="assets/Imgs/pint.svg">
+            </a>
+          </div>
+          <div class="h-10 w-10 rounded-full bg-[#1e2532] text-white hover:bg-gradient-to-r from-[#ed634a] to-[#ba46a5] cursor-pointer">
+            <a href="https://www.instagram.com/resume.io/" target="_blank">
+              <img class="w-6 pt-2 ml-2" src="assets/Imgs/instagram.svg">
+            </a>
+          </div>
+          <div class="h-10 w-10 rounded-full bg-[#1e2532] text-white hover:bg-blue-800 cursor-pointer">
+            <a href="https://www.facebook.com/resume.io/" target="_blank">
+              <img class="w-6 pt-2 ml-2" src="assets/Imgs/facebook.svg">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Links Section -->
+      <div class="flex flex-col sm:flex-row w-full md:ml-8 max-md:mt-8">
+        <div class="mb-6 sm:mb-0 max-md:text-center">
+          <p class="text-[#303848] uppercase text-[12px] font-semibold mb-2 tracking-[2px]">Job Seekers</p>
+          <ul *ngFor="let seeker of seekers">
+            <li class="text-white mb-[30px] cursor-pointer text-[14px] hover:text-blue-600">
+              <a [routerLink]="[seeker.route]">{{seeker.name}}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="sm:ml-12 mb-6 sm:mb-0 max-md:text-center">
+          <p class="text-[#303848] uppercase text-[12px] font-semibold mb-2 tracking-[2px]">Career Resources</p>
+          <ul *ngFor="let career of careers">
+            <li class="text-white mb-[30px] cursor-pointer text-[14px] hover:text-blue-600">
+              <a [routerLink]="[career.route]">{{career.name}}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="sm:ml-12 mb-6 sm:mb-0 max-md:text-center">
+          <p class="text-[#303848] uppercase text-[12px] font-semibold mb-2 tracking-[2px]">Our Company</p>
+          <ul *ngFor="let company of companies">
+            <li class="text-white mb-[30px] cursor-pointer text-[14px] hover:text-blue-600">
+              <a [routerLink]="[company.route]">{{company.name}}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="sm:ml-12 max-md:text-center">
+          <p class="text-[#303848] uppercase text-[12px] font-semibold mb-2 tracking-[2px]">Support</p>
+          <ul *ngFor="let support of supports">
+            <li class="text-white mb-[30px] cursor-pointer text-[14px] hover:text-blue-600">
+              <a [routerLink]="[support.route]">{{support.name}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="flex flex-col md:flex-row mt-8 items-center md:justify-between max-md:text-center">
+      <div class="text-center md:text-left">
+        <a class="text-white text-[15px] flex items-center justify-center md:justify-start mb-1 hover:text-blue-600">
+          <img class="w-[22px] h-[15px] mr-2" src="assets/Imgs/en.png">
+          International
+        </a>
+        <p class="text-[#495163] text-xs tracking-[.3px]">Copyright 2024 - Resume.io</p>
+      </div>
+      <a href="https://parwcc.com/" class="cursor-pointer">
+        <img class="my-4 md:my-0" src="assets/Imgs/cprw.webp">
+      </a>
+      <div class="text-sm text-[#656e83] text-center md:text-right mt-4 md:mt-0">
+        More than a resume. Resume.io is a part of 
+        <svg xmlns="http://www.w3.org/2000/svg" width="96" height="24" viewBox="0 0 96 24" fill="none">
+          <path d="M9.3 2.69922C4.16376 2.69922 0 6.86298 0 11.9992C0 17.1355 4.16376 21.2992 9.3 21.2992V2.69922Z" fill="#2F8DEB"></path>
+          <circle cx="19.4992" cy="11.9992" r="9.3" fill="#A0D6FA"></circle>
+          <!-- Add paths for the logo -->
+        </svg>
+      </div>
+    </div>
+  </div>
 </div>

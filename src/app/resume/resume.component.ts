@@ -27,21 +27,18 @@ export class ResumeComponent {
 
   currentIndex = 0;
   getDisplayedReviews() {
-    // Return the current set of 3 reviews
     return this.reviews.slice(this.currentIndex, this.currentIndex + 3);
   }
 
   nextSlide() {
-    this.currentIndex = (this.currentIndex + 3) % this.reviews.length; // Move to the next group of 3
+    this.currentIndex = (this.currentIndex + 3) % this.reviews.length; 
   }
 
   prevSlide() {
-    this.currentIndex = (this.currentIndex - 3 + this.reviews.length) % this.reviews.length; // Move to the previous group of 3
+    this.currentIndex = (this.currentIndex - 3 + this.reviews.length) % this.reviews.length; 
   }
 
  
-  
-  
   reviews:any[] = [
     {
       title: 'Platform is very helpful and intuitive', text: 'Platform is very helpful and intuitive. Many features and one on one assistance available. Ai available to help you with your descriptions.', label: 'C.T • about 9 hours ago'
@@ -120,11 +117,12 @@ export class ResumeComponent {
       { position: '-56px 0', width: '136px' },
     ];
     this.logos = [
-      { position: '0 -44px', marginLeft: '65px' },
-      { position: '0 -22px', marginLeft: '-32px' },
-      { position: '0 -94px', height: '32px', marginLeft: '3px', marginTop: '11px' },
-      { position: '0 -66px', height: '28px', marginLeft: '30px' },
-      { position: '0 0', marginLeft: '25px' },
+      {url: 'assets/Imgs/booking.svg', alt:'booking'},
+      {url: 'assets/Imgs/apple.svg', alt:'apple'},
+      {url: 'assets/Imgs/dhl.svg', alt:'dhl'},
+      {url: 'assets/Imgs/amazon.svg', alt:'amazon'},
+      {url: 'assets/Imgs/accenture.svg', alt:'accenture'},
+      {url: 'assets/Imgs/americanexpress.svg', alt:'americanexpress'},
     ]
     this.stars = [
       'assets/star.svg',
@@ -162,14 +160,7 @@ export class ResumeComponent {
       const imgPosition = this.featuresImg[index] ? this.featuresImg[index].position : '0 0';
       const imgWidth = this.featuresImg[index] && this.featuresImg[index].width ? this.featuresImg[index].width : '105px';
 
-      return { ...feature, imgPosition, imgWidth, imgUrl: '/assets/Imgs/features_sprite.svg' };
-    });
-    this.combinedLogo = this.logos.map((logo: any, index: any) => {
-      const imgPosition = this.logos[index] ? this.logos[index].position : '0 0';
-      const imgHeight = this.logos[index] && this.logos[index].height ? this.logos[index].height : '22px';
-      const imgLeft = this.logos[index] && this.logos[index].marginLeft ? this.logos[index].marginLeft : '22px';
-      const imgTop = this.logos[index] && this.logos[index].marginTop ? this.logos[index].marginTop : '0px';
-      return { ...logo, imgPosition, imgHeight, imgLeft, imgTop, imgUrl: '/assets/Imgs/logos.webp' };
+      return { ...feature, imgPosition, imgWidth, imgUrl: 'assets/Imgs/features_sprite.svg' };
     });
     this.startTabProgression();
   }

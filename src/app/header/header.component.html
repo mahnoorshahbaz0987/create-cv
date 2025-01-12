@@ -1,11 +1,10 @@
-<header class="bg-white h-20 fixed top-0 w-[100%] z-20 max-md:h-52 " [ngClass]="{'hidden': isNavbarHidden}"
-	[ngClass]="{'-translate-y-full': isNavbarHidden, 'transition-transform': !isNavbarHidden}">
-	<div class="pl-[31px] pr-[31px] pt-[17px] flex justify-between items-center max-md:pt-[52px] max-md:pl-[70px]">
+<header class="bg-white h-20 fixed top-0 w-[100%] z-20 max-md:h-[68px] ">
+	<div class="pl-[31px] pr-[31px] pt-[17px] flex justify-between items-center max-md:pt-[18px] max-md:pl-[23px]">
 		<a routerLink="/resume.io">
-			<img class="w-28 cursor-pointer max-md:w-80" [src]="logoImg">
+			<img class="w-28 cursor-pointer max-md:w-[96px]" [src]="logoImg">
 		</a>
-		<div class="flex">
-			<mat-icon class="text-[100px]">menu</mat-icon>
+
+		<div class="flex">  
 			<ul
 				class="flex text-[#7a7a7a] text-[17px] font-[sans-serif] font-normal items-center cursor-pointer max-md:hidden">
 				<li

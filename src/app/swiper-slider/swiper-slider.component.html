@@ -7,7 +7,7 @@
       <h3 class="text-center mt-2">{{ template.name | titlecase }}</h3>
       <!-- <img class="w-full h-[428px] object-cover" [src]="template.imageUrl" [alt]="template.name" /> -->
       <a
-      class="block absolute w-[560px] h-[400px] bg-cover bg-[50%_0] shadow-[0_16px_36px_rgba(15,20,31,0.08),0_24px_60px_rgba(15,20,31,0.08)]"
+      class="block absolute w-[560px] h-[400px] max-md:w-[304px] max-md:ml-[206px] max-md:bg-[50%_0] bg-cover bg-[50%_0] shadow-[0_16px_36px_rgba(15,20,31,0.08),0_24px_60px_rgba(15,20,31,0.08)]"
       [href]="'/app/create-resume?template=' + template.name"
       [style.backgroundImage]="'url(' + template.imageUrl + ')'"
       [attr.alt]="template.name">

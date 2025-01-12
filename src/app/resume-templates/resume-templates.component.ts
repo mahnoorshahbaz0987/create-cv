@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 
@@ -70,7 +70,7 @@ export class ResumeTemplatesComponent {
   educations: any = [];
   maxDots = 5;
   maxDots1 = 10;
-  headingText: string = 'Job-winning resume templates';
+  @Input()headingText: string = 'Job-winning resume templates';
   
   constructor(private router: Router) {
 
@@ -169,9 +169,9 @@ export class ResumeTemplatesComponent {
       },
     ]
     this.languages = [
-      { language: 'English', level: 100 },
-      { language: 'Spanish', level: 50 },
-      { language: 'French', level: 80 },
+      { language: 'English', percentage: 100 },
+      { language: 'Spanish', percentage: 50 },
+      { language: 'French', percentage: 80 },
 
     ];
   }

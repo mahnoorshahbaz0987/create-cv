@@ -1,8 +1,10 @@
-<div class="font-inherit mt-36 text-center">
-	<h1 class="text-[49px] max-w-[570px] mx-auto font-bold leading-[52px] text-[#1e2532] mt-9">
+<div class="overflow-hidden">
+<div class="font-inherit mt-36 text-center max-md:mt-28">
+	<h1
+		class="text-[49px] max-w-[570px] mx-auto font-bold leading-[52px] text-[#1e2532] mt-9 max-md:text-[33px] max-md:leading-[32px]">
 		{{headingText}}
 	</h1>
-	<p class="max-w-[671px] text-[17px] mx-auto text-[#1e2532] font-normal mt-4">
+	<p class="max-w-[671px] text-[17px] mx-auto text-[#1e2532] font-normal mt-4 max-md:text-[16px] max-md:px-[7px]">
 		Each resume template is designed to follow the exact rules you need to get hired faster. Use our resume
 		templates and get free access to 18 more career tools!
 	</p>
@@ -13,44 +15,46 @@
 	</div>
 </div>
 <div>
-	<div class="flex justify-center mt-[70px] max-w-[1260px] ml-[55px]">
+	<div class="flex justify-center mt-[70px] max-w-[1260px] ml-[55px] max-md:mt-3 max-md:ml-0">
 		<app-tabs></app-tabs>
 	</div>
 	<!-- Template-1 -->
 	<div class="mt-20 mb-20">
-		<div class="pl-[250px] pr-[250px]">
+		<div class="pl-[250px] pr-[250px] max-md:px-2">
 			<div #content1 class="border max-w-[1000px] h-[100%]">
 				<div>
 					<div class="bg-pink-200">
 						<div class="flex">
-							<div class="p-5">
-								<img class="rounded-full border-8 border-white h-64 w-64" [src]="profileImg">
+							<div class="p-5 max-md:p-3">
+								<img
+									class="rounded-full border-8 border-white h-64 w-64 max-md:border-7 max-md:w-[108px] max-md:h-[108px] "
+									[src]="profileImg">
 							</div>
-							<div class="mt-24 px-4">
-								<h1 class="uppercase text-[38px] font-medium">{{name}}</h1>
-								<p class="capitalize text-center ml-[25px] tracking-widest">{{title}}</p>
+							<div class="mt-24 px-4 max-md:mt-10 max-md:px-1">
+								<h1 class="uppercase text-[38px] font-medium max-md:text-[20px]">{{name}}</h1>
+								<p class="capitalize text-center ml-[25px] tracking-widest max-md:text-[13px] max-md:ml-0">{{title}}</p>
 							</div>
 						</div>
 					</div>
 					<div class="flex">
-						<div class="w-[35%]">
-							<div class="bg-pink-400 pb-10 h-[100%] px-10 pt-10">
-								<h1 class="text-2xl font-semibold text-white font-[cursive] mb-2">Contacts</h1>
-								<div class="text-white text-[14px] text-justify">
+						<div class="w-[35%] max-md:w-[35%]">
+							<div class="bg-pink-400 pb-10 h-[100%] px-10 pt-10 max-md:px-2">
+								<h1 class="text-2xl font-semibold text-white font-[cursive] mb-2 max-md:text-base">Contacts</h1>
+								<div class="text-white text-[14px] text-justify max-md:text-[13px]">
 									<p>{{ Details.address }}</p>
 									<p>{{ Details.city }}</p>
 									<p>{{ Details.phone }}</p>
 									<p>{{ Details.email }}</p>
 								</div>
-								<h1 class="text-2xl text-white font-semibold font-[cursive] mt-7 mb-1">Skills</h1>
+								<h1 class="text-2xl text-white font-semibold font-[cursive] mt-7 mb-1 max-md:text-base">Skills</h1>
 								<div class="text-justify  text-white text-sm" *ngFor="let skill of skills">
-									<h3 class="text-[13px] leading-[32px]">{{ skill.name }}</h3>
+									<h3 class="text-[13px] leading-[32px] max-md:text-[13px]">{{ skill.name }}</h3>
 									<div class="w-[90%] h-[5px] rounded bg-gray-300">
 										<div class="h-[100%] bg-white rounded" [style.width.%]="skill.percentage">
 										</div>
 									</div>
 								</div>
-								<h1 class="text-2xl text-white font-semibold font-[cursive] mt-7 mb-1">Language</h1>
+								<h1 class="text-2xl text-white font-semibold font-[cursive] mt-7 mb-1 max-md:text-base">Language</h1>
 								<div class="text-justify  text-white text-sm" *ngFor="let language of languages">
 									<h3 class="text-[13px] leading-[32px]">{{ language.language }}</h3>
 									<div class="w-[90%] h-[5px] rounded bg-gray-300">
@@ -60,19 +64,18 @@
 								</div>
 							</div>
 						</div>
-						<div class="w-[65%] pt-7 pl-6 pr-5 pb-10">
-							<h1 class="font-semibold text-2xl text-pink-400 font-[cursive] mb-2">Profile</h1>
-							<p>{{Profile}}</p>
-							<h1 class="font-semibold text-2xl text-pink-400 font-[cursive] mt-6 mb-2">Employement
+						<div class="w-[65%] pt-7 pl-6 pr-5 pb-10 max-md:w-[65%] max-md:px-2">
+							<h1 class="font-semibold text-2xl text-pink-400 font-[cursive] mb-2 max-md:text-base">Profile</h1>
+							<p class="max-md:text-[13px]">{{Profile}}</p>
+							<h1 class="font-semibold text-2xl text-pink-400 font-[cursive] mt-6 mb-2 max-md:text-base">Employement
 								History</h1>
 							<div class="mb-4" *ngFor="let employement of employements">
-								<h2 class="font-semibold text-[15px]">{{ employement.company }}</h2>
+								<h2 class="font-semibold text-[15px] max-md:text-[13px]">{{ employement.company }}</h2>
 								<p class="text-slate-400 text-[11px] mt-1 tracking-widest">{{
 									formatDate(employement.startDate) }} -
 									{{ formatDate(employement.endDate) }}</p>
 								<ul *ngFor="let requirement of employement.requirements">
-									<li class="text-sm ml-5 flex mt-2"><span
-											class="text-[19px] mr-[6px] mt-[-1px]">•</span> {{
+									<li class="text-sm ml-5 flex mt-2 max-md:text-[13px]"><span class="text-[19px] mr-[6px] mt-[-1px]">•</span> {{
 										requirement }}
 									</li>
 								</ul>
@@ -86,9 +89,11 @@
 			<button class="p-5 bg-purple-600 text-white rounded-xl" (click)="onDownload(el1)">Download CV</button>
 		</div>
 
+
+
 		<!-- Template-2 -->
 		<div class="mt-20 mb-20">
-			<div #content2 class="flex max-w-[800px] h-[100%] border border-gray-300 ml-auto mr-auto">
+			<div #content2 class="flex max-w-[800px] h-[100%] border border-gray-300 ml-auto mr-auto ">
 				<div class="w-[35%] bg-[#145748]  text-white">
 					<div class="text-center">
 						<div class="flex justify-center">
@@ -96,13 +101,13 @@
 						</div>
 						<h1 class="text-xl font-semibold font-serif">{{ name }}</h1>
 						<div class="flex justify-center">
-							<p class="border-b-2 border-b-slate-500  w-5 mt-4"></p>
+							<p class="border-b-2 border-b-slate-500 w-5 mt-2"></p>
 						</div>
-						<p class="text-slate-300 text-[10px] tracking-[1px] mt-4 text-center">{{title}}
+						<p class="text-slate-300 text-[10px] tracking-[1px] mt-2 text-center">{{title}}
 						</p>
 					</div>
 
-					<div class="px-[50px]">
+					<div class="px-[30px]">
 						<h1 class="text-[16px] font-serif mt-7 mb-1">Details</h1>
 						<div class="text-slate-300 text-[13px] text-justify">
 							<p>{{ Details.address }}</p>
@@ -113,7 +118,7 @@
 						<h1 class="text-[16px] font-serif mt-7 mb-1">Skills</h1>
 						<div class="text-justify text-slate-300 text-sm" *ngFor="let skill of skills">
 							<h3 class="text-[13px] leading-[34px]">{{ skill.name }}</h3>
-							<div class="w-[112%] h-[4px] rounded bg-gray-400">
+							<div class="w-[100%] h-[4px] rounded bg-gray-400">
 								<div class="h-[100%] bg-white rounded" [style.width.%]="skill.percentage"></div>
 							</div>
 						</div>
@@ -145,7 +150,7 @@
 
 		<!-- Template-3 -->
 		<div class="mt-20 mb-20">
-			<div class="pl-[250px] pr-[250px]">
+			<div class="pl-[250px] pr-[250px] max-md:px-2">
 				<div #content3 class="border max-w-[1000px] h-[100%]">
 					<div class="bg-fuchsia-600 h-[140px]">
 						<div class="flex ml-[35px]">
@@ -205,8 +210,7 @@
 										formatDate(employement.startDate) }} -
 										{{ formatDate(employement.endDate) }}</p>
 									<ul *ngFor="let requirement of employement.requirements">
-										<li class="text-sm ml-5 flex mt-2"><span
-												class="text-[19px] mr-[6px] mt-[-3px]">•</span> {{
+										<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span> {{
 											requirement }}
 										</li>
 									</ul>
@@ -223,7 +227,7 @@
 
 		<!-- Template-4 -->
 		<div class="mt-20 mb-20">
-			<div class="pl-[250px] pr-[250px]">
+			<div class="pl-[250px] pr-[250px] max-md:px-2">
 				<div #content4 class="border max-w-[1000px] h-[100%] pb-8">
 					<div class="bg-red-600 h-64">
 						<div class="flex">
@@ -236,10 +240,10 @@
 								<img class=" h-44 w-44 rounded-full" [src]="profileImg">
 							</div>
 						</div>
-						<div class="text-[13px] text-white ml-[53px] flex">
+						<div class="text-[13px] text-white mx-[40px] flex">
 							<p class="mt-3 flex"><mat-icon class="text-lg mt-[-5px]"
 									style="width: 26px; height: 100px;">phone</mat-icon>{{ Details.phone }}</p>
-							<p class="mx-24 mt-3 flex"><mat-icon class="text-lg mt-[-5px] h-[100px] w-[26px]"
+							<p class="mx-14 mt-3 flex"><mat-icon class="text-lg mt-[-5px] h-[100px] w-[26px]"
 									style="width: 26px; height: 100px;">location_on</mat-icon>{{ Details.address
 								}}</p>
 							<p class=" mt-3 flex"><mat-icon class="text-lg mt-[-5px] h-[100px] w-[26px]"
@@ -297,8 +301,7 @@
 									<div class="text-justify   text-sm" *ngFor="let language of languages">
 										<h3 class="text-[13px] leading-[32px]">{{ language.language }}</h3>
 										<div class="w-[170px] h-[7px] rounded bg-gray-300">
-											<div class="h-[100%] bg-red-400 rounded"
-												[style.width.%]="language.percentage"></div>
+											<div class="h-[100%] bg-red-400 rounded" [style.width.%]="language.percentage"></div>
 										</div>
 									</div>
 								</div>
@@ -314,10 +317,10 @@
 
 		<!-- Template-5 -->
 		<div class="mt-20 mb-20">
-			<div class="pl-[250px] pr-[250px]">
-				<div #content5 class="border max-w-[1000px] h-[100%]">
+			<div class="pl-[250px] pr-[250px] max-md:px-2">
+				<div #content5 class="border max-w-[1000px] h-[100%] pb-10">
 					<div class="pt-7 bg-[#fff0f5]">
-						<div class="ml-[342px] ">
+						<div class="flex justify-center">
 							<img class=" h-40 w-40 border-8 border-[#ffd6e4] rounded-full" [src]="profileImg">
 						</div>
 						<div class="text-center">
@@ -339,8 +342,7 @@
 									formatDate(employement.startDate) }} -
 									{{ formatDate(employement.endDate) }}</p>
 								<ul *ngFor="let requirement of employement.requirements">
-									<li class="text-sm ml-5 flex mt-2"><span
-											class="text-[19px] mr-[6px] mt-[-3px]">•</span> {{
+									<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span> {{
 										requirement }}
 									</li>
 								</ul>
@@ -354,17 +356,14 @@
 									{{ formatDate(education.endDate) }}</p>
 							</div>
 						</div>
-						<div class="w-[35%] h-[1109px] pl-9 pr-9 pt-7">
+						<div class="w-[35%] pl-9 pr-9 pt-7">
 							<h1 class="text-xl font-bold mb-3 font-[system-ui] text-[#f3427d]">Contacts</h1>
 							<div class="text-[13px] text-justify">
-								<p class="mb-[6px] flex gap-[7px]"><mat-icon
-										class="text-[19px] text-[#f3427d]">location_on</mat-icon>{{
+								<p class="mb-[6px] flex gap-[7px]"><mat-icon class="text-[19px] text-[#f3427d]">location_on</mat-icon>{{
 									Details.address }}</p>
-								<p class="mb-[6px] flex gap-[3px]"><mat-icon
-										class="text-[19px] text-[#f3427d]">mail</mat-icon>{{
+								<p class="mb-[6px] flex gap-[3px]"><mat-icon class="text-[19px] text-[#f3427d]">mail</mat-icon>{{
 									Details.email }}</p>
-								<p class="mb-[6px] flex gap-[3px]"><mat-icon
-										class="text-[19px] text-[#f3427d]">phone</mat-icon>{{
+								<p class="mb-[6px] flex gap-[3px]"><mat-icon class="text-[19px] text-[#f3427d]">phone</mat-icon>{{
 									Details.phone }}</p>
 							</div>
 							<h1 class="text-xl font-bold mb-3 font-[system-ui] mt-5 text-[#f3427d]">Skills</h1>
@@ -396,22 +395,18 @@
 
 		<!-- Template-6 -->
 		<div class="mt-20 mb-20">
-			<div class="pl-[250px] pr-[250px]">
+			<div class="pl-[250px] pr-[250px] max-md:px-2">
 				<div #content6 class="border max-w-[1000px] h-[100%] bg-black pb-[25px]">
 					<div class="flex">
-						<div class="h-[345px] w-[390px] rounded-br-[401px] bg-[#ffd700]">
+						<div class="z-[1] h-[345px] w-[390px] rounded-br-[401px] bg-[#ffd700]">
 							<div class="pt-[35px]">
-								<img class="ml-[154px] h-64 w-64 border-8 border-[#a9a9a9] rounded-full"
-									[src]="profileImg">
+								<img class="ml-[130px] h-64 w-64 border-8 border-[#a9a9a9] rounded-full" [src]="profileImg">
 							</div>
 						</div>
-						<div
-							class="border-8 border-[#a9a9a9] w-[421px] h-40 rounded-r-[99px] mt-[85px] border-l-0 ml-[-10px]">
-							<h1
-								class="uppercase text-[38px] font-medium mb-1 mt-6 text-[#ffd700] text-center font-[sans-serif]">
+						<div class="mr-8 border-8 border-[#a9a9a9] w-[421px] h-40 rounded-r-[99px] mt-[85px] border-l-0">
+							<h1 class="uppercase text-[38px] font-medium mb-1 mt-6 text-[#ffd700] text-center font-[sans-serif]">
 								{{name}}</h1>
-							<p
-								class="text-[#adadad] text-center text-lg font-medium leading-4 tracking-[1px] font-serif pb-8">
+							<p class="text-[#adadad] text-center text-lg font-medium leading-4 tracking-[1px] font-serif pb-8">
 								{{title}}
 							</p>
 						</div>
@@ -468,29 +463,18 @@
 										</div>
 									</div>
 								</div>
-								<!-- <div>
-									<h1 class="font-bold uppercase text-xl mb-3 font-[cursive] mt-5 text-[#ffd700]">Education</h1>
-									<div class="mb-3 mt-2" *ngFor="let education6 of educations6">
-										<h2 class="font-semibold text-[15px] text-white">{{ education.name }}</h2>
-									<h3 class="text-[14px] text-[#ffd700]">{{education.degree}}</h3>
-										<p class="text-[#a9a9a9] text-[11px] mt-1 tracking-widest">{{ formatDate(education.startDate) }} -
-											{{ formatDate(education.endDate) }}</p>
-									</div>
-								</div> -->
 							</div>
 						</div>
 						<div>
 							<div class="mt-5">
 								<h1 class="text-xl font-bold uppercase mb-3 font-[cursive] text-[#ffd700]">Contacts</h1>
-								<div class="text-[13px] text-justify text-white flex gap-28">
+								<div class="text-[13px] text-justify text-white flex gap-14">
 									<p class="mb-[6px] flex gap-[3px]"><mat-icon
 											class="text-[19px] text-[#ffd700]">location_on</mat-icon>{{
 										Details.address }}</p>
-									<p class="mb-[6px] flex gap-[3px]"><mat-icon
-											class="text-[19px] text-[#ffd700]">mail</mat-icon>{{
+									<p class="mb-[6px] flex gap-[3px]"><mat-icon class="text-[19px] text-[#ffd700]">mail</mat-icon>{{
 										Details.email }}</p>
-									<p class="mb-[6px] flex gap-[3px]"><mat-icon
-											class="text-[19px] text-[#ffd700]">phone</mat-icon>{{
+									<p class="mb-[6px] flex gap-[3px]"><mat-icon class="text-[19px] text-[#ffd700]">phone</mat-icon>{{
 										Details.phone }}</p>
 								</div>
 							</div>
@@ -505,16 +489,14 @@
 
 		<!-- Template-7 -->
 		<div class="mt-20 mb-20">
-			<div class="pl-[250px] pr-[250px]">
+			<div class="pl-[250px] pr-[250px] max-md:px-2">
 				<div #content7 class="border max-w-[1000px] h-[100%]">
 					<div class="flex">
 						<div class="w-[65%]">
 							<div class="bg-[#a52a2a] mt-6">
-								<h1
-									class="uppercase text-[38px] font-medium mb-1 text-white text-center font-[sans-serif]">
+								<h1 class="uppercase text-[38px] font-medium mb-1 text-white text-center font-[sans-serif]">
 									{{name}}</h1>
-								<p
-									class="text-[#e9e9e9] text-center text-lg font-medium leading-4 tracking-[1px] font-serif pb-8">
+								<p class="text-[#e9e9e9] text-center text-lg font-medium leading-4 tracking-[1px] font-serif pb-8">
 									{{title}}
 								</p>
 							</div>
@@ -530,8 +512,7 @@
 										'Present' }}
 									</p>
 									<ul *ngFor="let requirement of employement.requirements">
-										<li class="text-sm ml-5 flex mt-2"><span
-												class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+										<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 											{{
 											requirement }}
 										</li>
@@ -557,21 +538,18 @@
 							</div>
 						</div>
 						<div class="w-[35%] h-[100%px] bg-[#fd7515]">
-							<div class="ml-[28px] mt-5">
+							<div class="px-4 mt-5">
 								<img class="h-[260px] border-[7px] border-white w-60" [src]="profileImg">
 							</div>
-							<div class="pl-[29px] pr-[29px] mt-6">
+							<div class="px-[16px] mt-6">
 								<h1 class="text-lg font-bold uppercase text-white mb-3">Contacts</h1>
 								<div class="text-[13px] text-justify text-white">
 									<div class="text-[13px] text-justify text-white gap-14">
-										<p class="mb-[6px] flex gap-[3px]"><mat-icon
-												class="text-[19px]">location_on</mat-icon>{{
+										<p class="mb-[6px] flex gap-[3px]"><mat-icon class="text-[19px]">location_on</mat-icon>{{
 											Details.address }}</p>
-										<p class="mb-[6px] flex gap-[3px]"><mat-icon
-												class="text-[19px]">mail</mat-icon>{{ Details.email }}
+										<p class="mb-[6px] flex gap-[3px]"><mat-icon class="text-[19px]">mail</mat-icon>{{ Details.email }}
 										</p>
-										<p class="mb-[6px] flex gap-[3px]"><mat-icon
-												class="text-[19px]">phone</mat-icon>{{ Details.phone
+										<p class="mb-[6px] flex gap-[3px]"><mat-icon class="text-[19px]">phone</mat-icon>{{ Details.phone
 											}}</p>
 									</div>
 								</div>
@@ -611,7 +589,7 @@
 
 		<!-- Template-8 -->
 		<div class="mt-20 mb-20">
-			<div class="pl-[250px] pr-[250px]">
+			<div class="pl-[250px] pr-[250px] max-md:px-2">
 				<div #content8 class="border max-w-[1000px] h-[100%] pb-10">
 					<div class="mt-4 border-l-[10px] border-r-[10px] border-[#ff1493]">
 						<div class="flex justify-center">
@@ -625,8 +603,7 @@
 						<div class="mb-2">
 							<div class="text-[13px] text-justify text-[#ff1493] pt-2 px-9">
 								<div class="text-[13px] flex text-justify gap-10 text-[#ff1493]">
-									<p class="mb-[6px] flex gap-[3px]"><mat-icon
-											class="text-[19px]">location_on</mat-icon>{{
+									<p class="mb-[6px] flex gap-[3px]"><mat-icon class="text-[19px]">location_on</mat-icon>{{
 										Details.address }}</p>
 									<p class="mb-[6px] flex gap-[3px]"><mat-icon class="text-[19px]">mail</mat-icon>{{
 										Details.email }}
@@ -649,8 +626,7 @@
 									formatDate(employement.startDate) }} -
 									{{ formatDate(employement.endDate) }}</p>
 								<ul *ngFor="let requirement of employement.requirements">
-									<li class="text-sm ml-5 flex mt-2"><span
-											class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+									<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 										{{ requirement }}
 									</li>
 								</ul>
@@ -696,11 +672,10 @@
 
 		<!-- Template-9 -->
 		<div class="mt-20 mb-20">
-			<div class="pl-[250px] pr-[250px]">
+			<div class="pl-[250px] pr-[250px] max-md:px-2">
 				<div #content9 class="border max-w-[1000px] h-[100%] pb-10">
 					<div class="flex justify-center mt-2">
-						<img class="h-[139px] border-[5px] border-[#4f9eff] rounded-md mt-2 font-semibold w-32"
-							[src]="profileImg">
+						<img class="h-[139px] border-[5px] border-[#4f9eff] rounded-md mt-2 font-semibold w-32" [src]="profileImg">
 					</div>
 					<div class="text-center mt-3">
 						<h1 class="uppercase text-[40px] text-[#4f9eff] font-bold text-center">{{name}}</h1>
@@ -712,14 +687,11 @@
 						<div>
 							<h1 class="text-xl font-bold mb-3 text-[#4f9eff]">Contacts</h1>
 							<div class="text-[13px] text-justify flex gap-14">
-								<p class="mb-[6px] flex gap-[3px]"><mat-icon
-										class="text-[19px] text-[#4f9eff]">location_on</mat-icon>{{
+								<p class="mb-[6px] flex gap-[3px]"><mat-icon class="text-[19px] text-[#4f9eff]">location_on</mat-icon>{{
 									Details.address }}</p>
-								<p class="mb-[6px] flex gap-[3px]"><mat-icon
-										class="text-[19px] text-[#4f9eff]">mail</mat-icon>{{
+								<p class="mb-[6px] flex gap-[3px]"><mat-icon class="text-[19px] text-[#4f9eff]">mail</mat-icon>{{
 									Details.email }}</p>
-								<p class="mb-[6px] flex gap-[3px]"><mat-icon
-										class="text-[19px] text-[#4f9eff]">phone</mat-icon>{{
+								<p class="mb-[6px] flex gap-[3px]"><mat-icon class="text-[19px] text-[#4f9eff]">phone</mat-icon>{{
 									Details.phone }}</p>
 							</div>
 							<div>
@@ -734,8 +706,7 @@
 										formatDate(employement.startDate) }} -
 										{{ formatDate(employement.endDate) }}</p>
 									<ul *ngFor="let requirement of employement.requirements">
-										<li class="text-sm ml-5 flex mt-2"><span
-												class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+										<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 											{{ requirement}}
 										</li>
 									</ul>
@@ -754,8 +725,7 @@
 										</ul>
 									</div>
 									<div class="w-[100%] h-[6px] bg-[#c9c9c9] rounded-full">
-										<div class="h-[100%] bg-[#4f9eff] rounded-full"
-											[style.width.%]="skill.percentage"></div>
+										<div class="h-[100%] bg-[#4f9eff] rounded-full" [style.width.%]="skill.percentage"></div>
 									</div>
 								</div>
 							</div>
@@ -782,7 +752,7 @@
 
 			<!-- Template-10 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content10 class="border max-w-[1000px] h-[100%]">
 						<div class="flex bg-[#ff7f50]">
 							<div class="pt-3 pb-3 pl-10">
@@ -796,14 +766,11 @@
 						</div>
 						<div class="px-14 py-3 border-b">
 							<div class="text-[13px] text-justify flex gap-14">
-								<p class="mb-[6px] flex gap-[3px]"><mat-icon
-										class="text-[19px] text-[#ff7f50]">location_on</mat-icon>{{
+								<p class="mb-[6px] flex gap-[3px]"><mat-icon class="text-[19px] text-[#ff7f50]">location_on</mat-icon>{{
 									Details.address }}</p>
-								<p class="mb-[6px] flex gap-[3px]"><mat-icon
-										class="text-[19px] text-[#ff7f50]">mail</mat-icon>{{
+								<p class="mb-[6px] flex gap-[3px]"><mat-icon class="text-[19px] text-[#ff7f50]">mail</mat-icon>{{
 									Details.email }}</p>
-								<p class="mb-[6px] flex gap-[3px]"><mat-icon
-										class="text-[19px] text-[#ff7f50]">phone</mat-icon>{{
+								<p class="mb-[6px] flex gap-[3px]"><mat-icon class="text-[19px] text-[#ff7f50]">phone</mat-icon>{{
 									Details.phone }}</p>
 							</div>
 						</div>
@@ -823,8 +790,7 @@
 											-
 											{{ formatDate(employement.endDate) }}</p>
 										<ul *ngFor="let requirement of employement.requirements">
-											<li class="text-sm ml-5 flex mt-2"><span
-													class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+											<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 												{{ requirement }}
 											</li>
 										</ul>
@@ -856,8 +822,7 @@
 											</ul>
 										</div>
 										<div class="w-[100%] h-[6px] bg-[#c9c9c9] rounded-full">
-											<div class="h-[100%] bg-[#ff7f50] rounded-full"
-												[style.width.%]="skill.percentage"></div>
+											<div class="h-[100%] bg-[#ff7f50] rounded-full" [style.width.%]="skill.percentage"></div>
 										</div>
 									</div>
 								</div>
@@ -868,8 +833,7 @@
 											<h3 class="text-[13px] leading-[36px]">{{ language.language }}</h3>
 										</div>
 										<div class="w-[100%] h-[6px] rounded-full bg-[#c9c9c9]">
-											<div class="h-[100%] bg-[#ff7f50] rounded-full"
-												[style.width.%]="language.percentage"></div>
+											<div class="h-[100%] bg-[#ff7f50] rounded-full" [style.width.%]="language.percentage"></div>
 										</div>
 									</div>
 								</div>
@@ -884,10 +848,10 @@
 
 			<!-- Template-11 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
-					<div #content11 class="border max-w-[1000px] h-[1250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
+					<div #content11 class="border max-w-[1000px] h-[100%]">
 						<div class="flex">
-							<div class="w-[75%]">
+							<div class="w-[75%] pb-10">
 
 								<div class="flex">
 									<img class="h-[129px] rounded-full mt-6 ml-5 font-semibold w-32" [src]="profileImg">
@@ -912,8 +876,7 @@
 												-
 												{{ formatDate(employement.endDate) }}</p>
 											<ul *ngFor="let requirement of employement.requirements">
-												<li class="text-sm ml-5 flex mt-2"><span
-														class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+												<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 													{{ requirement }}
 												</li>
 											</ul>
@@ -934,18 +897,15 @@
 									</div>
 								</div>
 							</div>
-							<div class="w-[35%] bg-[#dd00d6] h-[1248px] px-6 pt-10">
+							<div class="w-[35%] bg-[#dd00d6] pb-10 px-6 pt-10">
 								<div>
 									<h1 class="text-xl font-bold mb-3 uppercase text-white">Contacts</h1>
 									<div class="text-[13px] text-justify text-white">
-										<p class="mb-[7px] flex gap-[7px]"><mat-icon
-												class="text-[19px]">location_on</mat-icon>{{
+										<p class="mb-[7px] flex gap-[7px]"><mat-icon class="text-[19px]">location_on</mat-icon>{{
 											Details.address }}</p>
-										<p class="mb-[7px] flex gap-[3px]"><mat-icon
-												class="text-[19px]">mail</mat-icon>{{
+										<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px]">mail</mat-icon>{{
 											Details.email }}</p>
-										<p class="mb-[7px] flex gap-[3px]"><mat-icon
-												class="text-[19px]">phone</mat-icon>{{
+										<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px]">phone</mat-icon>{{
 											Details.phone }}</p>
 									</div>
 								</div>
@@ -960,8 +920,7 @@
 											</ul>
 										</div>
 										<div class="w-[100%] h-[6px] bg-[#c9c9c9] rounded-full">
-											<div class="h-[100%] bg-white rounded-full"
-												[style.width.%]="skill.percentage"></div>
+											<div class="h-[100%] bg-white rounded-full" [style.width.%]="skill.percentage"></div>
 										</div>
 									</div>
 								</div>
@@ -972,8 +931,7 @@
 											<h3 class="text-[13px] leading-[36px]">{{ language.language }}</h3>
 										</div>
 										<div class="w-[100%] h-[6px] rounded-full bg-[#c9c9c9]">
-											<div class="h-[100%] bg-white rounded-full"
-												[style.width.%]="language.percentage"></div>
+											<div class="h-[100%] bg-white rounded-full" [style.width.%]="language.percentage"></div>
 										</div>
 									</div>
 								</div>
@@ -987,7 +945,7 @@
 			</div>
 			<!-- Template-12 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content12 class="border max-w-[1000px] h-[100%] pb-10">
 						<div class="text-justify flex gap-[193px] mt-7 ml-2 px-6">
 							<div class="">
@@ -996,8 +954,7 @@
 							</div>
 							<div>
 								<div class="text-[13px] text-justify mt-3 text-[#ff1b66]">
-									<p class="mb-[7px] flex gap-[4px]"><mat-icon
-											class="text-[19px]">location_on</mat-icon>{{
+									<p class="mb-[7px] flex gap-[4px]"><mat-icon class="text-[19px]">location_on</mat-icon>{{
 										Details.address }}</p>
 									<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px]">mail</mat-icon>{{
 										Details.email }}</p>
@@ -1019,8 +976,7 @@
 										<div class="">
 											<h2 class="font-semibold text-[#ff1b66] text-[15px]">{{
 												employement.company }}</h2>
-											<p
-												class="text-[#ff1b66] float-right text-[11px] mt-[-21px] tracking-widest">
+											<p class="text-[#ff1b66] float-right text-[11px] mt-[-21px] tracking-widest">
 												{{
 												formatDate(employement.startDate)
 												}}
@@ -1028,8 +984,7 @@
 												{{ formatDate(employement.endDate) }}</p>
 										</div>
 										<ul *ngFor="let requirement of employement.requirements">
-											<li class="text-sm ml-5 flex mt-2"><span
-													class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+											<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 												{{ requirement }}
 											</li>
 										</ul>
@@ -1057,8 +1012,7 @@
 												</ul>
 											</div>
 											<div class="w-[110%] h-[6px] bg-[#c9c9c9] rounded-full">
-												<div class="h-[100%] bg-[#ff558d] rounded-full"
-													[style.width.%]="skill.percentage"></div>
+												<div class="h-[100%] bg-[#ff558d] rounded-full" [style.width.%]="skill.percentage"></div>
 											</div>
 										</div>
 									</div>
@@ -1069,8 +1023,7 @@
 												<h3 class="text-[13px] leading-[36px]">{{ language.language }}</h3>
 											</div>
 											<div class="w-[110%] h-[6px] rounded-full bg-[#c9c9c9]">
-												<div class="h-[100%] bg-[#ff558d] rounded-full"
-													[style.width.%]="language.percentage"></div>
+												<div class="h-[100%] bg-[#ff558d] rounded-full" [style.width.%]="language.percentage"></div>
 											</div>
 										</div>
 									</div>
@@ -1085,7 +1038,7 @@
 			</div>
 			<!-- Template-13 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content13 class="border max-w-[1000px] h-[100%]">
 						<div class="flex">
 							<div class="w-[40%] bg-[#6495ed] pb-10">
@@ -1096,14 +1049,11 @@
 									<div>
 										<h1 class="text-xl font-bold mb-3 capitalize text-white">Contacts</h1>
 										<div class="text-[13px] text-justify text-white">
-											<p class="mb-[7px] flex gap-[7px]"><mat-icon
-													class="text-[19px]">location_on</mat-icon>{{
+											<p class="mb-[7px] flex gap-[7px]"><mat-icon class="text-[19px]">location_on</mat-icon>{{
 												Details.address }}</p>
-											<p class="mb-[7px] flex gap-[3px]"><mat-icon
-													class="text-[19px]">mail</mat-icon>{{
+											<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px]">mail</mat-icon>{{
 												Details.email }}</p>
-											<p class="mb-[7px] flex gap-[3px]"><mat-icon
-													class="text-[19px]">phone</mat-icon>{{
+											<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px]">phone</mat-icon>{{
 												Details.phone }}</p>
 										</div>
 									</div>
@@ -1118,8 +1068,7 @@
 												</ul>
 											</div>
 											<div class="w-[100%] h-[6px] bg-[#c9c9c9] rounded-full">
-												<div class="h-[100%] bg-white rounded-full"
-													[style.width.%]="skill.percentage"></div>
+												<div class="h-[100%] bg-white rounded-full" [style.width.%]="skill.percentage"></div>
 											</div>
 										</div>
 									</div>
@@ -1130,8 +1079,7 @@
 												<h3 class="text-[13px] leading-[36px]">{{ language.language }}</h3>
 											</div>
 											<div class="w-[100%] h-[6px] rounded-full bg-[#c9c9c9]">
-												<div class="h-[100%] bg-white rounded-full"
-													[style.width.%]="language.percentage"></div>
+												<div class="h-[100%] bg-white rounded-full" [style.width.%]="language.percentage"></div>
 											</div>
 										</div>
 									</div>
@@ -1161,8 +1109,7 @@
 													{{ formatDate(employement.endDate) }}</p>
 											</div>
 											<ul *ngFor="let requirement of employement.requirements">
-												<li class="text-sm ml-5 flex mt-2"><span
-														class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+												<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 													{{ requirement }}
 												</li>
 											</ul>
@@ -1172,8 +1119,7 @@
 										<h1 class="font-bold text-xl mb-3 capitalize mt-6 text-[#6495ed]">Education</h1>
 										<div class="mb-3 mt-2" *ngFor="let education of educations">
 											<h2 class="font-semibold text-[15px]">{{ education.degree }}, {{
-												education.insitution }}, {{
-												education.location }}</h2>
+												education.institution }}, {{ education.location }}</h2>
 											<p class="text-slate-400 text-[11px] mt-1 tracking-widest">{{
 												formatDate(education.startDate) }}
 												-
@@ -1192,7 +1138,7 @@
 			</div>
 			<!-- Template-14 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content14 class="border max-w-[1000px] h-[100%] pb-10">
 						<div class="flex px-11 mt-10 gap-[45px]">
 							<div>
@@ -1206,11 +1152,9 @@
 									<p class="mb-[7px] flex"><strong class="text-[17px] font-semibold">Address</strong>
 										<span class="ml-10 mt-[3px]">{{ Details.address }}</span>
 									</p>
-									<p class="mb-[7px] flex"><strong
-											class="text-[17px] font-semibold">Email</strong><span
+									<p class="mb-[7px] flex"><strong class="text-[17px] font-semibold">Email</strong><span
 											class="ml-[64px] mt-[3px]">{{ Details.email }}</span></p>
-									<p class="mb-[7px] flex"><strong
-											class="text-[17px] font-semibold">Number</strong><span
+									<p class="mb-[7px] flex"><strong class="text-[17px] font-semibold">Number</strong><span
 											class="ml-[44px] mt-[3px]">{{ Details.phone }}</span></p>
 								</div>
 							</div>
@@ -1236,8 +1180,7 @@
 											{{ formatDate(employement.endDate) }}</p>
 									</div>
 									<ul *ngFor="let requirement of employement.requirements">
-										<li class="text-sm ml-5 flex mt-2"><span
-												class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+										<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 											{{ requirement }}
 										</li>
 									</ul>
@@ -1283,7 +1226,7 @@
 
 			<!-- Template-15 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content15 class="border max-w-[1000px] h-[100%] pb-10">
 						<div class="flex">
 							<div class="w-[70%] px-8">
@@ -1313,8 +1256,7 @@
 												{{ formatDate(employement.endDate) }}</p>
 										</div>
 										<ul *ngFor="let requirement of employement.requirements">
-											<li class="text-sm ml-5 flex mt-2"><span
-													class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+											<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 												{{ requirement }}
 											</li>
 										</ul>
@@ -1371,7 +1313,7 @@
 
 			<!-- Template-16 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content16 class="border max-w-[1000px] h-[1250px] ">
 						<div class="bg-gradient-to-r from-[#55f7c3] to-[#ff95cadb] h-[240px]">
 							<div class="pt-6 flex justify-center">
@@ -1387,14 +1329,11 @@
 								<div>
 									<h1 class="text-xl font-bold mb-3 capitalize text-white">Contacts Me</h1>
 									<div class="text-[13px] text-justify text-white">
-										<p class="mb-[7px] flex gap-[7px]"><mat-icon
-												class="text-[19px]">location_on</mat-icon>{{
+										<p class="mb-[7px] flex gap-[7px]"><mat-icon class="text-[19px]">location_on</mat-icon>{{
 											Details.address }}</p>
-										<p class="mb-[7px] flex gap-[3px]"><mat-icon
-												class="text-[19px]">mail</mat-icon>{{
+										<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px]">mail</mat-icon>{{
 											Details.email }}</p>
-										<p class="mb-[7px] flex gap-[3px]"><mat-icon
-												class="text-[19px]">phone</mat-icon>{{
+										<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px]">phone</mat-icon>{{
 											Details.phone }}</p>
 									</div>
 								</div>
@@ -1432,8 +1371,7 @@
 												{{ formatDate(employement.endDate) }}</p>
 										</div>
 										<ul *ngFor="let requirement of employement.requirements">
-											<li class="text-sm ml-5 flex mt-2"><span
-													class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+											<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 												{{ requirement }}
 											</li>
 										</ul>
@@ -1461,7 +1399,7 @@
 
 			<!-- Template-17 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content17 class="border max-w-[1000px] h-[100%] pb-10">
 						<div class="text-justify px-8 mt-5">
 							<h1 class="uppercase text-[39px] font-semibold">{{name}}</h1>
@@ -1475,11 +1413,9 @@
 									</p>
 								</div>
 								<div>
-									<p class="mb-[7px] flex"><strong
-											class="text-[17px] font-semibold">Email</strong><span
+									<p class="mb-[7px] flex"><strong class="text-[17px] font-semibold">Email</strong><span
 											class="ml-[53px] mt-[3px] text-[#6495ed]">{{ Details.email }}</span></p>
-									<p class="mb-[7px] flex"><strong
-											class="text-[17px] font-semibold">Phone</strong><span
+									<p class="mb-[7px] flex"><strong class="text-[17px] font-semibold">Phone</strong><span
 											class="ml-[44px] mt-[3px]">{{ Details.phone }}</span></p>
 								</div>
 							</div>
@@ -1505,8 +1441,7 @@
 											{{ formatDate(employement.endDate) }}</p>
 									</div>
 									<ul *ngFor="let requirement of employement.requirements">
-										<li class="text-sm ml-5 flex mt-2"><span
-												class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+										<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 											{{ requirement }}
 										</li>
 									</ul>
@@ -1538,8 +1473,7 @@
 											</ul>
 										</div>
 										<div class="w-[40%] h-[6px] bg-[#c9c9c9] rounded-full">
-											<div class="h-[100%] bg-[#6495ed] rounded-full"
-												[style.width.%]="skill.percentage"></div>
+											<div class="h-[100%] bg-[#6495ed] rounded-full" [style.width.%]="skill.percentage"></div>
 										</div>
 									</div>
 								</div>
@@ -1554,7 +1488,7 @@
 
 			<!-- Template-18 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content18 class="border max-w-[1000px] h-[100%] pb-10">
 						<div class="flex">
 							<div class="w-[35%]">
@@ -1565,14 +1499,11 @@
 									<div class="mt-6">
 										<h1 class="text-xl font-bold mb-3 uppercase text-[#9c27b0bf]">Details</h1>
 										<div class="text-[13px] text-justify">
-											<p class="mb-[7px] flex gap-[7px]"><mat-icon
-													class="text-[19px]">location_on</mat-icon>{{
+											<p class="mb-[7px] flex gap-[7px]"><mat-icon class="text-[19px]">location_on</mat-icon>{{
 												Details.address }}</p>
-											<p class="mb-[7px] flex gap-[3px]"><mat-icon
-													class="text-[19px]">mail</mat-icon>{{
+											<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px]">mail</mat-icon>{{
 												Details.email }}</p>
-											<p class="mb-[7px] flex gap-[3px]"><mat-icon
-													class="text-[19px]">phone</mat-icon>{{
+											<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px]">phone</mat-icon>{{
 												Details.phone }}</p>
 										</div>
 									</div>
@@ -1581,8 +1512,7 @@
 										<div *ngFor="let skill of skills" class="flex flex-col">
 											<span class="font-medium text-[13px] mt-[14px]">{{ skill.name }}</span>
 											<div class="flex space-x-2 mt-[9px]">
-												<ng-container
-													*ngFor="let dot of getDots(skill.percentage); let i = index">
+												<ng-container *ngFor="let dot of getDots(skill.percentage); let i = index">
 													<div
 														[class]="dot ? 'w-[10px] h-[10px] bg-black rounded-full' : 'w-[10px] h-[10px] bg-gray-300 rounded-full'">
 													</div>
@@ -1596,8 +1526,7 @@
 											<span class="font-medium text-[13px] mt-[14px]">{{ language.language
 												}}</span>
 											<div class="flex space-x-2 mt-[9px]">
-												<ng-container
-													*ngFor="let dot of getDots(language.percentage); let i = index">
+												<ng-container *ngFor="let dot of getDots(language.percentage); let i = index">
 													<div
 														[class]="dot ? 'w-[10px] h-[10px] bg-black rounded-full' : 'w-[10px] h-[10px] bg-gray-300 rounded-full'">
 													</div>
@@ -1629,8 +1558,7 @@
 												{{ formatDate(employement.endDate) }}</p>
 										</div>
 										<ul *ngFor="let requirement of employement.requirements">
-											<li class="text-sm ml-5 flex mt-2"><span
-													class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+											<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 												{{ requirement }}
 											</li>
 										</ul>
@@ -1659,7 +1587,7 @@
 
 			<!-- Template-19 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content19 class="border max-w-[1000px] h-[100%] pb-10">
 						<div class="text-center capitalize mt-6 h-[116px] bg-[#ffefcf]">
 							<h1 class="text-[50px] font-semibold font-[cursive]">{{name}}</h1>
@@ -1683,8 +1611,7 @@
 												{{ formatDate(employement.endDate) }}</p>
 										</div>
 										<ul *ngFor="let requirement of employement.requirements">
-											<li class="text-[15px] ml-5 flex mt-2"><span
-													class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+											<li class="text-[15px] ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 												{{ requirement }}
 											</li>
 										</ul>
@@ -1708,11 +1635,9 @@
 										<p class="mb-[7px] flex gap-[7px]"><mat-icon
 												class="text-[19px] text-[#ffde9b]">location_on</mat-icon>{{
 											Details.address }}</p>
-										<p class="mb-[7px] flex gap-[3px]"><mat-icon
-												class="text-[19px] text-[#ffde9b]">mail</mat-icon>{{
+										<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px] text-[#ffde9b]">mail</mat-icon>{{
 											Details.email }}</p>
-										<p class="mb-[7px] flex gap-[3px]"><mat-icon
-												class="text-[19px] text-[#ffde9b]">phone</mat-icon>{{
+										<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px] text-[#ffde9b]">phone</mat-icon>{{
 											Details.phone }}</p>
 									</div>
 								</div>
@@ -1727,8 +1652,7 @@
 											</ul>
 										</div>
 										<div class="w-[80%] h-[6px] bg-[#c9c9c9] rounded-full">
-											<div class="h-[100%] bg-[#ffde9b] rounded-full"
-												[style.width.%]="skill.percentage"></div>
+											<div class="h-[100%] bg-[#ffde9b] rounded-full" [style.width.%]="skill.percentage"></div>
 										</div>
 									</div>
 								</div>
@@ -1739,8 +1663,7 @@
 											<h3 class="text-[14px] leading-[36px]">{{ language.language }}</h3>
 										</div>
 										<div class="w-[80%] h-[6px] rounded-full bg-[#c9c9c9]">
-											<div class="h-[100%] bg-[#ffde9b] rounded-full"
-												[style.width.%]="language.percentage"></div>
+											<div class="h-[100%] bg-[#ffde9b] rounded-full" [style.width.%]="language.percentage"></div>
 										</div>
 									</div>
 								</div>
@@ -1755,7 +1678,7 @@
 
 			<!-- Template-20 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content20 class="border max-w-[1000px] h-[100%]">
 						<div class="flex px-1 gap-[120px] pt-7 bg-[#ff1493] h-[100%] pb-10">
 							<div class="text-white uppercase pl-[39px] mt-[7px]">
@@ -1764,8 +1687,7 @@
 							</div>
 							<div>
 								<div class="text-[14px] text-justify text-white pl-[18px] mt-[23px]">
-									<p class="mb-[7px] flex gap-[7px]"><mat-icon
-											class="text-[19px]">location_on</mat-icon>{{
+									<p class="mb-[7px] flex gap-[7px]"><mat-icon class="text-[19px]">location_on</mat-icon>{{
 										Details.address }}</p>
 									<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px]">mail</mat-icon>{{
 										Details.email }}</p>
@@ -1792,8 +1714,7 @@
 												{{ formatDate(employement.endDate) }}</p>
 										</div>
 										<ul *ngFor="let requirement of employement.requirements">
-											<li class="text-sm ml-5 flex mt-2"><span
-													class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+											<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 												{{ requirement }}
 											</li>
 										</ul>
@@ -1831,8 +1752,7 @@
 									<div *ngFor="let language of languages" class="flex flex-col">
 										<span class="font-medium text-[13px] mt-[14px]">{{ language.language }}</span>
 										<div class="flex space-x-2 mt-[9px] justify-center">
-											<ng-container
-												*ngFor="let dot of getDots(language.percentage); let i = index">
+											<ng-container *ngFor="let dot of getDots(language.percentage); let i = index">
 												<div
 													[class]="dot ? 'w-[10px] h-[10px] bg-[#ff1493] rounded-full' : 'w-[10px] h-[10px] bg-gray-300 rounded-full'">
 												</div>
@@ -1851,7 +1771,7 @@
 
 			<!-- Template-21 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content21 class="border max-w-[1000px] h-[100%] bg-[#403d3d] pb-10">
 						<div class="flex">
 							<div class="w-[30%] bg-[#527c79] pb-14 rounded-t-full rounded-b-full my-7 mx-9">
@@ -1861,14 +1781,11 @@
 								<div class="mt-6 px-7">
 									<h1 class="text-xl font-bold mb-3 capitalize text-white">Details</h1>
 									<div class="text-[13px] text-justify text-white">
-										<p class="mb-[7px] flex gap-[12px]"><mat-icon
-												class="text-[19px]">location_on</mat-icon>{{
+										<p class="mb-[7px] flex gap-[12px]"><mat-icon class="text-[19px]">location_on</mat-icon>{{
 											Details.address }}</p>
-										<p class="mb-[7px] flex gap-[3px]"><mat-icon
-												class="text-[19px]">mail</mat-icon>{{
+										<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px]">mail</mat-icon>{{
 											Details.email }}</p>
-										<p class="mb-[7px] flex gap-[3px]"><mat-icon
-												class="text-[19px]">phone</mat-icon>{{
+										<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px]">phone</mat-icon>{{
 											Details.phone }}</p>
 									</div>
 
@@ -1877,8 +1794,7 @@
 										<div *ngFor="let skill of skills" class="flex flex-col text-white">
 											<span class="font-medium text-[13px] mt-[14px]">{{ skill.name }}</span>
 											<div class="flex space-x-2 mt-[9px]">
-												<ng-container
-													*ngFor="let dot of getDots(skill.percentage); let i = index">
+												<ng-container *ngFor="let dot of getDots(skill.percentage); let i = index">
 													<div
 														[class]="dot ? 'w-[10px] h-[10px] bg-[white] rounded-full' : 'w-[10px] h-[10px] bg-gray-300 rounded-full'">
 													</div>
@@ -1909,8 +1825,7 @@
 												{{ formatDate(employement.endDate) }}</p>
 										</div>
 										<ul *ngFor="let requirement of employement.requirements">
-											<li class="text-sm ml-5 flex mt-2"><span
-													class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+											<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 												{{ requirement}}
 											</li>
 										</ul>
@@ -1937,7 +1852,7 @@
 			</div>
 			<!-- Template-22 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content22 class="border max-w-[1000px] h-[100%] ">
 						<div class="uppercase text-center mt-5 mx-8">
 							<h1 class="text-[35px] font-semibold">{{name}}</h1>
@@ -1949,14 +1864,11 @@
 								<div class="mx-7">
 									<h1 class="font-bold text-xl mb-2 uppercase mt-4">contacts</h1>
 									<div class="text-[14px] text-justify mt-[23px]">
-										<p class="mb-[7px] flex gap-[7px]"><mat-icon
-												class="text-[19px]">location_on</mat-icon>{{
+										<p class="mb-[7px] flex gap-[7px]"><mat-icon class="text-[19px]">location_on</mat-icon>{{
 											Details.address }}</p>
-										<p class="mb-[7px] flex gap-[3px]"><mat-icon
-												class="text-[19px]">mail</mat-icon>{{
+										<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px]">mail</mat-icon>{{
 											Details.email }}</p>
-										<p class="mb-[7px] flex gap-[3px]"><mat-icon
-												class="text-[19px]">phone</mat-icon>{{
+										<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px]">phone</mat-icon>{{
 											Details.phone }}</p>
 									</div>
 									<div class="border-b-[3px] border-[#ebebeb] mt-5"></div>
@@ -1965,8 +1877,7 @@
 										<div *ngFor="let skill of skills" class="flex flex-col">
 											<span class="font-medium text-[13px] mt-[14px]">{{ skill.name }}</span>
 											<div class="flex space-x-2 mt-[9px]">
-												<ng-container
-													*ngFor="let dot of getDots(skill.percentage); let i = index">
+												<ng-container *ngFor="let dot of getDots(skill.percentage); let i = index">
 													<div
 														[class]="dot ? 'w-[10px] h-[10px] bg-[black] rounded-full' : 'w-[10px] h-[10px] bg-gray-300 rounded-full'">
 													</div>
@@ -1997,8 +1908,7 @@
 													{{ formatDate(employement.endDate) }}</p>
 											</div>
 											<ul *ngFor="let requirement of employement.requirements">
-												<li class="text-sm ml-5 flex mt-2"><span
-														class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+												<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 													{{ requirement }}
 												</li>
 											</ul>
@@ -2031,7 +1941,7 @@
 
 			<!-- Template-23 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content23 class="border max-w-[1000px] h-[100%] pb-10 p-3">
 						<div class="h-[120px] w-full bg-[rgb(240,128,128)] rounded-3xl">
 							<div class="text-white uppercase text-center mt-4">
@@ -2064,8 +1974,7 @@
 											{{ formatDate(employement.endDate) }}</p>
 									</div>
 									<ul *ngFor="let requirement of employement.requirements">
-										<li class="text-sm ml-5 flex mt-2"><span
-												class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+										<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 											{{ requirement }}
 										</li>
 									</ul>
@@ -2116,7 +2025,7 @@
 			</div>
 			<!-- Template-24 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content24 class="border max-w-[1000px]">
 						<div class="flex ">
 							<div class="w-[33%] h-[100%] pb-10 bg-[#ffd8a7]">
@@ -2128,23 +2037,19 @@
 											<p class="mb-[7px] flex gap-[7px]"><mat-icon
 													class="text-[19px] text-[#ffb65b]">location_on</mat-icon>{{
 												Details.address }}</p>
-											<p class="mb-[7px] flex gap-[3px]"><mat-icon
-													class="text-[19px] text-[#ffb65b]">mail</mat-icon>{{
+											<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px] text-[#ffb65b]">mail</mat-icon>{{
 												Details.email }}</p>
-											<p class="mb-[7px] flex gap-[3px]"><mat-icon
-													class="text-[19px] text-[#ffb65b]">phone</mat-icon>{{
+											<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px] text-[#ffb65b]">phone</mat-icon>{{
 												Details.phone }}</p>
 										</div>
 									</div>
 									<div class="">
-										<h1
-											class="text-[21px] font-bold uppercase mb-1 mt-7 tracking-[1px] font-[fangsong]">
+										<h1 class="text-[21px] font-bold uppercase mb-1 mt-7 tracking-[1px] font-[fangsong]">
 											Skills</h1>
 										<div *ngFor="let skill of skills" class="flex flex-col">
 											<span class="font-medium text-[13px] mt-[14px]">{{ skill.name }}</span>
 											<div class="flex space-x-2 mt-[9px]">
-												<ng-container
-													*ngFor="let dot of getDots(skill.percentage); let i = index">
+												<ng-container *ngFor="let dot of getDots(skill.percentage); let i = index">
 													<div
 														[class]="dot ? 'w-[10px] h-[10px] bg-[#ffb65b] rounded-full' : 'w-[10px] h-[10px] bg-gray-300 rounded-full'">
 													</div>
@@ -2158,8 +2063,7 @@
 											<span class="font-medium text-[13px] mt-[14px]">{{ language.language
 												}}</span>
 											<div class="flex space-x-2 mt-[9px]">
-												<ng-container
-													*ngFor="let dot of getDots(language.percentage); let i = index">
+												<ng-container *ngFor="let dot of getDots(language.percentage); let i = index">
 													<div
 														[class]="dot ? 'w-[10px] h-[10px] bg-[#ffb65b] rounded-full' : 'w-[10px] h-[10px] bg-gray-300 rounded-full'">
 													</div>
@@ -2176,14 +2080,12 @@
 								</div>
 								<div class="mx-5">
 									<div class="mt-9 text-center">
-										<h1
-											class="font-bold text-[21px] mb-2 uppercase mt-4 tracking-[1px] font-[fangsong]">
+										<h1 class="font-bold text-[21px] mb-2 uppercase mt-4 tracking-[1px] font-[fangsong]">
 											profile</h1>
 										<p class="pb-3 text-[16px] mt-2 text-justify">{{Profile}}</p>
 									</div>
 									<div>
-										<h1
-											class="font-bold uppercase text-[21px] mb-2 mt-4 text-center tracking-[1px] font-[fangsong]">
+										<h1 class="font-bold uppercase text-[21px] mb-2 mt-4 text-center tracking-[1px] font-[fangsong]">
 											Work Experience</h1>
 										<div class="mb-4 mt-2" *ngFor="let employement of employements">
 											<div class="">
@@ -2195,16 +2097,14 @@
 													{{ formatDate(employement.endDate) }}</p>
 											</div>
 											<ul *ngFor="let requirement of employement.requirements">
-												<li class="text-sm ml-5 flex mt-2"><span
-														class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+												<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 													{{ requirement }}
 												</li>
 											</ul>
 										</div>
 									</div>
 									<div>
-										<h1
-											class="font-bold text-[21px] mb-3 uppercase text-center mt-5 tracking-[1px] font-[fangsong]">
+										<h1 class="font-bold text-[21px] mb-3 uppercase text-center mt-5 tracking-[1px] font-[fangsong]">
 											Education</h1>
 										<div class="mb-3 mt-2" *ngFor="let education of educations">
 											<h2 class="font-semibold text-[15px]">{{ education.degree }}, {{
@@ -2228,7 +2128,7 @@
 
 			<!-- Template-25 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content25 class="border max-w-[1000px] h-[100%]">
 						<div class="h-[140px] w-full bg-[#5f9ea0]">
 							<div class="flex">
@@ -2249,11 +2149,9 @@
 										<p class="mb-[7px] flex gap-[14px]"><mat-icon
 												class="text-[19px] text-[#5f9ea0]">location_on</mat-icon>{{
 											Details.address }}</p>
-										<p class="mb-[7px] flex gap-[3px]"><mat-icon
-												class="text-[19px] text-[#5f9ea0]">mail</mat-icon>{{
+										<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px] text-[#5f9ea0]">mail</mat-icon>{{
 											Details.email }}</p>
-										<p class="mb-[7px] flex gap-[3px]"><mat-icon
-												class="text-[19px] text-[#5f9ea0]">phone</mat-icon>{{
+										<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px] text-[#5f9ea0]">phone</mat-icon>{{
 											Details.phone }}</p>
 									</div>
 								</div>
@@ -2291,8 +2189,7 @@
 												{{ formatDate(employement.endDate) }}</p>
 										</div>
 										<ul *ngFor="let requirement of employement.requirements">
-											<li class="text-sm ml-5 flex mt-2"><span
-													class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+											<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 												{{ requirement }}
 											</li>
 										</ul>
@@ -2322,8 +2219,8 @@
 
 			<!-- Template-26 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
-					<div #content26 class="border max-w-[1000px] h-[100%] bg-[#f300ca]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
+					<div #content26 class="border max-w-[1000px] h-[100%] pb-10 bg-[#f300ca]">
 						<div class="flex mt-6">
 							<div class="pl-12">
 								<img class="h-[160px] rounded-full font-semibold w-[160px]" [src]="profileImg">
@@ -2354,8 +2251,7 @@
 												{{ formatDate(employement.endDate) }}</p>
 										</div>
 										<ul *ngFor="let requirement of employement.requirements">
-											<li class="text-sm ml-5 flex mt-2"><span
-													class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+											<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 												{{ requirement }}
 											</li>
 										</ul>
@@ -2375,15 +2271,19 @@
 									</div>
 								</div>
 							</div>
-							<div class="border-l-2 border-white h-[1038px]"></div>
+							<div class="border-l-2 border-white"></div>
 							<div class="w-[30%] pb-10">
 								<div class="px-5 mt-6">
 									<h1 class="text-[21px] font-semibold text-white mb-2">Contacts</h1>
 									<div class="text-white text-[14px] text-justify">
 										<p>{{ Details.address }}</p>
+										<div class="border-b mt-2 mb-2"></div>
 										<p>{{ Details.city }}</p>
+										<div class="border-b mt-2 mb-2"></div>
 										<p>{{ Details.phone }}</p>
+										<div class="border-b mt-2 mb-2"></div>
 										<p>{{ Details.email }}</p>
+										<div class="border-b mt-2 mb-2"></div>
 									</div>
 									<h1 class="text-[21px] text-white font-semibold mt-7 mb-1">Skills</h1>
 									<div class="text-justify  text-white text-sm" *ngFor="let skill of skills">
@@ -2397,13 +2297,13 @@
 									<div class="text-justify  text-white text-sm" *ngFor="let language of languages">
 										<h3 class="text-[13px] leading-[32px]">{{ language.language }}</h3>
 										<div class="w-[90%] h-[5px] rounded bg-gray-300">
-											<div class="h-[100%] bg-white rounded"
-												[style.width.%]="language.percentage"></div>
+											<div class="h-[100%] bg-white rounded" [style.width.%]="language.percentage"></div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+						<div class="border-b-2 border-white"></div>
 					</div>
 				</div>
 			</div>
@@ -2412,12 +2312,13 @@
 			</div>
 			<!-- Template-27 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content27 class="border max-w-[1000px] h-[100%] bg-[#3a3939]">
 						<div class="flex pb-10">
-							<div class="w-[32%]">
+							<div class="w-[35%]">
 								<div class="">
-									<img class="h-[381px] border-[#ff69b4] rounded-bl-[119px] rounded-tr-[119px] border-[11px] font-semibold w-[281px]"
+									<img
+										class="h-[381px] border-[#ff69b4] rounded-bl-[119px] rounded-tr-[119px] border-[11px] font-semibold w-[281px]"
 										[src]="profileImg">
 								</div>
 								<div class="px-[36px] text-white">
@@ -2433,14 +2334,12 @@
 										</div>
 									</div>
 									<div class="">
-										<h1
-											class="text-[21px] font-bold uppercase mb-1 mt-7 tracking-[1px] text-[#ff69b4]">
+										<h1 class="text-[21px] font-bold uppercase mb-1 mt-7 tracking-[1px] text-[#ff69b4]">
 											Skills</h1>
 										<div *ngFor="let skill of skills" class="flex flex-col">
 											<span class="font-medium text-[13px] mt-[14px]">{{ skill.name }}</span>
 											<div class="flex space-x-2 mt-[9px]">
-												<ng-container
-													*ngFor="let dot of getDots1(skill.percentage); let i = index">
+												<ng-container *ngFor="let dot of getDots1(skill.percentage); let i = index">
 													<div
 														[class]="dot ? 'w-[10px] h-[10px] bg-[#ff69b4] rounded-full' : 'w-[10px] h-[10px] bg-gray-300 rounded-full'">
 													</div>
@@ -2454,8 +2353,7 @@
 											<span class="font-medium text-[13px] mt-[14px]">{{ language.language
 												}}</span>
 											<div class="flex space-x-2 mt-[9px]">
-												<ng-container
-													*ngFor="let dot of getDots1(language.percentage); let i = index">
+												<ng-container *ngFor="let dot of getDots1(language.percentage); let i = index">
 													<div
 														[class]="dot ? 'w-[10px] h-[10px] bg-[#ff69b4] rounded-full' : 'w-[10px] h-[10px] bg-gray-300 rounded-full'">
 													</div>
@@ -2465,8 +2363,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="w-[68%]">
-								<div class="text-white border h-[110px] w-[503px] text-center mt-[48px] mx-[36px]">
+							<div class="w-[65%]">
+								<div class="text-white border h-[110px] w-[420px] text-center mt-[48px] px-2 mx-[36px]">
 									<h1 class="text-[40px] font-semibold">{{name}}</h1>
 									<p class="tracking-[2px] font-semibold uppercase">{{title}}</p>
 								</div>
@@ -2476,8 +2374,7 @@
 											{{Profile}}</p>
 									</div>
 									<div class="text-white">
-										<h1
-											class="font-bold uppercase text-[21px] mb-2 mt-8 tracking-[1px] text-[#ff69b4]">
+										<h1 class="font-bold uppercase text-[21px] mb-2 mt-8 tracking-[1px] text-[#ff69b4]">
 											Career Experience</h1>
 										<div class="mb-4 mt-2" *ngFor="let employement of employements">
 											<div class="">
@@ -2489,16 +2386,14 @@
 													{{ formatDate(employement.endDate) }}</p>
 											</div>
 											<ul *ngFor="let requirement of employement.requirements">
-												<li class="text-sm ml-5 flex mt-2"><span
-														class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+												<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 													{{ requirement }}
 												</li>
 											</ul>
 										</div>
 									</div>
 									<div class="text-white">
-										<h1
-											class="font-bold text-[21px] mb-3 uppercase mt-5 tracking-[1px] text-[#ff69b4]">
+										<h1 class="font-bold text-[21px] mb-3 uppercase mt-5 tracking-[1px] text-[#ff69b4]">
 											Education</h1>
 										<div class="mb-3 mt-2" *ngFor="let education of educations">
 											<h2 class="font-semibold text-[15px]">{{ education.degree }}, {{
@@ -2521,7 +2416,7 @@
 			</div>
 			<!-- Template-28 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content28 class="border max-w-[1000px] h-[100%] pb-10">
 						<div class="h-[200px] bg-[#8b008b]">
 							<div class="flex">
@@ -2532,16 +2427,13 @@
 									<h1 class="text-[40px] font-semibold capitalize">{{name}}</h1>
 									<p class="tracking-[2px] font-semibold uppercase">{{title}}</p>
 									<div class="text-[13px] text-justify text-white pt-10">
-										<div class="text-[12px] flex text-justify gap-7 text-white">
-											<p class="mb-[6px] flex gap-[3px]"><mat-icon
-													class="text-[19px]">location_on</mat-icon>{{
+										<div class="text-[12px] flex text-justify gap-4 text-white">
+											<p class="mb-[6px] flex gap-[3px]"><mat-icon class="text-[19px]">location_on</mat-icon>{{
 												Details.address }}</p>
-											<p class="mb-[6px] flex gap-[3px]"><mat-icon
-													class="text-[19px]">mail</mat-icon>{{ Details.email
+											<p class="mb-[6px] flex gap-[3px]"><mat-icon class="text-[19px]">mail</mat-icon>{{ Details.email
 												}}
 											</p>
-											<p class="mb-[6px] flex gap-[3px]"><mat-icon
-													class="text-[19px]">phone</mat-icon>{{
+											<p class="mb-[6px] flex gap-[3px]"><mat-icon class="text-[19px]">phone</mat-icon>{{
 												Details.phone
 												}}</p>
 										</div>
@@ -2570,8 +2462,7 @@
 											{{ formatDate(employement.endDate) }}</p>
 									</div>
 									<ul *ngFor="let requirement of employement.requirements">
-										<li class="text-sm ml-5 flex mt-2"><span
-												class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+										<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 											{{ requirement }}
 										</li>
 									</ul>
@@ -2615,34 +2506,34 @@
 			</div>
 			<!-- Template-29 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content29 class="border max-w-[1000px] h-[100%] pb-10">
-						<div class="px-12 bg-[#f08080] h-[60%] pb-6 text-white">
-							<div class="flex">
+						<div class="px-9 bg-[#f08080] h-[60%] pb-6 text-white">
+							<div class="flex gap-7">
 								<div class="pt-[38px]">
-									<img class="h-[160px] font-semibold w-[155px] rounded-[20px]" [src]="profileImg">
+									<img class="h-[160px] font-semibold w-[220px] rounded-[20px]" [src]="profileImg">
 								</div>
-								<div class="ml-9">
-									<div class="flex border-b-4 border-white mb-2">
-										<div class="mt-[23px] mb-[42px]">
-											<h1 class="text-[35px] font-semibold capitalize">{{name}}</h1>
-											<p class="tracking-[2px] font-semibold uppercase">{{title}}</p>
+								<div class="mx-2 w-[100%]">
+									<div class="flex mb-2">
+										<div class="mt-[39px] mb-[25px]">
+											<h1 class="text-[30px] font-semibold capitalize">{{name}}</h1>
+											<p class="tracking-[2px] text-[14px] font-semibold uppercase">{{title}}</p>
 										</div>
-										<div class="mt-[40px] ml-[142px]">
-											<p class="mb-[6px] text-[15px] font-bold">{{ Details.email }}</p>
-											<p class="mb-[6px] text-[15px] font-bold">{{ Details.phone }}</p>
+										<div class="border-l-4 border-white mt-4 mx-3"></div>
+										<div class="mt-[40px]">
+											<p class="mb-[6px] text-[14px] font-bold">{{ Details.email }}</p>
+											<p class="mb-[6px] text-[14px] font-bold">{{ Details.phone }}</p>
 										</div>
 									</div>
-									<p class="text-[15px]">{{ Details.address }}</p>
+									<div class="border-b-4 border-white"></div>
+									<p class="text-[14px] mt-[20px]">{{ Details.address }}</p>
 								</div>
 							</div>
 							<div class="mt-8">
-								<h1 class="font-semibold text-[24px] mr-[80px] mb-2">Experienced and energetic Marketing
-									Manager with
-									over Five years of experience effectively Managing Marketing projects from
-									conception to completion
-								</h1>
-								<p class="pb-3 text-[15px] mt-2 text-justify">{{Profile}}</p>
+								<!-- <h1 class="font-semibold text-[24px] mr-[80px] mb-2">
+									Experienced and energetic Marketing Manager with over Five years of experience effectively Managing Marketing projects from conception to completion
+								</h1> -->
+								<h1 class="pb-3 font-semibold font-[auto] text-[21px] mt-2 text-justify">{{Profile}}</h1>
 							</div>
 							<div>
 								<h1 class="text-xl font-bold uppercase mb-3 mt-2">Skills</h1>
@@ -2656,8 +2547,7 @@
 											</ul>
 										</div>
 										<div class="w-[40%] h-[6px] bg-gray-300 rounded-full">
-											<div class="h-[100%] bg-white rounded-full"
-												[style.width.%]="skill.percentage"></div>
+											<div class="h-[100%] bg-white rounded-full" [style.width.%]="skill.percentage"></div>
 										</div>
 									</div>
 								</div>
@@ -2678,8 +2568,7 @@
 											{{ formatDate(employement.endDate) }}</p>
 									</div>
 									<ul *ngFor="let requirement of employement.requirements">
-										<li class="text-sm ml-5 flex mt-2"><span
-												class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+										<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 											{{ requirement }}
 										</li>
 									</ul>
@@ -2695,15 +2584,14 @@
 
 			<!-- Template-30 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content30 class="border max-w-[1000px] h-[100%] pb-10">
 						<div class="flex">
 							<div class="w-[35%]">
 								<div class="bg-[#8fbc8f] h-[470px]">
 									<div class="pt-6 px-8">
 										<div class="">
-											<img class="h-[230px] font-semibold w-[240px] rounded-t-[115px]"
-												[src]="profileImg">
+											<img class="h-[230px] font-semibold w-[240px] rounded-t-[115px]" [src]="profileImg">
 										</div>
 										<div class="border-b-2 mt-4"></div>
 										<div>
@@ -2713,12 +2601,10 @@
 													Details.address }}</p>
 												<div class="border-b-2 mt-2 mb-3"></div>
 
-												<p class="mb-[7px] flex gap-[3px]"><mat-icon
-														class="text-[19px] text-white">mail</mat-icon>{{
+												<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px] text-white">mail</mat-icon>{{
 													Details.email }}</p>
 												<div class="border-b-2 mt-2 mb-3"></div>
-												<p class="mb-[7px] flex gap-[3px]"><mat-icon
-														class="text-[19px] text-white">phone</mat-icon>{{
+												<p class="mb-[7px] flex gap-[3px]"><mat-icon class="text-[19px] text-white">phone</mat-icon>{{
 													Details.phone }}</p>
 												<div class="border-b-2 mt-2 mb-3"></div>
 											</div>
@@ -2743,8 +2629,7 @@
 											<span class="font-medium text-[13px] mt-[14px]">{{ language.language
 												}}</span>
 											<div class="flex space-x-2 mt-[9px]">
-												<ng-container
-													*ngFor="let dot of getDots1(language.percentage); let i = index">
+												<ng-container *ngFor="let dot of getDots1(language.percentage); let i = index">
 													<div
 														[class]="dot ? 'w-[10px] h-[10px] bg-[#8fbc8f] rounded-full' : 'w-[10px] h-[10px] bg-gray-300 rounded-full'">
 													</div>
@@ -2774,8 +2659,7 @@
 									<div class="mb-4 mt-2" *ngFor="let employement of employements">
 										<div class="">
 											<h2 class="font-semibold text-[15px]">{{ employement.company }}</h2>
-											<p
-												class="text-[11px] mt-[1px] font-bold font-[emoji] tracking-widest text-[#6fa96f]">
+											<p class="text-[11px] mt-[1px] font-bold font-[emoji] tracking-widest text-[#6fa96f]">
 												{{
 												formatDate(employement.startDate)
 												}}
@@ -2783,8 +2667,7 @@
 												{{ formatDate(employement.endDate) }}</p>
 										</div>
 										<ul *ngFor="let requirement of employement.requirements">
-											<li class="text-sm ml-5 flex mt-2"><span
-													class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+											<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 												{{ requirement }}
 											</li>
 										</ul>
@@ -2801,8 +2684,7 @@
 											<h2 class="font-semibold text-[15px]">{{ education.degree }}</h2>
 											<h3 class="text-[14px] text-slate-500">{{education.institution}},
 												{{education.location}}</h3>
-											<p
-												class="text-[11px] font-bold font-[emoji] text-[#6fa96f] mt-1 tracking-widest">
+											<p class="text-[11px] font-bold font-[emoji] text-[#6fa96f] mt-1 tracking-widest">
 												{{
 												formatDate(education.startDate) }}
 												-
@@ -2821,9 +2703,9 @@
 
 			<!-- Template-31 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content31 class="border max-w-[1000px] bg-[#fff0f5] h-[100%]">
-						<div class="border-[5px] border-[#ff69b4] bg-white h-[177px] w-[567px] mx-[140px] mt-6">
+						<div class="border-[5px] border-[#ff69b4] bg-white h-[177px] w-[567px] mx-[auto] mt-6">
 							<div class="text-center pt-3">
 								<h1 class="text-[45px] font-[cursive] font-semibold mb-3 capitalize">{{name}}</h1>
 								<p class="tracking-[2px] font-semibold font-[emoji] uppercase">{{title}}</p>
@@ -2848,8 +2730,7 @@
 												{{ formatDate(employement.endDate) }}</p>
 										</div>
 										<ul *ngFor="let requirement of employement.requirements">
-											<li class="text-sm ml-5 flex mt-2"><span
-													class="text-[19px] mr-[6px] mt-[-3px]">•</span>
+											<li class="text-sm ml-5 flex mt-2"><span class="text-[19px] mr-[6px] mt-[-3px]">•</span>
 												{{ requirement }}
 											</li>
 										</ul>
@@ -2894,8 +2775,7 @@
 									<div *ngFor="let language of languages" class="flex flex-col">
 										<span class="font-medium text-[13px] mt-3">{{ language.language }}</span>
 										<div class="flex space-x-2 mt-[9px]">
-											<ng-container
-												*ngFor="let dot of getDots(language.percentage); let i = index">
+											<ng-container *ngFor="let dot of getDots(language.percentage); let i = index">
 												<div
 													[class]="dot ? 'w-[10px] h-[10px] bg-[black] rounded-full' : 'w-[10px] h-[10px] bg-gray-300 rounded-full'">
 												</div>
@@ -2913,7 +2793,7 @@
 			</div>
 			<!-- Template-32 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content32 class="border max-w-[1000px] h-[100%]">
 						<div class="flex">
 							<div class="w-[40%] bg-[#424242] text-white pb-10">
@@ -2951,8 +2831,7 @@
 									<div *ngFor="let language of languages" class="flex flex-col text-white">
 										<span class="font-medium text-[13px] mt-3">{{ language.language }}</span>
 										<div class="flex space-x-2 mt-[9px]">
-											<ng-container
-												*ngFor="let dot of getDots1(language.percentage); let i = index">
+											<ng-container *ngFor="let dot of getDots1(language.percentage); let i = index">
 												<div
 													[class]="dot ? 'w-[10px] h-[10px] bg-white rounded-full' : 'w-[10px] h-[10px] bg-gray-300 rounded-full'">
 												</div>
@@ -3034,7 +2913,7 @@
 
 			<!-- Template-33 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content33 class="border max-w-[1000px] h-[100%] px-6 pb-12">
 						<div class="text-center font-semibold font-[emoji] uppercase py-4">
 							<h1 class="text-[43px] mb-2">{{name}}</h1>
@@ -3119,14 +2998,13 @@
 
 			<!-- Template-34 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content34 class="border max-w-[1000px] h-[100%] pb-12">
 						<div class="flex">
 							<div class="w-[45%] bg-yellow-600 p-12">
 								<img class="rounded-full border-8 border-white h-64 w-64" [src]="profileImg">
 							</div>
-							<div
-								class="w-[65%] bg-[#1f1e1e] text-white text-center font-semibold font-[emoji] uppercase px-5 pt-10">
+							<div class="w-[65%] bg-[#1f1e1e] text-white text-center font-semibold font-[emoji] uppercase px-5 pt-10">
 								<h1 class="text-[43px] mb-2">{{name}}</h1>
 								<p class="tracking-[1px]">{{title}}</p>
 								<div class="border-b-[2px] border-white flex justify-center pt-5"></div>
@@ -3158,8 +3036,7 @@
 											</ul>
 										</div>
 										<div class="w-[40%] h-[6px] bg-gray-300 rounded-full">
-											<div class="h-[100%] bg-yellow-600 rounded-full"
-												[style.width.%]="skill.percentage"></div>
+											<div class="h-[100%] bg-yellow-600 rounded-full" [style.width.%]="skill.percentage"></div>
 										</div>
 									</div>
 								</div>
@@ -3172,8 +3049,7 @@
 								<div class="mb-4 mt-3" *ngFor="let employement of employements">
 									<div class="">
 										<h2 class="font-bold text-[16px]">{{ employement.company }}</h2>
-										<p
-											class="text-[13px] font-bold tracking-widest font-[auto] float-right mt-[-25px]">
+										<p class="text-[13px] font-bold tracking-widest font-[auto] float-right mt-[-25px]">
 											{{
 											formatDate(employement.startDate)
 											}}
@@ -3221,7 +3097,7 @@
 
 			<!-- Template-35 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content35 class="border max-w-[1000px] h-[100%] bg-white">
 						<div class="flex">
 							<div class="w-[45%] bg-[#763333] mx-10 mt-10 pb-10 rounded-t-full">
@@ -3254,9 +3130,8 @@
 														</li>
 													</ul>
 												</div>
-												<div class="w-[40%] h-[6px] mb-2 bg-gray-300 rounded-full">
-													<div class="h-[100%] bg-white rounded-full"
-														[style.width.%]="skill.percentage"></div>
+												<div class="w-[100%] h-[6px] mb-2 bg-gray-300 rounded-full">
+													<div class="h-[100%] bg-white rounded-full" [style.width.%]="skill.percentage"></div>
 												</div>
 											</div>
 										</div>
@@ -3275,8 +3150,7 @@
 									<div class="mb-4 mt-3" *ngFor="let employement of employements">
 										<div class="">
 											<h2 class="font-bold text-[14px]">{{ employement.company }}</h2>
-											<p
-												class="text-[13px] font-bold tracking-widest font-[auto] float-right mt-[-25px]">
+											<p class="text-[13px] font-bold tracking-widest font-[auto] float-right mt-[-25px]">
 												{{
 												formatDate(employement.startDate)
 												}}
@@ -3312,7 +3186,7 @@
 
 			<!-- Template-36 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content36 class="border max-w-[1000px] h-[100%] bg-purple-100 pb-9">
 						<div class="flex">
 							<div class="w-[50%] mx-7">
@@ -3330,8 +3204,7 @@
 										<div class="">
 											<h2 class="font-bold text-[14px] text-[#64c7ef]">{{ employement.company }}
 											</h2>
-											<p
-												class="text-[13px] text-[#64c7ef] font-bold tracking-widest font-[auto] float-right mt-[-20px]">
+											<p class="text-[13px] text-[#64c7ef] font-bold tracking-widest font-[auto]">
 												{{
 												formatDate(employement.startDate)
 												}}
@@ -3362,8 +3235,7 @@
 										<h2 class="font-semibold text-[15px] text-[#64c7ef]">{{ education.degree }}</h2>
 										<h2 class="font-semibold text-[15px]"> {{ education.institution }},
 											{{education.location }}</h2>
-										<p
-											class="text-[13px] text-[#64c7ef] font-bold font-[auto] mt-1 tracking-widest">
+										<p class="text-[13px] text-[#64c7ef] font-bold font-[auto] mt-1 tracking-widest">
 											{{
 											formatDate(education.startDate) }}
 											-
@@ -3373,14 +3245,16 @@
 							</div>
 							<div class="w-[50%]">
 								<div class="justify-end flex">
-									<img class=" h-64 w-64 rounded-bl-[46px] border-l-8 border-b-8 border-[#64c7ef]"
-										[src]="profileImg">
+									<img class=" h-64 w-64 rounded-bl-[46px] border-l-8 border-b-8 border-[#64c7ef]" [src]="profileImg">
 								</div>
 								<div class="px-8">
 									<div class="mt-10 text-[15px] text-end">
 										<p class="">{{Details.email }}</p>
+										<div class="border-b-2 border-[#64c7ef] mt-2 mb-2"></div>
 										<p class="">{{Details.address }}</p>
+										<div class="border-b-2 border-[#64c7ef] mt-2 mb-2"></div>
 										<p class="">{{Details.phone }}</p>
+										<div class="border-b-2 border-[#64c7ef] mt-2 mb-2"></div>
 									</div>
 									<div class="ml-[124px]">
 										<div>
@@ -3388,8 +3262,7 @@
 											<div *ngFor="let skill of skills" class="flex flex-col">
 												<span class="font-medium text-[13px] mt-3">{{ skill.name }}</span>
 												<div class="flex space-x-2 mt-[9px]">
-													<ng-container
-														*ngFor="let dot of getDots1(skill.percentage); let i = index">
+													<ng-container *ngFor="let dot of getDots1(skill.percentage); let i = index">
 														<div
 															[class]="dot ? 'w-[10px] h-[10px] bg-[black] rounded-full' : 'w-[10px] h-[10px] bg-gray-300 rounded-full'">
 														</div>
@@ -3401,8 +3274,7 @@
 												<span class="font-medium text-[13px] mt-3">{{ language.language
 													}}</span>
 												<div class="flex space-x-2 mt-[9px]">
-													<ng-container
-														*ngFor="let dot of getDots1(language.percentage); let i = index">
+													<ng-container *ngFor="let dot of getDots1(language.percentage); let i = index">
 														<div
 															[class]="dot ? 'w-[10px] h-[10px] bg-[black] rounded-full' : 'w-[10px] h-[10px] bg-gray-300 rounded-full'">
 														</div>
@@ -3423,7 +3295,7 @@
 
 			<!-- Template-37 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content37 class="border max-w-[1000px] h-[100%] pb-9">
 						<div class="px-6">
 							<div class="">
@@ -3450,8 +3322,7 @@
 										<div class="">
 											<h2 class="font-bold text-[16px] text-gray-600">{{ employement.company }}
 											</h2>
-											<p
-												class="text-[13px] text-gray-600 font-bold tracking-widest font-[auto] float-right mt-[-25px]">
+											<p class="text-[13px] text-gray-600 font-bold tracking-widest font-[auto] float-right mt-[-25px]">
 												{{
 												formatDate(employement.startDate)
 												}}
@@ -3481,8 +3352,7 @@
 								<div>
 									<h1 class="text-xl font-bold capitalize mb-3 mt-7 text-[coral]">Skills
 									</h1>
-									<div
-										class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 mt-5">
+									<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 mt-5">
 										<div class="text-justify text-sm" *ngFor="let skill of skills">
 											<div>
 												<ul>
@@ -3492,8 +3362,7 @@
 												</ul>
 											</div>
 											<div class="w-[40%] h-[6px] bg-gray-300 rounded-full">
-												<div class="h-[100%] bg-[coral] rounded-full"
-													[style.width.%]="skill.percentage"></div>
+												<div class="h-[100%] bg-[coral] rounded-full" [style.width.%]="skill.percentage"></div>
 											</div>
 										</div>
 									</div>
@@ -3521,7 +3390,7 @@
 
 			<!-- Template-38 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content38 class="border max-w-[1000px] h-[100%] bg-[black] pb-9">
 						<div class="px-7">
 							<div class="border-[3px] border-white text-white px-5 mt-9 pb-5">
@@ -3540,8 +3409,7 @@
 								</div>
 								<div class="border-b-[3px] border-white"></div>
 								<div>
-									<h1
-										class="font-bold text-[19px] mb-2 capitalize mt-7 text-[#00bfff] font-[cursive]">
+									<h1 class="font-bold text-[19px] mb-2 capitalize mt-7 text-[#00bfff] font-[cursive]">
 										profile</h1>
 									<p class="pb-3 text-sm mt-3 text-justify font-[system-ui]">{{Profile}}</p>
 								</div>
@@ -3554,8 +3422,7 @@
 										<div class="">
 											<h2 class="font-bold text-[16px] text-gray-200">{{ employement.company }}
 											</h2>
-											<p
-												class="text-[13px] text-gray-200 font-bold tracking-widest font-[auto] float-right mt-[-25px]">
+											<p class="text-[13px] text-gray-200 font-bold tracking-widest font-[auto] float-right mt-[-25px]">
 												{{
 												formatDate(employement.startDate)
 												}}
@@ -3587,8 +3454,7 @@
 									<h1 class="text-xl font-bold capitalize mb-3 mt-7 text-[#00bfff] font-[cursive]">
 										Skills
 									</h1>
-									<div
-										class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 mt-5">
+									<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 mt-5">
 										<div class="text-justify text-sm" *ngFor="let skill of skills">
 											<div>
 												<ul>
@@ -3598,15 +3464,13 @@
 												</ul>
 											</div>
 											<div class="w-[40%] h-[6px] bg-gray-300 rounded-full">
-												<div class="h-[100%] bg-[#00bfff] rounded-full"
-													[style.width.%]="skill.percentage"></div>
+												<div class="h-[100%] bg-[#00bfff] rounded-full" [style.width.%]="skill.percentage"></div>
 											</div>
 										</div>
 									</div>
 								</div>
 								<div class="">
-									<h1
-										class="font-bold text-[19px] mb-3 capitalize text-[#00bfff] font-[cursive] mt-7">
+									<h1 class="font-bold text-[19px] mb-3 capitalize text-[#00bfff] font-[cursive] mt-7">
 										Education</h1>
 									<div class="mt-4" *ngFor="let education of educations">
 										<h2 class="font-semibold text-[15px]">{{ education.degree }}, {{
@@ -3628,7 +3492,7 @@
 
 			<!-- Template-39 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content39 class="border max-w-[1000px] h-[100%]">
 						<div class="flex">
 							<div class="w-[40%] bg-[#f9efef] pb-9">
@@ -3671,8 +3535,7 @@
 										<div *ngFor="let skill of skills" class="flex flex-col ">
 											<span class="font-medium text-[13px] mt-3">{{ skill.name }}</span>
 											<div class="flex space-x-2 mt-[9px]">
-												<ng-container
-													*ngFor="let dot of getDots1(skill.percentage); let i = index">
+												<ng-container *ngFor="let dot of getDots1(skill.percentage); let i = index">
 													<div
 														[class]="dot ? 'w-[10px] h-[10px] bg-pink-400 rounded-full' : 'w-[10px] h-[10px] bg-gray-300 rounded-full'">
 													</div>
@@ -3686,8 +3549,7 @@
 										<div *ngFor="let language of languages" class="flex flex-col">
 											<span class="font-medium text-[13px] mt-3">{{ language.language }}</span>
 											<div class="flex space-x-2 mt-[9px]">
-												<ng-container
-													*ngFor="let dot of getDots1(language.percentage); let i = index">
+												<ng-container *ngFor="let dot of getDots1(language.percentage); let i = index">
 													<div
 														[class]="dot ? 'w-[10px] h-[10px] bg-pink-400 rounded-full' : 'w-[10px] h-[10px] bg-gray-300 rounded-full'">
 													</div>
@@ -3695,8 +3557,7 @@
 											</div>
 										</div>
 										<div class="">
-											<h1
-												class="font-bold text-xl mb-4 capitalize mt-10 font-[cursive] text-center">
+											<h1 class="font-bold text-xl mb-4 capitalize mt-10 font-[cursive] text-center">
 												Education</h1>
 											<div class="border-b border-[#b9b9b9] mx-8 mb-[6px]"></div>
 											<div class="mt-4" *ngFor="let education of educations">
@@ -3729,8 +3590,7 @@
 										<div class="">
 											<h2 class="font-bold text-[16px] text-gray-400">{{ employement.company }}
 											</h2>
-											<p
-												class="text-[13px] text-gray-400 font-bold tracking-widest font-[auto] float-right mt-[-25px]">
+											<p class="text-[13px] text-gray-400 font-bold tracking-widest font-[auto]">
 												{{
 												formatDate(employement.startDate)
 												}}
@@ -3770,13 +3630,12 @@
 
 			<!-- Template-40 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content40 class="border max-w-[1000px] h-[100%]">
 						<div class="flex">
 							<div class="w-[40%] bg-[#272727] pb-9">
 								<div class="flex justify-center pt-6">
-									<img class="rounded-t-[109px] rounded-br-[109px] border-8 border-white h-52 w-52"
-										[src]="profileImg">
+									<img class="rounded-t-[109px] rounded-br-[109px] border-8 border-white h-52 w-52" [src]="profileImg">
 								</div>
 								<div class="text-[15px] mt-6 px-8 text-white">
 									<div>
@@ -3816,8 +3675,7 @@
 									<div *ngFor="let language of languages" class="flex flex-col">
 										<span class="font-medium text-[13px] mt-3">{{ language.language }}</span>
 										<div class="flex space-x-2 mt-[9px]">
-											<ng-container
-												*ngFor="let dot of getDots1(language.percentage); let i = index">
+											<ng-container *ngFor="let dot of getDots1(language.percentage); let i = index">
 												<div
 													[class]="dot ? 'w-[10px] h-[10px] bg-[blue] rounded-full' : 'w-[10px] h-[10px] bg-gray-300 rounded-full'">
 												</div>
@@ -3849,8 +3707,7 @@
 											<div class="">
 												<h2 class="font-bold text-[16px] text-gray-600">{{ employement.company
 													}}</h2>
-												<p
-													class="text-[13px] text-gray-600 font-bold tracking-widest font-[auto] float-right mt-[-25px]">
+												<p class="text-[13px] text-gray-600 font-bold tracking-widest font-[auto]">
 													{{
 													formatDate(employement.startDate)
 													}}
@@ -3905,7 +3762,7 @@
 
 			<!-- Template-41 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content41 class="border max-w-[1000px] h-[100%]">
 						<div>
 							<div class="h-[230px] bg-[#3d3d3d] flex p-6 px-8">
@@ -3922,15 +3779,13 @@
 								<div class="w-[40%] bg-[#ededed] mx-7 px-10 pb-9">
 									<div class="">
 										<div>
-											<h1
-												class="text-xl font-bold uppercase mb-3 mt-10 text-pink-500 text-center">
+											<h1 class="text-xl font-bold uppercase mb-3 mt-10 text-pink-500 text-center">
 												Language</h1>
 											<div class="text-sm" *ngFor="let language of languages">
 												<div class="">
 													<h3 class="text-[13px] leading-[36px]">{{ language.language }}</h3>
 												</div>
-												<div
-													class="w-[100%] h-[9px] rounded-bl-2xl rounded-tr-2xl bg-[#c9c9c9]">
+												<div class="w-[100%] h-[9px] rounded-bl-2xl rounded-tr-2xl bg-[#c9c9c9]">
 													<div class="h-[100%] bg-pink-500 rounded-bl-2xl rounded-tr-2xl"
 														[style.width.%]="language.percentage"></div>
 												</div>
@@ -3942,8 +3797,7 @@
 										<div *ngFor="let skill of skills" class="flex flex-col">
 											<span class="font-medium text-[13px] mt-3">{{ skill.name }}</span>
 											<div class="flex space-x-2 mt-[9px]">
-												<ng-container
-													*ngFor="let dot of getDots1(skill.percentage); let i = index">
+												<ng-container *ngFor="let dot of getDots1(skill.percentage); let i = index">
 													<div
 														[class]="dot ? 'w-[11px] h-[11px] bg-pink-500 rounded-full' : 'w-[11px] h-[11px] border-pink-500 border-[2px] bg-white rounded-full'">
 													</div>
@@ -3985,8 +3839,7 @@
 												<h2 class="font-bold text-[16px] text-pink-500">{{ employement.company
 													}}
 												</h2>
-												<p
-													class="text-[13px] text-pink-500 font-bold tracking-widest font-[auto] float-right mt-[-25px]">
+												<p class="text-[13px] text-pink-500 font-bold tracking-widest font-[auto]">
 													{{
 													formatDate(employement.startDate)
 													}}
@@ -4025,7 +3878,7 @@
 
 			<!-- Template-42 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content42 class="border max-w-[1000px] h-[100%]">
 						<div>
 							<div class="h-[250px] bg-[#303358] flex p-6 mx-32">
@@ -4040,8 +3893,7 @@
 							<div class="flex">
 								<div class="w-[35%] bg-[white] px-10 pb-9">
 									<div class="">
-										<h1
-											class="text-[19px] font-bold mb-3 uppercase text-[#303358] mt-6 font-[math]">
+										<h1 class="text-[19px] font-bold mb-3 uppercase text-[#303358] mt-6 font-[math]">
 											Contacts</h1>
 										<div class="text-[13px] text-justify">
 											<div class="">
@@ -4060,15 +3912,13 @@
 
 											</div>
 										</div>
-										<h1
-											class="font-bold text-[19px] mb-3 uppercase text-[#303358] mt-6 font-[math]">
+										<h1 class="font-bold text-[19px] mb-3 uppercase text-[#303358] mt-6 font-[math]">
 											skills
 										</h1>
 										<div *ngFor="let skill of skills" class="flex flex-col">
 											<span class="font-medium text-[13px] mt-3">{{ skill.name }}</span>
 											<div class="flex space-x-2 mt-[9px]">
-												<ng-container
-													*ngFor="let dot of getDots1(skill.percentage); let i = index">
+												<ng-container *ngFor="let dot of getDots1(skill.percentage); let i = index">
 													<div
 														[class]="dot ? 'w-[11px] h-[11px] bg-[#303358] rounded-full' : 'w-[11px] h-[11px] border-[#303358] border-[2px] bg-white rounded-full'">
 													</div>
@@ -4076,16 +3926,14 @@
 											</div>
 										</div>
 										<div>
-											<h1
-												class="text-xl font-bold uppercase mb-3 mt-10 text-[#303358] font-[math]">
+											<h1 class="text-xl font-bold uppercase mb-3 mt-10 text-[#303358] font-[math]">
 												Language</h1>
 											<div class="text-sm" *ngFor="let language of languages">
 												<div class="">
 													<h3 class="text-[13px] leading-[36px]">{{ language.language }}</h3>
 												</div>
 												<div class="w-[100%] h-[6px] rounded-full bg-[#c9c9c9]">
-													<div class="h-[100%] bg-[#303358] rounded-full"
-														[style.width.%]="language.percentage"></div>
+													<div class="h-[100%] bg-[#303358] rounded-full" [style.width.%]="language.percentage"></div>
 												</div>
 											</div>
 										</div>
@@ -4093,8 +3941,7 @@
 								</div>
 								<div class="w-[65%] bg-[#ffe3e8] pb-9 px-9">
 									<div>
-										<h1
-											class="font-bold text-[19px] mb-2 uppercase mt-7 text-[#303358] font-[math]">
+										<h1 class="font-bold text-[19px] mb-2 uppercase mt-7 text-[#303358] font-[math]">
 											profile</h1>
 										<p class="pb-3 text-sm mt-3 text-justify font-[system-ui]">{{Profile}}</p>
 									</div>
@@ -4107,8 +3954,7 @@
 												<h2 class="font-bold text-[16px] text-[#303358]">{{ employement.company
 													}}
 												</h2>
-												<p
-													class="text-[13px] text-[#303358] font-bold tracking-widest font-[auto] float-right mt-[-25px]">
+												<p class="text-[13px] text-[#303358] font-bold tracking-widest font-[auto]">
 													{{
 													formatDate(employement.startDate)
 													}}
@@ -4123,8 +3969,7 @@
 										</div>
 									</div>
 									<div class="">
-										<h1
-											class="font-bold text-[19px] mb-1 uppercase mt-7 text-[#303358] font-[math]">
+										<h1 class="font-bold text-[19px] mb-1 uppercase mt-7 text-[#303358] font-[math]">
 											Education</h1>
 										<div class="mt-3" *ngFor="let education of educations">
 											<h2 class="font-semibold text-[15px]">{{ education.degree }}</h2>
@@ -4148,7 +3993,7 @@
 
 			<!-- Template-43 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content43 class="border max-w-[1000px] h-[100%]">
 						<div>
 							<div class="uppercase mt-5 px-8 mb-10">
@@ -4180,8 +4025,7 @@
 								<div class="border-l-2 border-[#08aeb1]"></div>
 								<div class="w-[60%] px-7">
 									<div>
-										<h1
-											class="font-bold text-[19px] mb-2 uppercase mt-7 text-[#08aeb1] font-[math]">
+										<h1 class="font-bold text-[19px] mb-2 uppercase mt-7 text-[#08aeb1] font-[math]">
 											profile</h1>
 										<p class="pb-6 text-sm mt-3 text-justify font-[system-ui]">{{Profile}}</p>
 									</div>
@@ -4192,16 +4036,14 @@
 								<div class="w-[40%] px-8 pb-9">
 									<div class="">
 										<div>
-											<h1
-												class="text-xl font-bold uppercase mb-4 mt-7 text-[#08aeb1] font-[math]">
+											<h1 class="text-xl font-bold uppercase mb-4 mt-7 text-[#08aeb1] font-[math]">
 												Language
 											</h1>
 											<div *ngFor="let language of languages" class="flex flex-col">
 												<span class="font-medium text-[13px] mt-3">{{ language.language
 													}}</span>
 												<div class="flex space-x-2 mt-[9px]">
-													<ng-container
-														*ngFor="let dot of getDots1(language.percentage); let i = index">
+													<ng-container *ngFor="let dot of getDots1(language.percentage); let i = index">
 														<div
 															[class]="dot ? 'w-[10px] h-[10px] bg-[#08aeb1] rounded-full' : 'w-[10px] h-[10px] border-[#08aeb1] border-[2px] bg-white rounded-full'">
 														</div>
@@ -4209,15 +4051,13 @@
 												</div>
 											</div>
 										</div>
-										<h1
-											class="font-bold text-[19px] mb-3 uppercase text-[#08aeb1] mt-7 font-[math]">
+										<h1 class="font-bold text-[19px] mb-3 uppercase text-[#08aeb1] mt-7 font-[math]">
 											skills
 										</h1>
 										<div *ngFor="let skill of skills" class="flex flex-col">
 											<span class="font-medium text-[13px] mt-3">{{ skill.name }}</span>
 											<div class="flex space-x-2 mt-[9px]">
-												<ng-container
-													*ngFor="let dot of getDots1(skill.percentage); let i = index">
+												<ng-container *ngFor="let dot of getDots1(skill.percentage); let i = index">
 													<div
 														[class]="dot ? 'w-[11px] h-[11px] bg-[#08aeb1] rounded-full' : 'w-[11px] h-[11px] border-[#08aeb1] border-[2px] bg-white rounded-full'">
 													</div>
@@ -4236,8 +4076,7 @@
 												<h2 class="font-bold text-[16px] text-[#08aeb1] font-[math]">{{
 													employement.company }}
 												</h2>
-												<p
-													class="text-[13px] text-[#08aeb1] font-bold tracking-widest font-[auto] float-right mt-[-25px]">
+												<p class="text-[13px] text-[#08aeb1] font-bold tracking-widest font-[auto]">
 													{{
 													formatDate(employement.startDate)
 													}}
@@ -4252,8 +4091,7 @@
 										</div>
 									</div>
 									<div class="">
-										<h1
-											class="font-bold text-[19px] mb-1 uppercase mt-7 text-[#08aeb1] font-[math]">
+										<h1 class="font-bold text-[19px] mb-1 uppercase mt-7 text-[#08aeb1] font-[math]">
 											Education</h1>
 										<div class="mt-3" *ngFor="let education of educations">
 											<h2 class="font-semibold text-[15px]">{{ education.degree }}</h2>
@@ -4277,7 +4115,7 @@
 
 			<!-- Template-44 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content44 class="border max-w-[1000px] h-[100%]">
 						<div>
 							<div class="flex px-8 py-5 h-[220px]">
@@ -4314,16 +4152,14 @@
 									<div class="border-b-[2px] mt-5 border-[#444444]"></div>
 									<div class="">
 										<div>
-											<h1
-												class="text-xl font-bold uppercase mb-4 mt-8 text-[#444444] font-[math]">
+											<h1 class="text-xl font-bold uppercase mb-4 mt-8 text-[#444444] font-[math]">
 												Language
 											</h1>
 											<div *ngFor="let language of languages" class="flex flex-col">
 												<span class="font-medium text-[13px] mt-3">{{ language.language
 													}}</span>
 												<div class="flex space-x-2 mt-[9px]">
-													<ng-container
-														*ngFor="let dot of getDots1(language.percentage); let i = index">
+													<ng-container *ngFor="let dot of getDots1(language.percentage); let i = index">
 														<div
 															[class]="dot ? 'w-[10px] h-[10px] bg-[#444444] ' : 'w-[10px] h-[10px] border-[#444444] border-[2px] bg-white '">
 														</div>
@@ -4332,15 +4168,13 @@
 											</div>
 										</div>
 										<div class="border-b-[2px] mt-5 border-[#444444]"></div>
-										<h1
-											class="font-bold text-[19px] mb-3 uppercase text-[#444444] mt-9 font-[math]">
+										<h1 class="font-bold text-[19px] mb-3 uppercase text-[#444444] mt-9 font-[math]">
 											skills
 										</h1>
 										<div *ngFor="let skill of skills" class="flex flex-col">
 											<span class="font-medium text-[13px] mt-3">{{ skill.name }}</span>
 											<div class="flex space-x-2 mt-[9px]">
-												<ng-container
-													*ngFor="let dot of getDots1(skill.percentage); let i = index">
+												<ng-container *ngFor="let dot of getDots1(skill.percentage); let i = index">
 													<div
 														[class]="dot ? 'w-[11px] h-[11px] bg-[#444444]' : 'w-[11px] h-[11px] border-[#444444] border-[2px] bg-white'">
 													</div>
@@ -4353,8 +4187,7 @@
 								<div class="border-l-2 border-[#444444]"></div>
 								<div class="w-[60%] px-8 pb-8">
 									<div>
-										<h1
-											class="font-bold text-[19px] mb-2 uppercase mt-7 text-[#444444] font-[math]">
+										<h1 class="font-bold text-[19px] mb-2 uppercase mt-7 text-[#444444] font-[math]">
 											About me</h1>
 										<p class="pb-2 text-sm mt-3 text-justify font-[system-ui]">{{Profile}}</p>
 									</div>
@@ -4367,8 +4200,7 @@
 												<h2 class="font-bold text-[16px] text-[#444444] font-[math]">{{
 													employement.company }}
 												</h2>
-												<p
-													class="text-[13px] text-[#444444] font-bold tracking-widest font-[auto] float-right mt-[-25px]">
+												<p class="text-[13px] text-[#444444] font-bold tracking-widest font-[auto]">
 													{{
 													formatDate(employement.startDate)
 													}}
@@ -4383,8 +4215,7 @@
 										</div>
 									</div>
 									<div class="">
-										<h1
-											class="font-bold text-[19px] mb-1 uppercase mt-7 text-[#444444] font-[math]">
+										<h1 class="font-bold text-[19px] mb-1 uppercase mt-7 text-[#444444] font-[math]">
 											Education</h1>
 										<div class="mt-3" *ngFor="let education of educations">
 											<h2 class="font-semibold text-[15px]">{{ education.degree }}</h2>
@@ -4408,10 +4239,10 @@
 
 			<!-- Template-45 -->
 			<div class="mt-20 mb-20">
-				<div class="pl-[250px] pr-[250px]">
+				<div class="pl-[250px] pr-[250px] max-md:px-2">
 					<div #content45 class="border max-w-[1000px] h-[100%] bg-[#ab9f36d4]">
 						<div class="flex">
-							<div class="w-[60%] px-10">
+							<div class="w-[60%] px-8">
 								<div class="uppercase mt-5">
 									<h1 class="text-[55px] font-extrabold font-[math] text-[black]">{{name}}</h1>
 									<p class="tracking-[1px] text-[18px] font-[math]">{{title}}</p>
@@ -4435,8 +4266,7 @@
 											<div class="">
 												<h2 class="font-bold text-[16px] font-[math]">{{ employement.company }}
 												</h2>
-												<p
-													class="text-[13px] font-bold tracking-widest font-[auto] float-right mt-[-25px]">
+												<p class="text-[13px] font-bold tracking-widest font-[auto]">
 													{{
 													formatDate(employement.startDate)
 													}}
@@ -4465,8 +4295,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="w-[40%] px-10">
-								<div class="">
+							<div class="w-[40%] px-8">
+								<div class="pt-3">
 									<img class="h-[265px] w-[265px]" [src]="profileImg">
 								</div>
 								<div class="">
@@ -4476,8 +4306,7 @@
 										<div *ngFor="let language of languages" class="flex flex-col">
 											<span class="font-medium text-[13px] mt-3">{{ language.language }}</span>
 											<div class="flex space-x-2 mt-[9px]">
-												<ng-container
-													*ngFor="let dot of getDots1(language.percentage); let i = index">
+												<ng-container *ngFor="let dot of getDots1(language.percentage); let i = index">
 													<div
 														[class]="dot ? 'w-[10px] h-[10px] bg-[black] rounded-lg' : 'w-[10px] h-[10px] border-[black] border-[2px] bg-white rounded-lg'">
 													</div>
@@ -4520,7 +4349,7 @@
 
 				<!-- Template-46 -->
 				<div class="mt-20 mb-20">
-					<div class="pl-[250px] pr-[250px]">
+					<div class="pl-[250px] pr-[250px] max-md:px-2">
 						<div #content46
 							class="border max-w-[1000px] h-[100%] bg-[#c7fffbd4] border-b-[25px] border-b-[#3bc1cad4] pb-14">
 							<div class="border-t-[25px] border-t-[#3bc1cad4]"></div>
@@ -4534,8 +4363,7 @@
 										<div class="text-[13px] text-justify">
 											<div class="bg-[white] p-3 rounded-3xl">
 												<div class="mb-[7px] flex gap-[18px]">
-													<mat-icon
-														class="text-[19px] text-[#3bc1cad4]">location_on</mat-icon>
+													<mat-icon class="text-[19px] text-[#3bc1cad4]">location_on</mat-icon>
 													{{Details.address }}
 												</div>
 												<div class="mb-[7px] flex gap-[18px]">
@@ -4555,8 +4383,7 @@
 										<div *ngFor="let skill of skills" class="flex flex-col">
 											<span class="font-medium text-[13px] mt-3">{{ skill.name }}</span>
 											<div class="flex space-x-2 mt-[9px]">
-												<ng-container
-													*ngFor="let dot of getDots1(skill.percentage); let i = index">
+												<ng-container *ngFor="let dot of getDots1(skill.percentage); let i = index">
 													<div
 														[class]="dot ? 'w-[11px] h-[11px] bg-[#3bc1cad4] rounded-lg' : 'w-[11px] h-[11px] border-[#3bc1cad4] border-[2px] bg-white rounded-lg' ">
 													</div>
@@ -4570,8 +4397,7 @@
 										<div *ngFor="let language of languages" class="flex flex-col">
 											<span class="font-medium text-[13px] mt-3">{{ language.language }}</span>
 											<div class="flex space-x-2 mt-[9px]">
-												<ng-container
-													*ngFor="let dot of getDots1(language.percentage); let i = index">
+												<ng-container *ngFor="let dot of getDots1(language.percentage); let i = index">
 													<div
 														[class]="dot ? 'w-[11px] h-[11px] bg-[#3bc1cad4] rounded-lg' : 'w-[11px] h-[11px] border-[#3bc1cad4] border-[2px] bg-white rounded-lg'">
 													</div>
@@ -4600,8 +4426,7 @@
 											<h2 class="font-bold text-[16px] font-[math] text-[#3bc1cad4]">{{
 												employement.company }}
 											</h2>
-											<p
-												class="text-[13px] font-bold tracking-widest font-[auto] text-[#3bc1cad4] float-right mt-[-25px]">
+											<p class="text-[13px] font-bold tracking-widest font-[auto] text-[#3bc1cad4]">
 												{{
 												formatDate(employement.startDate)
 												}}
@@ -4621,8 +4446,7 @@
 											<h2 class="font-semibold text-[16px]">{{ education.degree }}</h2>
 											<h2 class="font-semibold text-[15px]"> {{ education.institution }},
 												{{education.location }}</h2>
-											<p
-												class="text-[13px] font-[auto] mt-1 font-bold tracking-widest text-[#3bc1cad4]">
+											<p class="text-[13px] font-[auto] mt-1 font-bold tracking-widest text-[#3bc1cad4]">
 												{{
 												formatDate(education.startDate) }}
 												-
@@ -4642,12 +4466,13 @@
 
 				<!-- Template-47 -->
 				<div class="mt-20 mb-20">
-					<div class="pl-[250px] pr-[250px]">
-						<div #content47 class="border max-w-[1000px] h-[1100px] pb-14">
+					<div class="pl-[250px] pr-[250px] max-md:px-2">
+						<div #content47 class="border max-w-[1000px] h-[100%] pb-14">
 							<div class="flex">
 								<div class="w-[40%] px-7">
 									<div class="mt-8">
-										<img class="h-[240px] w-[240px] rounded-tl-[100px] rounded-br-[100px] border-8 border-r-[#eb9e9e] border-t-[#eb9e9e] border-b-[#91cd5c] border-l-[#91cd5c]"
+										<img
+											class="h-[240px] w-[240px] rounded-tl-[100px] rounded-br-[100px] border-8 border-r-[#eb9e9e] border-t-[#eb9e9e] border-b-[#91cd5c] border-l-[#91cd5c]"
 											[src]="profileImg">
 									</div>
 									<div>
@@ -4676,8 +4501,7 @@
 										<div *ngFor="let skill of skills" class="flex flex-col">
 											<span class="font-medium text-[13px] mt-3">{{ skill.name }}</span>
 											<div class="flex space-x-2 mt-[9px]">
-												<ng-container
-													*ngFor="let dot of getDots(skill.percentage); let i = index">
+												<ng-container *ngFor="let dot of getDots(skill.percentage); let i = index">
 													<div
 														[class]="dot ? 'w-[11px] h-[11px] bg-[#eb9e9e] rounded-lg' : 'w-[11px] h-[11px] border-[#eb9e9e] border-[2px] bg-white rounded-lg' ">
 													</div>
@@ -4691,8 +4515,7 @@
 										<div *ngFor="let language of languages" class="flex flex-col">
 											<span class="font-medium text-[13px] mt-3">{{ language.language }}</span>
 											<div class="flex space-x-2 mt-[9px]">
-												<ng-container
-													*ngFor="let dot of getDots(language.percentage); let i = index">
+												<ng-container *ngFor="let dot of getDots(language.percentage); let i = index">
 													<div
 														[class]="dot ? 'w-[11px] h-[11px] bg-[#eb9e9e] rounded-lg' : 'w-[11px] h-[11px] border-[#eb9e9e] border-[2px] bg-white rounded-lg'">
 													</div>
@@ -4701,13 +4524,13 @@
 										</div>
 									</div>
 								</div>
-								<div class="w-[60%] mt-6 px-7">
+								<div class="w-[60%] mt-16 px-7">
 									<div class="capitalize">
 										<h1 class="text-[55px] font-extrabold font-[cursive] text-[black]">{{name}}</h1>
 										<p class="tracking-[1px] text-[18px] font-[math]">{{title}}</p>
 									</div>
 									<div class="">
-										<h1 class="font-extrabold text-[19px] mb-4 capitalize mt-[162px] font-[math]">
+										<h1 class="font-extrabold text-[19px] mb-4 capitalize mt-[127px] font-[math]">
 											profile</h1>
 										<div class="">
 											<p class="pb-2 text-sm mt-2 text-justify font-[system-ui]">{{Profile}}</p>
@@ -4721,8 +4544,7 @@
 											<h2 class="font-bold text-[16px] font-[math] text-[#eb9e9e]">{{
 												employement.company }}
 											</h2>
-											<p
-												class="text-[13px] font-bold tracking-widest font-[auto] text-[#eb9e9e] float-right mt-[-25px]">
+											<p class="text-[13px] font-bold tracking-widest font-[auto] text-[#eb9e9e]">
 												{{
 												formatDate(employement.startDate)
 												}}
@@ -4742,8 +4564,7 @@
 											<h2 class="font-semibold text-[16px]">{{ education.degree }}</h2>
 											<h2 class="font-semibold text-[15px]"> {{ education.institution }},
 												{{education.location }}</h2>
-											<p
-												class="text-[13px] font-[auto] mt-1 font-bold tracking-widest text-[#eb9e9e]">
+											<p class="text-[13px] font-[auto] mt-1 font-bold tracking-widest text-[#eb9e9e]">
 												{{
 												formatDate(education.startDate) }}
 												-
@@ -4759,3 +4580,4 @@
 					<button class="p-5 bg-purple-600 text-white rounded-xl" (click)="onDownload(el47)">Download
 						CV</button>
 				</div>
+			</div>

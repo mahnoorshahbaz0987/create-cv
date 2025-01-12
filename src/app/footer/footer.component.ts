@@ -6,12 +6,19 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
+  dropdowns: { [key: string]: boolean } = {
+    jobSeekers: false,
+  };
+
+  toggleDropdown(section: string): void {
+    this.dropdowns[section] = !this.dropdowns[section];
+  }
   seekers: any = [
-    {name:'Create a Resume'},
-    {name:'Resume Examples'},
+    {name:'Create a Resume', route: 'resume'},
+    {name:'Resume Examples', route: 'resume'},
     {name:'Resume Templates',route:'/resume.io/resume-templates'},
-    {name:'Cover Letter Templates'},
-    {name:'Job Search'}
+    {name:'Cover Letter Templates', route: 'resume'},
+    {name:'Job Search', route: 'resume'}
   ];
   careers: any = [
     {name:'Resume Help'},
@@ -35,4 +42,5 @@ export class FooterComponent {
     {name:'Right of Withdrawal'},
     {name:'Do not sell, do not share'}
   ];
+  
 }

@@ -1,82 +1,67 @@
-<div class="bg-[#eff2f9] h-[807px] mt-20 flex flex-col items-center justify-center max-md:w-full max-md:h-auto">
-	<div class="text-center w-full">
+<div
+	class="bg-[#eff2f9] h-[807px] mt-20 flex flex-col items-center justify-center max-md:h-auto max-md:mt-4 max-md:pt-12">
+	<div class="text-center">
 		<p
-			class="uppercase text-[#1a1c6a] text-[13px] font-bold font-[system-ui] tracking-[2px] pt-16 mb-2 max-md:text-[42px] max-md:pt-44 max-md:tracking-[7px]">
+			class="uppercase text-[#1a1c6a] text-[13px] font-bold font-[system-ui] tracking-[2px] pt-16 mb-2 max-md:text-[13px] max-md:pt-[45px]">
 			online resume builder
 		</p>
 		<h1
-			class="text-[40px] font-bold leading-[48px] text-[#302d2d] max-w-[734px] mx-auto max-md:text-[93px] max-md:max-w-[90%] max-md:leading-[120px] max-md:mt-7">
+			class="text-[40px] font-bold leading-[48px] text-[#302d2d] max-w-[734px] mx-auto max-md:text-[25px] max-md:mx-[14px] max-md:leading-[34px] max-md:mt-4">
 			Only 2% of resumes make it past the first round. Be in the top 2%
 		</h1>
-		<p class="text-[19px] text-[#1e2532] mt-4 max-w-[617px] mx-auto max-md:text-[55px] max-md:max-w-[90%]">
+		<p class="text-[19px] text-[#1e2532] mt-4 max-w-[617px] mx-auto max-md:text-[16px] max-md:max-w-[90%]">
 			Use professional field-tested resume templates that follow the exact ‘resume rules’ employers look for. Easy
 			to use and done within minutes - try now for free!
 		</p>
-		<div class="mt-11 cursor-pointer mb-4 max-md:mt-28 max-md:mb-32">
+		<div class="mt-11 cursor-pointer mb-4 max-md:mt-12 max-md:mb-12">
 			<a routerLink="/resume.io/resume-templates"
-				class="bg-[#1a91f0] w-[252px] text-[21px] p-4 px-6 text-white font-bold rounded hover:bg-[#1170cd] max-md:text-[52px] max-md:p-14 max-md:rounded-2xl">
+				class="bg-[#1a91f0] w-[252px] text-[21px] p-4 px-6 text-white font-bold rounded hover:bg-[#1170cd] max-md:text-[17px] max-md:p-[22px]">
 				Create My Resume
 			</a>
 		</div>
-		<div class="relative mt-8 flex items-center justify-center gap-2">
-			<div
-				class="animate-[pulse_1.5s_ease_infinite] bg-[#339d5d] rounded-full h-[6px] w-[6px] max-md:h-5 max-md:w-5">
+		<div class="relative mt-8 flex items-center justify-center gap-2 max-md:mt-7">
+			<div class="animate-[pulse_1.5s_ease_infinite] bg-[#339d5d] rounded-full h-[6px] w-[6px] max-md:h-2 max-md:w-2">
 			</div>
-			<h1 class="text-sm text-[#1e2532] max-md:text-[46px]">
+			<h1 class="text-sm text-[#1e2532] max-md:text-[15px]">
 				{{resumeCount}} resumes created today
 			</h1>
 		</div>
-		<div class="mt-[40px] max-w-[734px] mx-auto max-md:mt-[258px] max-md:w-full max-md:pl-4 max-md:pr-4">
-			<img class="rounded-t-[9px] w-full h-[351px]" [src]="templateImg" alt="Resume Template" />
+		<div class="mt-[40px] max-w-[734px] mx-auto max-md:mt-[18px] max-md:pl-3 max-md:pr-3">
+			<img class="rounded-t-[9px] w-full h-[351px] max-md:w-full max-md:rounded-t-[6px] max-md:h-[220px]"
+				[src]="templateImg" alt="Resume Template" />
 		</div>
 	</div>
 </div>
-<!-- <div class="border-t border-t-[#eff2f9] border-b-[#eff2f9] border-b bg-white pt-[21px] pb-[12px] flex justify-center">
-	<div class="flex flex-wrap justify-center items-center gap-[28px]">
-		<div *ngFor="let logo of combinedLogo" class="flex max-md:mr-0 max-md:text-center max-md:w-[860px]">
-			<div class="w-[140px] h-[22px] bg-no-repeat bg-size" [attr.data-lazy-bg]="logo.imgUrl"
-				[style.background-image]="'url(' + logo.imgUrl + ')'" [style.background-position]="logo.imgPosition"
-				[style.height]="logo.imgHeight" [style.marginLeft]="logo.imgLeft" [style.marginTop]="logo.imgTop">
+
+<div class="items-center flex flex-col pt-[40px] gap-y-3">
+	<div class="text-[19px] leading-6 text-center max-md:text-base max-md:px-2">Our customers have been hired at:</div>
+	<div class="w-[100%]">
+		<div class="items-center flex flex-wrap justify-center max-md:px-2 max-md:pb-3">
+			<div *ngFor="let logo of logos">
+				<img [alt]="logo.alt" [src]="logo.url">
 			</div>
 		</div>
 	</div>
-</div> -->
+</div>
 
-<div class="border-t border-b border-[#eff2f9] bg-white pt-[21px] pb-[12px] flex justify-center">
-	<div class="flex flex-wrap justify-center items-center gap-[28px]">
-	  <div 
-		*ngFor="let logo of combinedLogo" 
-		class="w-[140px] h-[22px] bg-no-repeat bg-size"
-		[attr.data-lazy-bg]="logo.imgUrl"
-		[style.background-image]="'url(' + logo.imgUrl + ')'"
-		[style.background-position]="logo.imgPosition"
-		[style.height]="logo.imgHeight"
-		[style.margin-top]="logo.imgTop"
-		[style.marginLeft]="logo.imgLeft"
-	  >
-	  </div>
-	</div>
-  </div>
-  
-<div class="mt-[130px]">
+<div class="mt-[110px] max-md:mt-9">
 	<h1
-		class="text-[41px] px-5 mx-60 text-[#1e2532] font-bold leading-[48px] text-center max-md:text-[85px] max-md:ml-5 max-md:w-[1280px] max-md:leading-[101px]">
+		class="text-[41px] px-5 mx-60 max-md:mx-auto text-[#1e2532] font-bold leading-[48px] text-center max-md:text-[25px] max-md:leading-[34px]">
 		Reviewed by the community. Trusted by professionals
 	</h1>
 </div>
-<div class="flex max-md:mt-32 mt-16 mx-[150px]  max-md:w-[1348px]">
-	<div class=" max-md:mx-0 max-md:text-center">
-		<div class="max-md:w-[532px] max-md:ml-[400px]">
-			<h2 class="text-[25px] ml-4 mb-2 max-md:text-[70px]">4.5 out of 5</h2>
+<div class="flex max-md:mt-18 mt-16 mx-[150px] max-md:mx-[70px] max-md:flex max-md:flex-wrap ">
+	<div class="max-md:text-center">
+		<div class="">
+			<h2 class="text-[25px] ml-4 max-md:ml-0 mb-2 max-md:text-[20px] ">4.5 out of 5</h2>
 			<div class="flex">
 				<div *ngFor="let star of stars">
-					<img class="max-md:w-44" src={{star}}>
+					<img class="" src={{star}}>
 				</div>
 			</div>
 			<div class="max-md:mt-20 max-md:mb-48">
-				<img class="w-[100px] ml-7 mt-8 max-md:w-64 max-md:ml-[117px] max-md:mb-11"
-					src="assets/Imgs/trustpilot_logo.svg">
-				<p class="text-xs text-[#656e83] ml-[14px] mt-3 max-md:text-[45px]">based on 49,864 reviews</p>
+				<img class="w-[100px] ml-7 mt-8 max-md:w-64 max-md:mb-11 max-md:ml-0" src="assets/Imgs/trustpilot_logo.svg">
+				<p class="text-xs text-[#656e83] ml-[14px] mt-3 max-md:text-[17px]">based on 49,864 reviews</p>
 			</div>
 		</div>
 	</div>
@@ -113,9 +98,8 @@
 			</div>
 		</div>
 	</div> -->
-	<div class="max-w-[784px] ml-[75px] mb-16 max-md:pl-20 max-md:w-[791px] max-md:mb-7">
+	<!-- <div class="max-w-[784px] ml-[75px] mb-16 max-md:pl-20 max-md:mb-7">
 		<div class="flex overflow-hidden">
-			<!-- Loop through the current set of displayed reviews -->
 			<div *ngFor="let review of getDisplayedReviews()" class="flex flex-col mr-4">
 				<div class="flex">
 					<div *ngFor="let starIcon of review.starIcons">
@@ -147,35 +131,31 @@
 			<div class="bg-[#e7eaf4] rounded-sm h-[2px] w-[100%] overflow-hidden relative">
 				<div class="bg-blue-500 h-full"
 					[ngStyle]="{ width: ((currentIndex + 3) / reviews.length) * 100 + '%' }"></div>
-				<!-- Active indicator -->
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 </div>
 
 <div class="border-b max-md:border-b-[3px] mt-16 "></div>
 
-<div class="mt-[125px] mx-auto px-[44px] max-md:mt-[135px]">
+<div class="mt-[125px] mx-auto px-[44px] max-md:px-0 max-md:mt-[100px]">
 	<h1
-		class="text-[41px] mx-48 px-5 font-bold leading-[50px] text-center text-[#1e2532] max-md:text-[85px] max-md:ml-28 max-md:w-[1086px] max-md:leading-[101px]">
+		class="text-[41px] mx-48 max-md:mx-auto px-5 font-bold leading-[50px] text-center text-[#1e2532] max-md:text-[25px] max-md:leading-[34px]">
 		Features designed to help you win your dream job
 	</h1>
-	<div class="mx-[30px] mt-[72px] max-md:mx-0 max-md:w-[860px] max-md:mt-[50px]">
-		<div class="grid grid-cols-3 gap-x-[59px] gap-y-[2px]">
+	<div class="mx-[30px] mt-[72px] max-md:mx-3 max-md:mt-[40px]">
+		<div class="grid grid-cols-3 gap-x-[59px] gap-y-[2px] max-md:flex max-md:flex-wrap max-md:gap-x-[10px]">
 			<div *ngFor="let feature of combinedFeatures"
-				class="flex gap-3 max-md:flex-col max-md:items-center max-md:mb-12 max-md:text-center">
-				<div class="w-[105px] h-[100px] bg-no-repeat" [attr.data-lazy-bg]="feature.imgUrl"
-					[style.background-image]="'url(' + feature.imgUrl + ')'"
-					[style.background-position]="feature.imgPosition"
-					[style.width]="feature.imgWidth"
-					>
+				class="flex gap-3 max-md:flex-col max-md:items-center max-md:mb-3 max-md:text-center">
+				<div class="w-[105px] h-[100px] bg-no-repeat" [style.background-image]="'url(' + feature.imgUrl + ')'"
+					[style.background-position]="feature.imgPosition" [style.width]="feature.imgWidth">
 				</div>
 				<div class="">
-					<div class="text-[#282b8f] text-[19px] font-semibold mb-2 max-md:text-6xl max-md:mb-6">
+					<div class="text-[#282b8f] text-[19px] font-semibold mb-2 max-md:text-[18px] max-md:mb-6">
 						{{ feature.label }}
 					</div>
-					<div class="text-[#1e2532] text-[16px] mb-16 max-md:text-[48px] max-md:mb-20">
+					<div class="text-[#1e2532] text-[16px] mb-16 max-md:text-[15px] max-md:mb-20">
 						{{ feature.text }}
 					</div>
 				</div>
@@ -183,16 +163,21 @@
 		</div>
 	</div>
 </div>
-<div class="mx-20 px-10 mt-12">
-	<div class="bg-[#eaf6ff] h-full pb-14 py-[64px] px-[148px] rounded-3xl">
-		<h2 class="max-w-[741px] text-center text-[41px] text-[#1e2532] font-bold mx-9 font-[sans-serif] pb-6">So much
+<div class="mx-20 px-10 mt-12  max-md:mt-2 max-md:mx-0 max-md:px-2">
+	<div class="bg-[#eaf6ff] h-full pb-14 py-[64px] px-[148px] max-md:px-2 max-md:rounded-2xl rounded-3xl">
+		<h2
+			class="max-w-[741px] text-center text-[41px] text-[#1e2532] font-bold mx-9 font-[sans-serif] pb-6 max-md:mx-0 max-md:text-[25px]">
+			So much
 			more than a resume builder</h2>
-		<p class="text-center mx-[133px] text-[17px]">Your job starts with a resume, but what about the interview? When
-			you build your resume, you also get access to 18 powerful career tools. It’s the complete career toolkit, all in one place. If
+		<p class="text-center mx-[133px] text-[17px] max-md:mx-auto max-md:text-[15px]">Your job starts with a resume, but
+			what about the interview? When
+			you build your resume, you also get access to 18 powerful career tools. It’s the complete career toolkit, all in
+			one place. If
 			you're here, you're already on the way up.</p>
-		<div class=" justify-center flex gap-4 mt-8">
+		<div class="justify-center flex gap-4 mt-8 max-md:flex-wrap">
 			<div *ngFor="let image of images">
-				<div class="border-[10px] border-white w-[84px] h-[84px] bg-white hover:border-blue-100 cursor-pointer rounded-2xl  bg-no-repeat bg-center"
+				<div
+					class="border-[10px] border-white w-[84px] h-[84px] bg-white hover:border-blue-100 cursor-pointer rounded-2xl  bg-no-repeat bg-center"
 					[style.background-image]="'url(' + image + ')'">
 				</div>
 			</div>
@@ -201,49 +186,49 @@
 				+12
 			</div>
 		</div>
-		<div class="mt-14 cursor-pointer text-center max-md:mt-32">
+		<div class="mt-14 cursor-pointer text-center max-md:mt-10">
 			<a routerLink="/resume.io/app"
-				class="bg-[#1a91f0] text-[16px] capitalize p-4 px-6 text-white font-bold rounded hover:bg-[#1170cd] max-md:text-[52px] max-md:p-[50px] max-md:pl-20 max-md:pr-20 max-md:rounded-2xl">
+				class="bg-[#1a91f0] text-[16px] capitalize p-4 px-6 text-white font-bold rounded hover:bg-[#1170cd] max-md:text-[15px] max-md:p-[20px] max-md:rounded">
 				explore your potential
 			</a>
 		</div>
 
 	</div>
 </div>
-<div class="bg-[#eff2f9] h-[870px] mt-[130px] max-md:w-[1349px] max-md:h-[4500px]">
-	<div class="mx-10 pl-[44px] pr-[44px] pt-32 max-md:ml-0 max-md:mr-0">
+<div class="bg-[#eff2f9] h-[870px] mt-[130px] max-md:mt-8 max-md:pb-8 max-md:h-auto">
+	<div class="mx-10 px-[44px] pt-32 max-md:pt-10 max-md:px-2 max-md:mx-auto">
 		<div class="flex max-md:flex-col">
-			<div class="w-[50%] max-md:w-[1293px]">
-				<img class="max-md:w-[1300px]" src="assets/Imgs/visual.svg">
+			<div class="w-[50%] max-md:w-auto mx-2 mt-10">
+				<img class="" src="assets/Imgs/visual.svg">
 			</div>
-			<div class="w-[404px] ml-[151px] max-md:order-[-1] max-md:w-[1245px] max-md:ml-0 max-md:text-center">
+			<div class="w-[404px] ml-[151px] max-md:order-[-1] max-md:w-full max-md:ml-0 max-md:text-center">
 				<h1
-					class="text-[38px]  font-bold leading-[48px] text-[#1e2532] max-md:text-[100px] max-md:leading-[110px] max-md:mb-5">
+					class="text-[38px]  font-bold leading-[48px] text-[#1e2532] max-md:text-[25px] max-md:leading-[34px] max-md:mb-5">
 					Use the best resume maker as your guide
 				</h1>
-				<p class="text-[#1e2532] mt-6 max-md:text-[52px]">
+				<p class="text-[#1e2532] mt-6 max-md:text-[16px]">
 					Getting that dream job can seem like an impossible task. We’re here to change that. Give yourself a
 					real
 					advantage with the best online resume maker: created by experts, improved by data, trusted by
 					millions of
 					professionals.
 				</p>
-				<div class="flex max-md:flex-col">
-					<div class="mt-11 cursor-pointer max-md:mt-32">
+				<div class="flex max-md:flex-wrap max-md:justify-center">
+					<div class="mt-11 cursor-pointer max-md:mt-10">
 						<a routerLink="/resume.io/resume-templates"
-							class="bg-[#1a91f0] text-[16px] p-4 px-6 text-white font-bold rounded hover:bg-[#1170cd] max-md:text-[52px] max-md:p-[50px] max-md:pl-20 max-md:pr-20 max-md:rounded-2xl">
+							class="bg-[#1a91f0] text-[16px] p-4 px-6 text-white font-bold rounded hover:bg-[#1170cd] max-md:text-[17px] max-md:p-[20px] max-md:rounded">
 							Create My Resume
 						</a>
 					</div>
-					<div class="mt-[30px] cursor-pointer ml-3 max-md:mt-28 max-md:ml-[311px] max-md:mb-28">
+					<div class="mt-[30px] cursor-pointer ml-3 max-md:ml-0">
 						<div
-							class="border border-[#c9c8c8] text-[#242424] hover:fill-[#1a91f0] hover:text-[#1a91f0] hover:border-[#1a91f0] flex px-7 py-[13px] rounded max-md:w-[614px]">
-							<svg class="mt-[1px] max-md:w-[50px] max-md:h-[76px] max-md:mt-[22px] max-md:ml-[82px]"
-								xmlns="http://www.w3.org/2000/svg" width="12" height="21px" viewBox="0 0 256 512">
+							class="border border-[#c9c8c8] text-[#242424] hover:fill-[#1a91f0] hover:text-[#1a91f0] hover:border-[#1a91f0] flex px-7 py-[13px] rounded max-md:text-[17px] max-md:rounded max-md:px-9 max-md:py-4">
+							<svg class="mt-[1px] max-md:mt-[1px]" xmlns="http://www.w3.org/2000/svg" width="12" height="21px"
+								viewBox="0 0 256 512">
 								<path
 									d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z" />
 							</svg>
-							<a class="text-[16px] ml-3 font-bold rounded max-md:text-[50px] max-md:p-6">
+							<a class="text-[16px] ml-3 font-bold rounded max-md:text-[16px]">
 								Watch Video
 							</a>
 						</div>
@@ -252,35 +237,34 @@
 			</div>
 		</div>
 	</div>
-	<div
-		class="mt-20 flex mx-20 gap-[40px] max-md:flex-col max-md:mx-[90px] max-md:mt-[90px]">
+	<div class="mt-20 flex mx-20 gap-[40px] max-md:flex-col max-md:mx-[30px] max-md:mt-[40px]">
 		<div class="max-md:text-center">
-			<img class="max-md:w-[210px] max-md:ml-[474px] max-md:mb-6" src="assets/Imgs/feature-1.svg">
-			<h2 class="text-[#1a1c6a] text-[18px] font-semibold mt-2 mb-[6px] max-md:text-[61px] max-md:mb-3">
+			<img class="max-md:w-[73px] max-md:mb-6 max-md:mx-auto" src="assets/Imgs/feature-1.svg">
+			<h2 class="text-[#1a1c6a] text-[18px] font-semibold mt-2 mb-[6px] max-md:text-[18px] max-md:mb-3">
 				Make a resume that wins interviews
 			</h2>
-			<p class="text-[#1e2532] max-md:text-[53px] max-md:mb-9">
+			<p class="text-[#1e2532] max-md:text-[15px] max-md:mb-3">
 				Use our resume maker with its advanced creation tools to tell a professional story that engages
 				recruiters,
 				hiring managers and even CEOs.
 			</p>
 		</div>
 		<div class="max-md:text-center">
-			<img class="max-md:w-[210px] max-md:ml-[474px] max-md:mb-6" src="assets/Imgs/feature-2.svg">
-			<h2 class="text-[#1a1c6a] text-[19px] font-semibold mt-2 mb-[6px] max-md:text-[61px] max-md:mb-3">
+			<img class="max-md:w-[73px] max-md:mb-6 max-md:mx-auto" src="assets/Imgs/feature-2.svg">
+			<h2 class="text-[#1a1c6a] text-[19px] font-semibold mt-2 mb-[6px] max-md:text-[18px] max-md:mb-3">
 				Resume writing made easy
 			</h2>
-			<p class="text-[#1e2532] max-md:text-[53px] max-md:mb-9">
+			<p class="text-[#1e2532] max-md:text-[15px] max-md:mb-3">
 				Resume writing has never been this effortless. Pre-generated text, visual designs and more - all already
 				integrated into the resume maker. Just fill in your details.
 			</p>
 		</div>
 		<div class="max-md:text-center">
-			<img class="max-md:w-[210px] max-md:ml-[474px] max-md:mb-6" src="assets/Imgs/feature-3.svg">
-			<h2 class="text-[#1a1c6a] text-[19px] font-semibold mt-2 mb-[6px] max-md:text-[61px] max-md:mb-3">
+			<img class="max-md:w-[73px] max-md:mb-6 max-md:mx-auto" src="assets/Imgs/feature-3.svg">
+			<h2 class="text-[#1a1c6a] text-[19px] font-semibold mt-2 mb-[6px] max-md:text-[18px] max-md:mb-3">
 				A recruiter-tested CV maker tool
 			</h2>
-			<p class="text-[#1e2532] max-md:text-[53px]">
+			<p class="text-[#1e2532] max-md:text-[15px]">
 				<a routerLink="/resume.io/resume-builder" class="text-[#1a91f0] cursor-pointer hover:text-[#10529b]">
 					Our resume builder
 				</a>
@@ -290,10 +274,11 @@
 		</div>
 	</div>
 </div>
-<div class="bg-[#282b8f] h-[760px] max-md:w-[1349px]">
-	<div class="pt-[119px] pl-[116px]">
+
+<div class="bg-[#282b8f] h-[760px] max-md:h-auto">
+	<div class="pt-[119px] pl-[116px] max-md:pt-9 max-md:px-[13px] max-md:text-center">
 		<div class="max-w-[355px]">
-			<h1 class="text-white text-[39px] font-bold leading-[48px] mb-4">
+			<h1 class="text-white text-[39px] font-bold leading-[48px] mb-4 max-md:text-[31px] max-md:leading-9">
 				Beautiful ready-to-use resume templates
 			</h1>
 			<p class="text-white">
@@ -307,53 +292,52 @@
 					Select Template
 				</a>
 			</div>
-			<div class="mt-36">
-				<div class="flex">
+			<div class="mt-36 max-md:mt-12 max-md:pb-7">
+				<div class="flex max-md:justify-center">
 					<div class="mb-4" *ngFor="let star of stars">
 						<img src={{star}}>
 					</div>
 				</div>
 				<h2 class="text-base text-white">4.5 out of 5</h2>
-				<p class="text-white text-xs">based on 49,951 reviews on<a
-						class="underline ml-1 cursor-pointer">Trustpilot</a>
+				<p class="text-white text-xs">based on 49,951 reviews on<a class="underline ml-1 cursor-pointer">Trustpilot</a>
 				</p>
 			</div>
 		</div>
 	</div>
 </div>
-<div class="bg-[#eff2f9] h-[680px] max-md:w-[1349px]">
-	<div class="ml-[69px] mr-[69px] pl-[44px] pr-[44px] pt-28">
-		<div class="flex">
-			<div class="w-[49%] ml-48">
+<div class="bg-[#eff2f9] h-[680px] max-md:h-auto max-md:pb-10">
+	<div class="px-[36px] mx-[44px] pt-28 max-md:px-5 max-md:mx-auto max-md:pt-20">
+		<div class="flex max-md:flex max-md:flex-wrap">
+			<div class="w-[55%] mr-20 max-md:mr-0">
 				<div class="flex">
 					<div
-						class="bg-[url(assets/Imgs/resume3.avif)] h-[413px] left-[225px] shadow-custom w-72 bg-no-repeat rounded-md rotate-[-22.2deg] bg-[50%] bg-cover absolute">
+						class="bg-[url(assets/Imgs/resume3.avif)] h-[413px] max-md:h-[200px] max-md:w-[140px] left-[180px] max-md:left-[62px] shadow-custom w-72 bg-no-repeat rounded-md rotate-[-22.2deg] bg-[50%] bg-cover absolute">
 					</div>
 					<div
-						class="bg-[url(assets/Imgs/resume2.avif)] h-[413px] mt-[-17px] shadow-custom w-72 bg-no-repeat rounded-md rotate-[-4.51deg] bg-[50%] bg-cover absolute">
+						class="bg-[url(assets/Imgs/resume2.avif)] h-[413px] max-md:h-[200px] max-md:w-[140px] left-[255px] max-md:left-[100px] mt-[-17px] shadow-custom w-72 bg-no-repeat rounded-md rotate-[-4.51deg] bg-[50%] bg-cover absolute">
 					</div>
 					<div
-						class="bg-[url(assets/Imgs/resume1.avif)] h-[413px] left-[387px] shadow-custom mt-[44px] w-72 bg-no-repeat rounded-md rotate-[9.87deg] bg-[50%] bg-cover absolute">
+						class="bg-[url(assets/Imgs/resume1.avif)] h-[413px] max-md:h-[200px] max-md:w-[140px] left-[334px] max-md:left-36 shadow-custom mt-[44px] max-md:mt-4 w-72 bg-no-repeat rounded-md rotate-[9.87deg] bg-[50%] bg-cover absolute">
 					</div>
 				</div>
 			</div>
-			<div class="w-[434px] ml-[-56px] pt-[94px]">
-				<h1 class="text-[38px] text-[#1e2532] font-bold leading-[48px]">
+			<div class="w-[45%] pt-[94px] max-md:pt-[255px] max-md:w-full max-md:text-center">
+				<h1 class="text-[38px] text-[#1e2532] font-bold leading-[48px] max-md:text-[29px] max-md:leading-9">
 					Try our professional Resume builder now!
 				</h1>
-				<p class="text-[#1e2532] mt-[21px]">
+				<p class="text-[#1e2532] mt-[21px] max-md:text-[16px]">
 					Save time with our easy 3-step resume builder. No more writer’s block or formatting difficulties in
 					Word.
 					Rapidly make a perfect resume employers love.
 				</p>
-				<div class="flex">
+				<div class="flex max-md:flex max-md:flex-wrap max-md:justify-center">
 					<div class="mt-11 cursor-pointer">
 						<a routerLink="/resume.io/resume-templates"
 							class="bg-[#1a91f0] text-[16px] p-4 px-6 text-white font-bold rounded hover:bg-[#1170cd]">
 							Create My Resume
 						</a>
 					</div>
-					<div class="mt-[30px] cursor-pointer ml-3">
+					<div class="mt-[30px] cursor-pointer ml-3 max-md:ml-0">
 						<div
 							class="border border-[#c9c8c8] text-[#1e2532] hover:fill-[#1a91f0] hover:text-[#1a91f0] hover:border-[#1a91f0] flex px-7 py-[13px] rounded">
 							<a class="text-[16px] font-bold rounded">
@@ -366,35 +350,35 @@
 		</div>
 	</div>
 </div>
-<div class="bg-[#282b8f] w-full max-md:w-[1349px]">
-	<div class="mx-[420px]">
-		<div class="flex justify-center pt-[116px] mb-5">
+
+<div class="bg-[#282b8f] w-full max-md:w-full">
+	<div class="mx-[420px] max-md:mx-3">
+		<div class="flex justify-center pt-[116px] mb-5 max-md:pt-9">
 			<div class="bg-[url(assets/Imgs/icon.svg)] h-20 w-20"></div>
 		</div>
 		<div class="text-center justify-center">
-			<h1 class="text-white  text-[42px] font-bold leading-[51px] mb-5">Proven resume templates</h1>
-			<p class="text-[#828ba2] text-[16px]">
+			<h1 class="text-white text-[42px] font-bold leading-[51px] mb-5 max-md:text-[31px] max-md:leading-8">Proven resume
+				templates</h1>
+			<p class="text-[#828ba2] text-[16px] max-md:text-[16px]">
 				These resume templates are here because they work. Every one is tried and tested on real hiring managers
 			</p>
 		</div>
 	</div>
 	<!-- continue -->
-	 <div class="">
+	<div class="">
 		<app-swiper-slider></app-swiper-slider>
-	 </div>
-	
-
+	</div>
 </div>
-<div class="h-[700px]">
-	<div class="px-28 pt-36 flex gap-[130px]">
-		<div class="w-[50%]">
+<!-- <div class="h-[700px] max-md:h-auto">
+	<div class="px-28 pt-36 flex gap-[130px] max-md:gap-0 max-md:flex-wrap max-md:pt-10 max-md:px-4">
+		<div class="w-[50%] max-md:w-full max-md:text-center">
 			<p class="uppercase text-[#343ecc] text-[12px] font-semibold tracking-[1.2px] mb-[6px]">
 				secure your dream job
 			</p>
-			<h1 class="text-[#1e2532] text-[41px] font-bold leading-[48px] mb-5">
+			<h1 class="text-[#1e2532] text-[41px] font-bold leading-[48px] mb-5 max-md:text-[27px] max-md:leading-8">
 				Create a professional story in minutes. Use our cover letter maker.
 			</h1>
-			<p class="text-[#1e2532]">Our cover letter maker allows you to write amazing professional pitches in minutes
+			<p class="text-[#1e2532] max-md:text-[16px]">Our cover letter maker allows you to write amazing professional pitches in minutes
 				rather than hours. No more writer’s block, no more searching for the convincing phrases or agonizing
 				over
 				formatting. Be persuasive without effort!
@@ -465,13 +449,13 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 <!-- continue -->
-<div class="pt-[120px] pb-[120px]">
-	<div class="mx-20 px-10">
-		<div class="mx-72 text-center">
-			<h2 class=" text-[41px] mb-5 font-bold leading-[48px] text-[#1e2532]">The Elevator</h2>
-			<p class="text-[17px] mb-6">
+<div class="pt-[120px] pb-[120px] max-md:pt-9">
+	<div class="mx-20 px-10 max-md:mx-2 max-md:px-2">
+		<div class="mx-72 text-center max-md:mx-0">
+			<h2 class=" text-[41px] mb-5 font-bold leading-[48px] text-[#1e2532] max-md:text-[27px]">The Elevator</h2>
+			<p class="text-[17px] mb-6 max-md:text-[16px]">
 				Discover our extensive knowledge base, The Elevator, which gives you the best information on improving
 				your
 				resume and resume writing samples taking your career to the next level.
@@ -482,10 +466,11 @@
 				<mat-icon class="text-[25px] mt-[2px]">keyboard_arrow_right</mat-icon>
 			</a>
 		</div>
-		<div class="flex justify-center max-w-[960px] mx-20 mt-[80px]">
-			<a class="bg-[#338699] group items-start flex-col justify-between flex text-white rounded-xl mx-4 min-h-[392px] overflow-hidden p-8 relative w-[50%] z-[1] translate-z-0 cover-letter-guide"
+		<div class="flex justify-center max-w-[960px] mx-20 mt-[80px] max-md:mt-6 max-md:mx-0 max-md:w-full">
+			<a class="bg-[#338699] group items-start flex-col justify-between flex text-white rounded-xl mx-4 min-h-[392px] overflow-hidden p-8 max-md:p-4 relative w-[50%] max-md:w-full max-md:mx-0 z-[1] translate-z-0 cover-letter-guide"
 				href="https://resume.io/blog/how-to-write-cover-letter">
-				<div class="group-hover:opacity-0  bg-position bg-cover h-[100%] w-[100%] left-0 top-0 absolute will-change-[opacity] transition-opacity cover-letter-guide-image"
+				<div
+					class="group-hover:opacity-0  bg-position bg-cover h-[100%] w-[100%] left-0 top-0 absolute will-change-[opacity] transition-opacity cover-letter-guide-image"
 					style="background-image: url('assets/Imgs/Cover-Letter-Guide.avif')">
 				</div>
 				<div class="z-10">
@@ -516,15 +501,16 @@
 		</div>
 	</div>
 </div>
-<div class="bg-[#eff2f9] h-[1000px] py-[120px] max-md:w-[1349px]">
-	<div class="text-center mx-[350px]">
+<div class="bg-[#eff2f9] h-[1000px] py-[120px] max-md:pt-10 max-md:pb-7 max-md:w-full max-md:h-auto">
+	<div class="text-center mx-[350px] max-md:mx-3">
 		<div class="flex justify-center mb-5">
 			<div class="bg-[url(assets/Imgs/homeIcon.svg)] h-20 w-20"></div>
 		</div>
-		<h1 class="text-[42px] text-[#1e2532] font-bold mb-5 leading-[54px]">
+		<h1 class="text-[42px] text-[#1e2532] font-bold mb-5 leading-[54px] max-md:text-[27px] max-md:leading-8">
 			Create perfect resumes for the modern job market
 		</h1>
-		<p class="text-[#1e2532] mb-5">Creating a resume has never been this easy! In three simple steps, create the
+		<p class="text-[#1e2532] mb-5 max-md:text-[16px]">Creating a resume has never been this easy! In three simple steps,
+			create the
 			perfect
 			document to impress hiring managers and employers. Minimum time, maximum professional quality.
 		</p>
@@ -534,7 +520,7 @@
 				My Resume</a>
 		</div>
 	</div>
-	<div class="max-w-[800px] mx-auto">
+	<!-- <div class="max-w-[800px] mx-auto">
 		<div>
 			<div class="flex justify-between font-[sans-serif]">
 				<div (click)="onClickTab('Sign Up')"
@@ -622,19 +608,106 @@
 				</div>
 			</div>
 		</div>
+	</div> -->
+
+	<div class="max-w-[800px] mx-auto max-md:mx-4">
+		<div>
+			<div class="flex justify-between font-[sans-serif] max-md:flex-col">
+				<div (click)="onClickTab('Sign Up')"
+					class="w-[260px] h-[70px] cursor-pointer bg-[#f7f9fc] text-[#828ba2] rounded-t-[6px] font-bold text-[19px] p-4 max-md:w-full max-md:text-center max-md:h-auto"
+					[ngClass]="{'bg-white text-black': activeTab === 'Sign Up', 'bg-[#f7f9fc] text-[#828ba2]': activeTab !== 'Sign Up'}">
+					1. Sign Up
+					<div class="w-[224px] h-[3px] bg-[#d9deeb] rounded-[2px] mt-[10px] max-md:w-full">
+						<div class="h-[3px] w-0 rounded-[2px] bg-[#1a91f0]"
+							[ngClass]="{'animate-progressAnimation': activeTab === 'Sign Up'}"></div>
+					</div>
+				</div>
+				<div (click)="onClickTab('Create')"
+					class="w-[260px] h-[70px] cursor-pointer bg-[#f7f9fc] text-[#828ba2] rounded-t-[6px] font-bold text-[19px] p-4 max-md:w-full max-md:text-center max-md:h-auto"
+					[ngClass]="{'bg-white text-black': activeTab === 'Create', 'bg-[#f7f9fc] text-[#828ba2]': activeTab !== 'Create'}">
+					2. Create
+					<div class="w-[224px] h-[3px] bg-[#d9deeb] rounded-[2px] mt-[10px] max-md:w-full">
+						<div class="h-[3px] w-0 rounded-[2px] bg-[#1a91f0]"
+							[ngClass]="{'animate-progressAnimation': activeTab === 'Create'}"></div>
+					</div>
+				</div>
+				<div (click)="onClickTab('Download')"
+					class="w-[260px] h-[70px] cursor-pointer bg-[#f7f9fc] text-[#828ba2] rounded-t-[6px] font-bold text-[19px] p-4 max-md:w-full max-md:text-center max-md:h-auto"
+					[ngClass]="{'bg-white text-black': activeTab === 'Download', 'bg-[#f7f9fc] text-[#828ba2]': activeTab !== 'Download'}">
+					3. Download
+					<div class="w-[224px] h-[3px] bg-[#d9deeb] rounded-[2px] mt-[10px] max-md:w-full">
+						<div class="h-[3px] w-0 rounded-[2px] bg-[#1a91f0]"
+							[ngClass]="{'animate-progressAnimation': activeTab === 'Download'}"></div>
+					</div>
+				</div>
+			</div>
+			<div class="h-72 bg-white max-md:h-auto pb-4">
+				<div *ngIf="activeTab == 'Sign Up'" class="text-black">
+					<div class="flex gap-[46px] max-md:flex-col max-md:gap-4 max-md:items-center">
+						<div class="ml-12 pt-[34px] max-md:ml-0 max-md:text-center max-md:px-3">
+							<h2 class="capitalize text-[#282b8f] text-[23px] font-bold mb-2 max-md:text-[20px]">
+								your first steps
+							</h2>
+							<p class="text-[#1e2532] max-md:text-sm">
+								We’ve made sure that signing up to our resume maker tools is even more convenient than usual. Use one of
+								the most common networks used by professionals (LinkedIn, Facebook or your Google account) or simply
+								skip
+								this step and enter your name and email address. We keep your data strictly confidential.
+							</p>
+						</div>
+						<div>
+							<img class="max-w-[363px] max-md:max-w-[200px]" src="assets/Imgs/sign-up.svg" />
+						</div>
+					</div>
+				</div>
+				<div *ngIf="activeTab == 'Create'" class="text-black">
+					<div class="flex gap-[46px] max-md:flex-col max-md:gap-4 max-md:items-center max-md:px-3">
+						<div class="ml-12 pt-[34px] max-md:ml-0 max-md:text-center">
+							<h2 class="capitalize text-[#282b8f] text-[23px] font-bold mb-2 max-md:text-[20px]">
+								achieve beauty with ease
+							</h2>
+							<p class="text-[#1e2532] max-md:text-sm">
+								Choose one of our beautiful, professionally designed resume or cover letter formats. Add your personal
+								info and choose and edit the necessary sections. Customize the layout and visuals as much (or as little)
+								as you want. We provide a ton of ready content with lots of room for your own creativity and needs.
+							</p>
+						</div>
+						<div>
+							<img class="max-w-[363px] max-md:max-w-[200px]" src="assets/Imgs/create.svg" />
+						</div>
+					</div>
+				</div>
+				<div *ngIf="activeTab == 'Download'" class="text-black">
+					<div class="flex gap-[46px] max-md:flex-col max-md:gap-4 max-md:items-center max-md:px-3">
+						<div class="ml-12 pt-[34px] max-md:ml-0 max-md:text-center">
+							<h2 class="capitalize text-[#282b8f] text-[23px] font-bold mb-2 max-md:text-[20px]">now its yours!</h2>
+							<p class="text-[#1e2532] max-md:text-sm">
+								Export your new resume, CV or application letter in one of the available formats. PDF will provide you
+								with the best and most consistent visual formatting. Word files allow you to edit the document further
+								or
+								submit the resume to an online application system. You can also share your career updates online.
+							</p>
+						</div>
+						<div>
+							<img class="max-w-[363px] max-md:max-w-[200px]" src="assets/Imgs/download.svg" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
-<div class="bg-[#282b8f] w-full h-[780px] max-md:w-[1349px]">
-	<div class="flex mx-[70px] gap-[85px]">
-		<div class="w-[40%] pt-28">
-			<div class="mt-[70px] ">
+<div class="bg-[#282b8f] w-full h-[780px] max-md:h-[870px]">
+	<div class="flex mx-[70px] gap-[85px] max-md:mx-4 max-md:flex-col max-md:gap-0">
+		<div class="w-[40%] pt-28 max-md:w-full max-md:pt-8">
+			<div class="mt-[70px] max-md:mt-4">
 				<p class="uppercase text-[#f9ba44] text-sm font-semibold tracking-[1.2px] mb-2">
 					start building your career
 				</p>
-				<h1 class="text-white text-[42px] font-bold leading-[51px] mb-5">
+				<h1 class="text-white text-[42px] font-bold leading-[51px] mb-5 max-md:text-[28px] max-md:leading-[36px]">
 					Professional resumes for effective job interviews
 				</h1>
-				<p class="text-white">
+				<p class="text-white max-md:text-sm">
 					A great job application leads to a good interview. An amazing resume is what makes it all possible.
 					Start off
 					strong with the hiring manager by creating a positive professional image. A job interview can be
@@ -642,17 +715,17 @@
 					if
 					they have a favorable view of your resume and cover letter.
 				</p>
-				<div class="flex">
-					<div class="mt-11 cursor-pointer">
+				<div class="flex max-md:flex-col max-md:items-start max-md:gap-2">
+					<div class="mt-11 cursor-pointer max-md:mt-4">
 						<a routerLink="/resume.io/resume-templates"
-							class="bg-[#1a91f0] text-[16px] p-4 px-6 text-white font-bold rounded hover:bg-[#1170cd]">
+							class="bg-[#1a91f0] text-[16px] p-4 px-6 text-white font-bold rounded hover:bg-[#1170cd] max-md:text-[15px] max-md:px-4 max-md:py-[15px]">
 							Get Started Now
 						</a>
 					</div>
-					<div class="mt-[30px] cursor-pointer ml-4">
+					<div class="mt-[30px] cursor-pointer ml-4 max-md:ml-0">
 						<div
-							class="border border-white text-white hover:fill-[#1a91f0] hover:text-[#1a91f0] hover:border-[#1a91f0] flex px-7 py-[13px] rounded">
-							<a class="text-[16px] font-bold rounded">
+							class="border border-white text-white hover:fill-[#1a91f0] hover:text-[#1a91f0] hover:border-[#1a91f0] flex px-7 py-[13px] rounded max-md:text-[15px] max-md:px-4 max-md:py-[15px]">
+							<a class="text-[16px] font-bold rounded max-md:text-sm">
 								Resume Example
 							</a>
 						</div>
@@ -660,27 +733,30 @@
 				</div>
 			</div>
 		</div>
-		<div class="mt-[123px] w-[50%]">
-			<div class="flex">
+		<div class="mt-[123px] w-[50%] max-md:w-full max-md:mt-8">
+			<div class="flex max-md:relative max-md:justify-center max-md:gap-4">
 				<div
-					class="bg-[url(assets/Imgs/resume4.jpg)] h-[413px] ml-[12px] shadow-box w-72 bg-no-repeat rounded-[4px] bg-[50%] bg-cover absolute">
+					class="bg-[url(assets/Imgs/resume4.jpg)] h-[413px] ml-[12px] shadow-box w-72 bg-no-repeat rounded-[4px] bg-[50%] bg-cover absolute max-md:h-[260px] max-md:w-[160px] max-md:ml-[-130px]">
 				</div>
 				<div
-					class="bg-[url(assets/Imgs/resume5.avif)] h-[413px] ml-[152px] mt-[63px] shadow-box w-72 bg-no-repeat rounded-[4px] bg-[50%] bg-cover absolute">
+					class="bg-[url(assets/Imgs/resume5.avif)] h-[413px] ml-[152px] mt-[63px] shadow-box w-72 bg-no-repeat rounded-[4px] bg-[50%] bg-cover absolute max-md:h-[260px] max-md:w-[160px] max-md:mt-10 max-md:ml-4">
 				</div>
 				<div
-					class="bg-[url(assets/Imgs/resume6.avif)] h-[413px] ml-[292px] mt-[130px] shadow-box w-72 bg-no-repeat rounded-[4px] bg-[50%] bg-cover absolute">
+					class="bg-[url(assets/Imgs/resume6.avif)] h-[413px] ml-[292px] mt-[130px] shadow-box w-72 bg-no-repeat rounded-[4px] bg-[50%] bg-cover absolute max-md:h-[260px] max-md:w-[160px] max-md:mt-20 max-md:ml-[134px]">
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<div class="border-b border-b-[#d9deeb] pt-[120px] pb-[120px]">
+
+
+<div class="border-b border-b-[#d9deeb] pt-[120px] pb-[120px] max-md:pt-8 max-md:pb-8">
 	<div class="">
-		<h1 class="mx-[410px] text-[41px] font-bold text-center text-[#1e2532] font-[sans-serif] mb-20">
+		<h1
+			class="mx-[410px] text-[41px] font-bold text-center text-[#1e2532] font-[sans-serif] mb-20 max-md:mx-4 max-md:mb-3 max-md:text-[27px]">
 			Frequently Asked Questions
 		</h1>
-		<div class="mx-[210px]">
+		<div class="mx-[210px] max-md:mx-5">
 			<div *ngFor="let qa of questionsAndAnswers let i = index let last = last" [class.border-b]="!last"
 				class="border-b mb-6">
 				<div class="cursor-pointer" (click)="toggleAnswer(i)">
@@ -705,10 +781,11 @@
 		</div>
 	</div>
 </div>
-<div class="h-[440px] text-center mx-[230px] justify-center mt-[128px]">
-	<div class="text-[#1a91f0] text-[65px] font-bold leading-[88px] ">
+<div class="h-[440px] text-center mx-[230px] justify-center mt-[128px] max-md:mt-8 max-md:mx-3">
+	<div class="text-[#1a91f0] text-[65px] font-bold leading-[88px] max-md:text-[34px] max-md:leading-[42px]">
 		Join over
-		<mark class="text-[#1a91f0] border-b-[7px] border-[#f9ba44] bg-transparent">{{JoinUsers}}</mark>
+		<mark
+			class="text-[#1a91f0] border-b-[7px] border-[#f9ba44] bg-transparent max-md:border-b-[3px]">{{JoinUsers}}</mark>
 		users worldwide
 	</div>
 	<p class="text-[#1e2532] mt-4">Start for free — try our resume builder now</p>

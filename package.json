@@ -42,6 +42,7 @@
     "@types/qs": "^6.9.17",
     "@types/range-parser": "^1.2.7",
     "@types/send": "^0.17.4",
+    "angular-cli-ghpages": "^2.0.3",
     "autoprefixer": "^10.4.20",
     "jasmine-core": "^5.4.0",
     "karma": "^6.4.4",

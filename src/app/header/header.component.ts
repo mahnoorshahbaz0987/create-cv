@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,16 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   logoImg: any;
-  isNavbarHidden = false;
-  lastScrollTop = 0;
-  showDropdown: boolean = false;
-
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event: any) {
-    const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    this.isNavbarHidden = currentScrollTop > this.lastScrollTop && currentScrollTop > 50;
-    this.lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
-  }
+  isMenuOpen = false;
   constructor(private router: Router) {
     this.logoImg = "assets/logo.svg";
   }
@@ -26,4 +17,7 @@ export class HeaderComponent {
     this.router.navigate(['/resume.io/app/create-resume/templates']);
   }
 
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }
